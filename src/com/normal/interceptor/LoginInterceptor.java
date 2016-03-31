@@ -1,0 +1,23 @@
+package com.normal.interceptor;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+/**
+ * Ä¬ÈÏÀ¹½ØÆ÷
+ * @author weiyong
+ *
+ */
+public class LoginInterceptor extends HandlerInterceptorAdapter {
+	
+	@Override
+	public boolean preHandle(HttpServletRequest request,
+			HttpServletResponse response, Object handler) throws Exception {
+		
+		System.out.println("°¡¹þ¹þ");
+		return true;
+	}
+
+}
