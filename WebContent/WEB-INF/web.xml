@@ -19,7 +19,7 @@
 	<!-- 加载spring的xml配置文件到 spring的上下文容器中 -->  
 	<context-param>  
 	    <param-name>contextConfigLocation</param-name>  
-	    <param-value>classpath:root-context.xml</param-value>  
+	    <param-value>classpath:*-context.xml</param-value>  
 	</context-param>
   
 	<!-- 配置Spring MVC DispatcherServlet -->

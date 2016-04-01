@@ -1,28 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<beans xmlns="http://www.springframework.org/schema/beans"  
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"  
-    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd  
-                http://www.springframework.org/schema/context  
-                 http://www.springframework.org/schema/context/spring-context-3.2.xsd  
-                http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">  
-    <!-- Root Context: defines shared resources visible to all other web components -->  
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+       xmlns:context="http://www.springframework.org/schema/context"  
+       xmlns:mvc="http://www.springframework.org/schema/mvc"  
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd  
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd"> 
+
+	<!-- 启用spring mvc 注解-->
+    <mvc:annotation-driven>   
+    </mvc:annotation-driven>
   	
-  	<context:component-scan base-package="com.normal.controller"/>
+  	<!-- 自动扫描的包名 ，使Spring支持自动检测组件，如注解的Controller-->
+  	<context:component-scan base-package="com.normal"/>
   	
- <!--   <mvc:default-servlet-handler />
+  	<context:property-placeholder location="classpath:jdbc.properties" />
+  	
+  	    <!--数据库连接-->  
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/test?characterEncoding=utf-8" />
+		<property name="username" value="root" />
+		<property name="password" value="123456" />
+		<property name="maxActive" value="5" />
+		<property name="maxIdle" value="3" />
+		<property name="maxWait" value="1000" />
+		<property name="defaultAutoCommit" value="true" />
+		<property name="removeAbandoned" value="true" />
+		<property name="removeAbandonedTimeout" value="60" />
+	</bean>  
+      
+    <!-- mybatis配置 -->  
+    <!-- 创建SqlSessionFactory，同时指定数据源 --> 
+    <bean id="mySqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
+        <property name="dataSource" ref="dataSource" />  
+        <!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
+        <property name="mapperLocations" value="classpath*:maper/*.map.xml" />
+    </bean> 
+     
+    <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
+        <property name="basePackage" value="org.com.mars.dao" />
+        <property name="sqlSessionFactoryBeanName" value="mySqlSessionFactory" />
+    </bean>
+  	
     
-    if you use annotation you must configure following setting
-    <mvc:annotation-driven />
-    
+    <!--配置拦截器, 多个拦截器,顺序执行 -->
     <mvc:interceptors>
-        RequestHandlerInterceptor
+    	<!-- 匹配的是url路径  -->
         <mvc:interceptor>
             <mvc:mapping path="*" />
             <bean class="com.normal.interceptor.LoginInterceptor"/>
+            <!-- 当设置多个拦截器时，先按顺序调用preHandle方法，然后逆序调用每个拦截器的postHandle和afterCompletion方法 -->
         </mvc:interceptor>
-    </mvc:interceptors> -->
+    </mvc:interceptors>
     
-    <!-- configure the InternalResourceViewResolver -->
+    <!-- 视图解析器:定义跳转的文件的前后缀 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
             id="internalResourceViewResolver">
         <!-- 前缀 -->
