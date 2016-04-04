@@ -13,16 +13,16 @@
   	<!-- 自动扫描的包名 ，使Spring支持自动检测组件，如注解的Controller-->
   	<context:component-scan base-package="com.normal"/>
   	
-  	<context:property-placeholder location="classpath:jdbc.properties" />
+  	 <context:property-placeholder location="classpath:jdbc.properties" />
   	
-  	    <!--数据库连接-->  
+  	 <!--    数据库连接   -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mysql://localhost:3306/test?characterEncoding=utf-8" />
+			value="jdbc:mysql://localhost:3306/normal?characterEncoding=utf-8" />
 		<property name="username" value="root" />
-		<property name="password" value="123456" />
+		<property name="password" value="root" />
 		<property name="maxActive" value="5" />
 		<property name="maxIdle" value="3" />
 		<property name="maxWait" value="1000" />
@@ -31,17 +31,17 @@
 		<property name="removeAbandonedTimeout" value="60" />
 	</bean>  
       
-    <!-- mybatis配置 -->  
-    <!-- 创建SqlSessionFactory，同时指定数据源 --> 
+   <!--  mybatis配置  
+    创建SqlSessionFactory，同时指定数据源  -->
     <bean id="mySqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
         <property name="dataSource" ref="dataSource" />  
-        <!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
-        <property name="mapperLocations" value="classpath*:maper/*.map.xml" />
+       <!--  自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
+         <property name="mapperLocations" value="classpath*:com/normal/model/*.xml" />
     </bean> 
      
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-        <property name="basePackage" value="org.com.mars.dao" />
+        <property name="basePackage" value="com.normal.dao" />
         <property name="sqlSessionFactoryBeanName" value="mySqlSessionFactory" />
     </bean>
   	

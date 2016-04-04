@@ -11,6 +11,6 @@ public interface UserService {
 	
 	User getUserById(int uerId);
 	
-	
+	void save(User user);
 
 }

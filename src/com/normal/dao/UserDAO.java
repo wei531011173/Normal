@@ -13,5 +13,7 @@ import com.normal.model.User;
 public interface UserDAO {
 	
 	User getUserById(int uerId);
+	
+	void save(User user);
 
 }
