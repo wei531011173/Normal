@@ -44,6 +44,14 @@
         <property name="basePackage" value="com.normal.dao" />
         <property name="sqlSessionFactoryBeanName" value="mySqlSessionFactory" />
     </bean>
+    
+    <!-- 线程池的使用 -->
+    <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+          <property name="corePoolSize" value="5"></property>
+          <property name="keepAliveSeconds" value="300"></property>
+          <property name="maxPoolSize" value="50"></property>
+          <property name="queueCapacity" value="25"></property>
+	</bean>
   	
     
     <!--配置拦截器, 多个拦截器,顺序执行 -->

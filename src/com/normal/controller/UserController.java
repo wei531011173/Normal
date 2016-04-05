@@ -22,12 +22,12 @@ public class UserController {
     public ModelAndView index(){  
         //创建模型跟视图，用于渲染页面。并且指定要返回的页面为home页面  
     	
-    	User u = new User();
+    	/*User u = new User();
     	u.setBuyTime(20160101);
     	u.setShopId(1);
     	u.setDayCount(30);
-    	u.setSmsCount(10);
-    	userService.save(u);
+    	u.setSmsCount(10);*/
+    	userService.save(null);
         ModelAndView mav = new ModelAndView("home");  
         return mav;  
     }

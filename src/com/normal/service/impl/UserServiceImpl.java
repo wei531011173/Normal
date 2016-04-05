@@ -1,6 +1,7 @@
 package com.normal.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.task.TaskExecutor;
 import org.springframework.stereotype.Service;
 
 import com.normal.dao.UserDAO;
@@ -17,6 +18,9 @@ public class UserServiceImpl implements UserService{
 	
 	@Autowired
 	UserDAO userDAO;
+	
+	@Autowired
+	TaskExecutor taskExecutor;
 
 	@Override
 	public User getUserById(int uerId) {
@@ -25,7 +29,24 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public void save(User user) {
-		userDAO.save(user);
+		
+		taskExecutor.execute(new Runnable() {
+			
+			@Override
+			public void run() {
+				
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				System.out.println("finish");
+			}
+		});
+		
+	//	userDAO.save(user);
+		System.out.println("return");
 	}
 
 }
