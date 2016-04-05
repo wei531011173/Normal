@@ -36,7 +36,7 @@
     <bean id="mySqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
         <property name="dataSource" ref="dataSource" />  
        <!--  自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
-         <property name="mapperLocations" value="classpath*:com/normal/model/*.xml" />
+         <property name="mapperLocations" value="classpath*:com/normal/dao/*.xml" />
     </bean> 
      
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->

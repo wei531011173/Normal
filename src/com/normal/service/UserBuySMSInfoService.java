@@ -1,17 +1,21 @@
 package com.normal.service;
 
+import java.util.List;
+
+import com.normal.model.UserBuySMSInfo;
 
 /**
  * ÓÃ»§¹ºÂò¼ÇÂ¼
+ * 
  * @author weiyong
  *
  */
 public interface UserBuySMSInfoService {
-	
-	/*SMSInfo getSMSInfoById(int id);
-	
-	List<SMSInfo> getSMSInfoList();*/
-	
-	
+
+	List<UserBuySMSInfo> getSMSInfoByUserId(int userId);
+
+	void saveUserBuySMSInfo(UserBuySMSInfo info);
+
+	void updateUserBuySMSInfoById(UserBuySMSInfo info);
 
 }

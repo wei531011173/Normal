@@ -28,3 +28,14 @@ CREATE TABLE `userinfo` (
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin ROW_FORMAT=DYNAMIC;
 
+
+
+/* 用户充值记录表*/
+DROP TABLE IF EXISTS `userbuysmsinfo`;
+CREATE TABLE `userbuysmsinfo` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+	`userId` int(11) NOT NULL unique COMMENT '用户id',
+    `smsId` int(11) NOT NULL COMMENT '短信id',
+    `isSuccess` int(11) NOT NULL COMMENT '是否成功',
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin ROW_FORMAT=DYNAMIC;

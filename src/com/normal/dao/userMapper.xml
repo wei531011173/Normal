@@ -17,7 +17,7 @@
         select * from users where shopId=#{id}
     </select>
     
-    <insert id="save" parameterType="com.normal.model.User" useGeneratedKeys="true"> 
+    <insert id="saveUser" parameterType="com.normal.model.User" useGeneratedKeys="true"> 
 		insert into userinfo(shopId,smsCount,buyTime,dayCount) values
 		(#{shopId},#{smsCount},#{buyTime},#{dayCount}) 
 	</insert>

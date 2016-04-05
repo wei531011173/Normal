@@ -12,8 +12,17 @@ import com.normal.model.User;
 @MapperScan
 public interface UserDAO {
 	
+	/**
+	 * 根据id获取用户
+	 * @param uerId
+	 * @return
+	 */
 	User getUserById(int uerId);
 	
-	void save(User user);
+	/**
+	 * 保存用户
+	 * @param user
+	 */
+	void saveUser(User user);
 
 }
