@@ -28,6 +28,8 @@ CREATE TABLE `userinfo` (
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin ROW_FORMAT=DYNAMIC;
 
+ALTER TABLE `userinfo` ADD `userName` varchar(100) DEFAULT "" COMMENT '用户名';
+
 
 
 /* 用户充值记录表*/

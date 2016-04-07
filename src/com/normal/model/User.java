@@ -17,6 +17,8 @@ public class User {
 	private int buyTime;
 	/** 订购天数 */
 	private int dayCount;
+	/** 用户名*/
+	private String userName;
 
 	public int getId() {
 		return id;
@@ -57,5 +59,15 @@ public class User {
 	public void setDayCount(int dayCount) {
 		this.dayCount = dayCount;
 	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	
+	
 
 }

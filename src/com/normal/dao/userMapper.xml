@@ -18,8 +18,8 @@
     </select>
     
     <insert id="saveUser" parameterType="com.normal.model.User" useGeneratedKeys="true"> 
-		insert into userinfo(shopId,smsCount,buyTime,dayCount) values
-		(#{shopId},#{smsCount},#{buyTime},#{dayCount}) 
+		insert into userinfo(shopId,smsCount,buyTime,dayCount, userName) values
+		(#{shopId},#{smsCount},#{buyTime},#{dayCount}, #{userName})
 	</insert>
     
 </mapper>

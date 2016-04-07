@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>导入号码群发</title>
+	<meta http-equiv="Cache-Control" content="max-age=86400">
+	<meta name="renderer" content="webkit">
+	<meta name="renderer" content="ie-comp">
+	<meta name="renderer" content="ie-stand">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" media="screen" href="style/pintuer.css">
+	<link rel="stylesheet" media="screen" href="style/main.css">
+	<link rel="stylesheet" media="screen" href="style/webuploader.css">
+	<link rel="stylesheet" media="screen" href="style/ui-dialog.css">
+	<link rel="stylesheet" media="screen" href="style/introjs.css">
+	<link rel="stylesheet" media="screen" href="style/msgbox.css"> 	
+	<script src="js/jQuery.js"></script>		
+</head>
+<body>
+	<div id="header" class="bg bg-main layout">
+		<div class="container clearfix bg bg-main">
+			<a href="#" target="_self">
+				<img src="images/logo.png" class="float-left">
+			</a>
+			<div class="float-right user-info">
+				欢迎 <span id="shop-name">用户名</span> 剩余短信：
+				<b class="msg-remain">10</b>条 <a href="#" target="_self" class="button bg-yellow button-small">充值</a> | 软件还剩：
+				<b class="deadL">14</b>天
+				<a href="#" target="_blank" class="button bg-yellow button-small">续费</a>
+			</div>				
+		</div>
+	</div>
+	<div id="wrapper" class="clearfix container">
+		<marquee behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()"><img src="images/iconfont-laba.png"> 
+		亲爱的叮咚用户，由于淘宝数据接口规则发生变化，一星期内没登陆叮咚，已开启的关怀提醒功能会自动失效。所以，为保障您关怀短信正常发送，今后烦请7天内至少登陆一次叮咚哦。给您带来的不便，敬请谅解。</marquee>
+		<div id="main-nav">
+			<ul class="main-ul">
+				<li class="nav-index">
+					<a href="#" target="_self"><b></b>首页
+					</a>
+				</li>
+				<li class="nav-market">
+					<a href="javascript:;" target="_self" class="active"><b></b>会员营销<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub" style="display: block;">
+						<li>
+							<a href="#" target="_self">会员短信群发</a>
+						</li>
+						<li class="active">
+							<a href="#" target="_self">导入号码群发</a>
+						</li>
+						<li>
+							<a href="#" target="_self">优惠券群发</a>
+						</li>
+						<li style="display: none;">
+							<a href="#" target="_self">订单营销</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-care">
+					<a href="javascript:;" target="_self"><b></b>会员关怀<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<li>
+							<a href="#" target="_self">订单催付</a>
+						</li>
+						<li>
+							<a href="#" target="_self">二次催付</a>
+						</li>
+						<li>
+							<a href="#" target="_self">发货提醒</a>
+						</li>
+						<li>
+							<a href="#" target="_self">到货提醒</a>
+						</li>
+						<li>
+							<a href="#" target="_self">签收提醒</a>
+						</li>
+						<li>
+							<a href="#" target="_self">中差评关怀</a>
+						</li>
+						<li>
+							<a href="#" target="_self">好评关怀</a>
+						</li>
+						<li>
+							<a href="#" target="_self">付款关怀</a>
+						</li>
+						<li>
+							<a href="#" target="_self">迟发提醒</a>
+						</li>
+						<li>
+							<a href="#" target="_self">回款关怀</a>
+						</li>
+						<li>
+							<a href="#" target="_self">退款关怀</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-history">
+					<a href="javascript:;" target="_self"><b></b>短信记录/效果<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<!-- <li>
+							<a href="#" target="_self">营销效果</a>
+						</li>
+						<li>
+							<a href="#" target="_self">优惠券效果</a>
+						</li>
+						<li>
+							<a href="#" target="_self">催付效果</a>
+						</li> -->
+						<li>
+							<a href="#" target="_self">发送记录</a>
+						</li>
+						<li>
+							<a href="#" target="_self">充值记录</a>
+						</li>
+						<li>
+							<a href="#" target="_self">短信账单</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-sysset">
+					<a href="javascript:;" target="_self"><b></b>系统设置<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<li>
+							<a href="#" target="_self">导入历史订单</a>
+						</li>
+						<li>
+							<a href="#" target="_self">短信发送设置</a>
+						</li>
+						<li>
+							<a href="#" target="_self">黑名单设置</a>
+						</li>
+						<li>
+							<a href="#" target="_self">子账号设置</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-help">
+					<a href="#" target="_self"><b></b>帮助中心</a>
+				</li>
+			</ul>
+		</div>
+		<div id="main-content" class="clearfix">				  
+			<ul class="main-tab-nav">
+				<li class="active">导入号码群发</li>
+				<li>发送记录及结果</li>
+			</ul>
+			<div class="main-tab-content">
+				<div class="main-step clearfix margin-top">
+					<h2><b>1</b>会员上传：</h2>
+					<div class="member-upload-nav">
+						<button class="button bg-sub">手动输入</button>
+						<button class="button">批量导入</button>
+					</div>
+					<div class="member-upload-cont">
+						<textarea class="manual-phone input" placeholder="可填写多个手机号码（逗号或者换行分隔）"></textarea>
+					</div>
+					<!--测试-->
+					<div class="member-upload-cont border padding">
+						<div class="line">
+							<div class="x2">
+								<a href="javascript:;" target="_self" class="member-upload-pick">上传文件</a>
+							</div>
+							<div class="x6 height-large">
+								支持csv、txt、xls格式，可直接上传淘宝订单文件 
+								<a href="#" target="_blank" class="text-red">点击下载模板</a>
+							</div>
+							<div class="x3 height-large">
+								<a href="#" class="height-big text-red" target="_blank">如何导入指定号码？</a>
+							</div>
+						</div>
+						<div class="progress progress-striped active uploadPro margin-top margin-bottom" style="display: none;">
+							<div class="progress-bar bg-sub"></div>
+						</div>
+						<textarea class="uploadResu input" style="display:none;" readonly="readonly"></textarea>
+					</div>
+					<div class="button1"><span class="hasSeleCont" style="display: none;">手动输入了0个电话号码。</span></div>
+					<div class="button2"><span class="hasSeleCont" style="display: none;">成功上传 了0个电话号码。</span></div>
+					<span style="display: none;">
+						<span class="text-dot">添加测试号码：</span>
+					    <input class="appendMobile input input-auto" size="50" placeholder="输入手机号码，多个号码用逗号隔开" style="margin-top:10px;">
+					</span>
+				</div>
+				<hr>
+				<div class="main-step clearfix margin-top">
+					<h2><b>2</b>编辑短信内容：</h2>
+					<div class="msg-content-wrapper clearfix ">
+						<div class="float-left">
+						<!--<img src="/public/images/markettip.jpg" alt="" style="cursor: pointer;  margin-left: 528px;" class="markettip">-->
+							<div class="msg-wrap margin-top clearfix" style="border: 0px;">
+								<div class="sign-wrap margin-small clearfix">
+									<span class="sign-title float-left height-big">平台签名：</span>
+									<ul class="select-ul float-left">
+									<li value="20" td="退订回T">楚楚街</li>
+									<li value="14" td="退订回T">苏宁</li>
+									<li value="9" td="退订回T">蘑菇街</li>
+									<li value="8" td="退订回T">美丽说</li>
+									<li value="7" td="退订回T">一号店</li>
+									<li value="6" td="退订回T">聚划算</li>
+									<li value="4" td="退订回T">京东</li>
+									<li value="2" td="退订回T">天猫</li>
+									<li value="1" td="退订回T">淘宝</li>
+									</ul>
+								</div>
+								<div class="sign-set margin-small clearfix">
+									<span class="sign-title float-left height-big">自定义签名：</span>
+									<ul class="select-ul float-left signset">
+										<li value="0" td="退订回T" class="active">BONA户外鞋</li>
+									</ul>
+									<ul class="select-ul float-left">
+										<a href="javascript:;" target="_self" class="modifysign modify margin-top">修改签名</a>
+									</ul>
+								</div>
+								<div class="tags-wrap margin-small" style="display: none;">
+									<span class="sign-title float-left height-big">短信标签：</span>
+									<ul class="clearfix">
+										<li>
+											<a href="javascript:;" target="_self" class="text-small showtip">【#收件人姓名#】</a>
+										</li>
+										<li>
+											<a href="javascript:;" target="_self" class="text-small showtip">【#买家旺旺#】</a>
+										</li>
+									</ul>
+								</div>
+								<div class="msg-temps margin-small-bottom  float-right">
+									<a href="javascript:;" target="_self" class=" more-temp">
+										<img src="images/icon1.png" class="margin-small-right" alt="">短信模板
+									</a>
+									<a href="javascript:;" target="_self" class=" short-url">
+										<img src="images/icon2.png" class="margin-small-right" alt="">插入短链接
+									</a>	
+								</div>
+								<div class="msgwrap clearfix">
+									<span class="sign-title float-left height-big float-left margin-small-left">短信内容：</span>
+									<div class="sign-msg float-left">
+										<textarea class="msg mrkmsg" value="">亲，最近这件衣服很流行哦！今天限时5折，赶紧来看看吧。O(∩_∩)o </textarea>
+									    <span class="sign-after text-blue">退订回T</span>
+									</div>
+								</div>			
+							</div>
+						</div>
+						<div class="msg-preview mrksmsmsg  mrkmsg float-left">
+							<p>亲，最近这件衣服很流行哦！今天限时5折，赶紧来看看吧。O(∩_∩)o </p>
+							<div class="sign">【BONA户外鞋】</div>
+							<span class="td">退订回T</span>
+						</div>
+					</div>
+					<div class="msg-count mrkmsg height-big">
+						&nbsp;&nbsp;&nbsp;已经输入<span class="remain text-yellow">48</span>/<span class="msgCount">70</span>字<span class="msglengtgtip">（亲!超过<span class="text-red">0</span>字，不满<span class="text-red">70</span>个字，需要<span class="text-red">1</span>条短信~）</span>
+					</div>
+					</div>
+					<hr>
+					<!--<div class="main-step clearfix  margin-top">
+						<h2><b>3</b>添加测试号码：</h2>
+						<input  class="appendMobile input input-auto" size="50"  placeholder="输入手机号码，多个号码用逗号隔开" />
+					</div>
+					<hr />-->
+					<div class="main-step clearfix margin-top">
+						<h2>
+							<b>3</b>发送时间：
+							<a href="javascript:;" target="_self" class="change-time modify">修改</a>
+						</h2>
+						<ul class="select-ul sendts" style="display: inline-block;vertical-align: middle;">
+							<li class="active ">立即发送</li>
+						</ul>
+						<input class="Wdate input input-auto" id="sendTime" type="text" value="" style="display:none;">
+						<a href="javascript:;" target="_self" class="button button-small bg-yellow comfirm-sendts" style="display:none;">确定</a>
+						<span class="bg-red-light padding margin-big-left">【发送时段】：<span class="text-red margin-right">9:00-21:00</span></span>
+					</div>
+					<hr>
+					<div class="main-step clearfix margin-top">
+						<h2><b>4</b>设置营销计划名称：</h2>
+						<input class="input input-auto plan-name" size="50" type="text" value="">
+					</div>
+					<div class="text-center margin-big sendsms" data-step="3">
+						<a href="javascript:;" target="_self" class="subplan button button-large bg-yellow">确认提交</a>
+					</div>
+				</div>
+				<div class="main-tab-content padding" style="display: none;">
+					<div id="mktrpt" class="clearfix">
+					<form method="post" class="form-inline" onsubmit="return false;">
+						<div class="form-group">
+							<div class="field">
+								<div class="input-group"><span class="addon">营销计划名称</span>
+									<input type="text" class="input search-plan-name" size="30">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="field">
+								<div class="input-group"><span class="addon">发送时间</span>
+									<input type="text" id="mktrptstime" class="input mktrpt-stime Wdate" size="22" onfocus="WdatePicker({dateFmt:&#39;yyyy/MM/dd &#39;,maxDate:&#39;#F{$dp.$D(\&#39;mktrptetime\&#39;)}&#39;,skin:&#39;twoer&#39;})"><span class="addon">~</span>
+									<input type="text" id="mktrptetime" class="input mktrpt-etime Wdate" size="22" onfocus="WdatePicker({dateFmt:&#39;yyyy/MM/dd &#39;,minDate:&#39;#F{$dp.$D(\&#39;mktrptstime\&#39;)}&#39;,skin:&#39;twoer&#39;})">
+								</div>
+							</div>
+						</div>
+						<div class="form-button">
+							<button class="button searchbtn" type="submit">搜索</button>
+						</div>
+					</form>
+					<table class="table  margin-top text-left border">
+						<thead height="40">
+							<tr class="bg">
+								<th width="205">计划名称</th>
+								<th width="150">发送时间</th>
+								<th width="150">状态</th>
+								<th width="95">发送客户数</th>
+								<th width="80">发送条数</th>
+								<th width="80">成交笔数</th>
+								<th width="80">成交金额</th>
+								<th width="50">ROI
+									<a class="qa" data-toggle="tooltip" data-placement="bottom" title="ROI，投入产出比，发短信花了1块钱，成交了100块钱，ROI=100"></a>
+								</th>
+								<th width="110">详情</th>
+								<!--<th width="80" style="text-align:center">导出明细</th>-->
+							</tr>
+						</thead>
+						<tbody class="text-small"><tr><td colspan="11" style="text-align:center;">没有发送记录哦</td></tr></tbody>
+					</table>
+					<ul class=" pagination float-right margin-top " style="display: none;">
+						<li class="page-prev page-prev-disabled" title="上一页">
+							<a href="http://dingdong.ciaosir.com/ui/MarketingUI/sendsms#">上一页</a>
+						</li>
+						<li class="page-next page-next-abled" title="2">
+							<a href="http://dingdong.ciaosir.com/ui/MarketingUI/sendsms#">下一页</a> 
+						</li>
+						<li class="pageinfo">共0页,0条记录  
+							<input type="text" class="jumpTo" style="" value="1"> 页 
+							<input style="border: solid 1px #ddd;" class="gopage-submit hand button button-small" title="跳转页面" type="button" value="确定">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<ul id="fixnav">
+		    <li class="qq">
+				<a target="_blank" href="#">
+			 </a>
+			</li>
+			<li class="ww">
+				<a target="_blank" href="#">
+				</a>
+			</li>
+			<li class="phone">
+				<div>152-6813-5612</div>
+			</li>
+			<li class="feedback">
+				<a href="#" target="_blank"></a>
+			</li>
+			<li class="totop">
+				<a href="#" target="_self"></a>
+			</li>
+		</ul>
+	</div>
+	<div id="foot" class="text-center height-large margin-large">Copyright © 杭州逐鹿网络技术有限公司 2014</div>
+	<script src="js/index.js"></script>
+</body>
+</html>

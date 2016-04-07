@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.normal.model.SMSInfo;
-import com.normal.model.User;
 import com.normal.model.UserBuySMSInfo;
 import com.normal.service.SMSInfoService;
 import com.normal.service.UserBuySMSInfoService;

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>优惠券群发</title>
+	<meta http-equiv="Cache-Control" content="max-age=86400">
+	<meta name="renderer" content="webkit">
+	<meta name="renderer" content="ie-comp">
+	<meta name="renderer" content="ie-stand">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" media="screen" href="style/pintuer.css">
+	<link rel="stylesheet" media="screen" href="style/main.css">
+	<link rel="stylesheet" media="screen" href="style/webuploader.css">
+	<link rel="stylesheet" media="screen" href="style/ui-dialog.css">
+	<link rel="stylesheet" media="screen" href="style/introjs.css">
+	<link rel="stylesheet" media="screen" href="style/msgbox.css"> 	
+	<script src="js/jQuery.js"></script>		
+</head>
+<body>
+	<div id="header" class="bg bg-main layout">
+		<div class="container clearfix bg bg-main">
+			<a href="#" target="_self">
+				<img src="images/logo.png" class="float-left">
+			</a>
+			<div class="float-right user-info">
+				欢迎 <span id="shop-name">用户名</span> 剩余短信：
+				<b class="msg-remain">10</b>条 
+				<a href="#" target="_self" class="button bg-yellow button-small">充值</a> | 软件还剩：
+				<b class="deadL">14</b>天
+				<a href="#" target="_blank" class="button bg-yellow button-small">续费</a>
+			</div>			
+		</div>
+	</div>
+	<div id="wrapper" class="clearfix container">
+		<marquee behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()">
+			<img src="images/iconfont-laba.png"> 
+			亲爱的叮咚用户，由于淘宝数据接口规则发生变化，一星期内没登陆叮咚，已开启的关怀提醒功能会自动失效。所以，为保障您关怀短信正常发送，今后烦请7天内至少登陆一次叮咚哦。给您带来的不便，敬请谅解。
+		</marquee>
+		<div id="main-nav">
+			<ul class="main-ul">
+				<li class="nav-index">
+					<a href="#" target="_self"><b></b>首页</a></li>
+				<li class="nav-market">
+					<a href="javascript:;" target="_self" class="active"><b></b>会员营销<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub" style="display: block;">
+						<li>
+							<a href="#" target="_self">会员短信群发</a>
+						</li>
+						<li>
+							<a href="#" target="_self">导入号码群发</a>
+						</li>
+						<li class="active">
+							<a href="#" target="_self">优惠券群发</a>
+						</li>
+						<li style="display: none;">
+							<a href="#" target="_self">订单营销</a>
+						</li>
+					</ul>
+				</li>					
+				<li class="nav-care">
+					<a href="javascript:;" target="_self"><b></b>会员关怀<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<li>
+							<a href="#" target="_self">订单催付</a>
+						</li>
+						<li>
+							<a href="#" target="_self">二次催付</a>
+						</li>
+						<li>
+							<a href="#" target="_self">发货提醒</a>
+						</li>
+						<li>
+							<a href="#" target="_self">到货提醒</a>
+						</li>
+						<li>
+							<a href="#" target="_self">签收提醒</a>
+						</li>
+						<li>
+							<a href="#" target="_self">中差评关怀</a>
+						</li>
+						<li>
+							<a href="#" target="_self">好评关怀</a>
+						</li>
+						<li>
+							<a href="#" target="_self">付款关怀</a>
+						</li>
+						<li>
+							<a href="#" target="_self">迟发提醒</a>
+						</li>
+						<li>
+							<a href="#" target="_self">回款关怀</a>
+						</li>
+						<li>
+							<a href="#" target="_self">退款关怀</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-history">
+					<a href="javascript:;" target="_self"><b></b>短信记录/效果<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<!-- <li>
+							<a href="#" target="_self">营销效果</a>
+						</li>
+						<li>
+							<a href="#" target="_self">优惠券效果</a>
+						</li>
+						<li>
+							<a href="#" target="_self">催付效果</a>
+						</li> -->
+						<li>
+							<a href="#" target="_self">发送记录</a>
+						</li>
+						<li>
+							<a href="#" target="_self">充值记录</a>
+						</li>
+						<li>
+							<a href="#" target="_self">短信账单</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-sysset">
+					<a href="javascript:;" target="_self"><b></b>系统设置<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<li>
+							<a href="#" target="_self">导入历史订单</a>
+						</li>
+						<li>
+							<a href="#" target="_self">短信发送设置</a>
+						</li>
+						<li>
+							<a href="#" target="_self">黑名单设置</a>
+						</li>
+						<li>
+							<a href="#" target="_self">子账号设置</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-help">
+					<a href="#" target="_self"><b></b>帮助中心</a>
+				</li>
+			</ul>
+		</div>
+		<div id="main-content" class="clearfix">
+			<ul class="main-tab-nav">
+				<li class="active">优惠券群发</li>
+				<li>发送记录及结果</li>
+			</ul>
+			<div class="main-tab-content">
+				<div class="padding bg-yellow-light margin-big-bottom margin-big">
+					<span>
+						温馨提示：C店需要订购官方优惠券服务才能使用该功能，
+						<a href="#" target="_blank" class="text-blue">立即订购</a>
+					</span>
+					<div class="margin-top text-dot" style="margin-left: 70px;">
+						亲，淘宝已经开始对优惠券发送进行流量限制，在此期间优惠券发送可能由于淘宝限流导致发送失败率偏高，望周知~
+					</div>
+				</div>
+				<div class="main-step clearfix">
+					<h2><b>1</b>优惠券设置：</h2>
+					<div class=" introjs-showElement introjs-relativePosition">
+						<div class="line margin-bottom">
+							<div class="x6">
+								<div class="x3 height-big text-right">
+									优惠券名称：
+								</div>
+								<input type="text" class="coupon-name input input-auto" size="25">
+							</div>
+							<div class="x6">
+								<div class="x3 height-big text-right">
+									优惠券面额：
+								</div>
+								<ul class="select-ul denomination">
+									<li class="active" val="3">3元</li>
+									<li val="5">5元</li>
+									<li val="10">10元</li>
+									<li val="20">20元</li>
+									<li val="50">50元</li>
+									<li val="100">100元</li>
+								</ul>
+							</div>
+						</div>
+						<div class="line margin-bottom">
+							<div class="x6">
+								<div class="x3 height-big text-right">
+									生效时间：
+								</div>
+								<input class="Wdate input input-auto" id="coupon-begin" type="text" value="">
+							</div>
+							<div class="x6">
+								<div class="x3 height-big text-right">
+									失效时间：
+								</div>
+								<input class="Wdate input input-auto" id="coupon-end" type="text" value="">
+							</div>
+						</div>
+						<div class="line">
+							<div class="x6">
+								<div class="x3 height-big text-right">
+									使用条件：
+								</div>
+								<div class="form-group" style="vertical-align: middle; display: inline-block;">
+									<div class="field">
+										<label class="margin-right">
+											<input type="radio" checked="checked" name="use-condition" value="0.01"> 不限
+										</label>
+										<label>
+											<input name="use-condition" type="radio"> 订单满
+											<input type="text" id="satisfied" class="input input-auto" size="3"> 元
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+      				</div>
+				</div>
+				<hr>
+				<div class="main-step clearfix margin-top fliter-main-wrap">
+					<h2>
+						<b>2</b>发送对象：
+						<a href="javascript:;" target="_self" class="change-fliter modify">修改</a>
+					</h2> 
+					<div class="mkt-fliter-res iscoupon">
+						<ul class="select-ul" style="display: none;">
+							<li class="active">全部会员</li>
+						</ul>
+						<ul class="fliter-result clearfix">
+							<li><b>会员等级：</b><span class="blue">全选</span> </li>
+							<li><b>平均客单价：</b><span class="blue">全选</span> </li>
+							<li><b>消费金额：</b><span class="blue">全选</span> </li>
+							<li><b>购买次数：</b><span class="blue">全选</span> </li>
+							<li><b>最近购买时间：</b><span class="blue">全选</span> </li>
+							<li><b>地域：</b><span class="blue">全国</span> </li>
+							<li><b>过滤中差评：</b><span class="blue">过滤中差评买家</span> </li>
+							<li><b>过滤黑名单：</b><span class="blue">过滤黑名单</span> </li>
+							<li><b><img src="images/iconfont-2121.png" style="vertical-align: middle;" class="showtip">已发送过滤：</b><span class="blue">不过滤已发送</span> </li>
+							<li class="mktexcludeflag"><b>订单标旗：</b><span class="blue">不限</span> </li>							
+						</ul>
+						<dl class="fliter-items clearfix" style="display: none;">
+							<dt>指定宝贝筛选：</dt>
+							<dd class="clearfix">
+								<ul>
+									<!--<li><img src="/public/images/xufei61.gif" class="float-left">
+											<b></b>
+										</li>-->
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<hr>
+					<div class="height-big"> 
+						<span class="hasSeleCont text-big margin-big-right">根据条件筛选出
+							<img src="images/loadings.gif" width="16" height="16" alt="">人其中
+							<img src="images/loadings.gif" width="16" height="16" alt="">人有手机号。
+						</span>
+						数据不全?
+						<a href="javascript:;" target="_self" class="toImport text-main">请点击此处导入历史订单。</a>
+					</div>
+					<div class="fliter-wrap clearfix padding-top margin-top" style="display: none;">
+						<div class=" bg-blue-light padding margin-bottom">
+							<b class="margin-big-left">快速选择：</b>
+							<ul class="fliter-cate clearfix">
+								<li cate="自定义筛选" style="display: none;">
+									<input type="radio" style="display: none;" name="fliters" class="select-self" select="0,0,0,0,0,0,0,0,0,0" checked="checked"> 自定义筛选
+									<!--<span class="bg-red-light padding"><span title="不用系统模版，自己做会员筛选">筛选详情</span> （共有<b><span class="icon-spinner rotate"></span></b>个用户）</span>-->
+								</li>
+								<li cate="忠实客户">
+									<input type="radio" style="display: none;" name="fliters" select="0,0,0,3,4,0,0,0,0,0"> 忠实客户
+									<!--<span class="bg-red-light padding"><span title="半年内购买过2次及以上，没有给过中差评的买家">筛选详情</span>（共有<b><span class="icon-spinner rotate"></span></b>个用户）</span>-->
+								</li>
+								<li cate="活跃客户">
+									<input type="radio" style="display: none;" name="fliters" select="0,0,0,2,4,0,0,0,0,0"> 活跃客户
+									<!--<span class="bg-red-light padding"><span title="半年内购买过1次及以上，没有给过中差评的买家">筛选详情</span>（共有<b><span class="icon-spinner rotate"></span></b>个用户）</span>-->
+								</li>
+								<li cate="休眠客户">
+									<input type="radio" style="display: none;" name="fliters" select="0,0,0,0,5,0,0,0,0,0"> 休眠客户
+									<!--<span class="bg-red-light padding"><span title="近半年都没购买过，没有给过中差评的买家">筛选详情</span>（共有<b><span class="icon-spinner rotate"></span></b>个用户）</span>-->
+								</li>
+								<li cate="最近用过的筛选条件" style="display: none;">
+									<input type="radio" style="display: none;" name="fliters" select="" class="select-last"> 最近用过的筛选条件
+									<!--<span class="bg-red-light padding"><span title="1次及以上，半年内，过滤中差评买家，过滤黑名单．．．等条件">筛选详情</span>（共有<b><span class="icon-spinner rotate"></span></b>个用户）</span>-->
+								</li>
+							</ul>
+						</div>
+						<div class="fliter-main">
+							<div class="fliter senior coupon-senior">
+								<h5>会员等级：</h5>
+								<ul class="mult option">
+									<li class="selectall cur">全选</li>
+									<li val="grade:1">普通会员</li>
+									<li val="grade:2">高级会员</li>
+									<li val="grade:3">VIP会员</li>
+									<li val="grade:4">至尊VIP会员</li>
+								</ul>
+								<h5>平均客单价：</h5>
+								<ul class="option">
+									<li class="selectall cur">全选</li>
+									<li val="avgPrice:[0 TO 100]">100以下</li>
+									<li val="avgPrice:[100 TO *]">100及以上</li>
+									<li temp="avgPrice:[{f} TO {t}]" class="manual" data-manual=""><b>自定义</b> 
+										<span>
+					 						<input type="text" class="input input-auto" size="4">~
+					 						<input type="text" class="input input-auto" size="4">
+										 	<button class="ok price button button-small">确定</button>
+										 	<button class="cancel button button-small">取消</button>
+										</span> 
+									</li>
+								</ul>
+								<h5>消费金额：</h5>
+								<ul class="option">
+									<li class="selectall cur">全选</li>
+									<li val="tradeAmount:[1 TO 99]">1~99</li>
+									<li val="tradeAmount:[100 TO 199]">100~199</li>
+									<li val="tradeAmount:[200 TO *]">200及以上</li>
+									<li temp="tradeAmount:[{f} TO {t}]" class="manual" data-manual="">
+										<b>自定义</b>
+										<span>
+											<input type="text" class="input input-auto" size="4">~
+											<input type="text" class="input input-auto" size="4">
+											<button class="ok price button button-small">确定</button>
+											<button class="cancel button button-small">取消</button>
+										</span>
+									</li>
+								</ul>
+								<h5>购买次数：</h5>
+								<ul class="option">
+									<li class="selectall cur">全选</li>
+									<li class="" val="tradeCount:[0 TO 0]" style="display: none;">0次（拍下未付款）</li>
+									<li val="tradeCount:[1 TO *]" class="">1次及以上</li>
+									<li val="tradeCount:[2 TO *]" class="">2次及以上</li>
+									<li temp="tradeCount:[{f} TO {t}]" class="manual" data-manual="">
+										<b>自定义</b>
+										<span>
+											<input type="text" class="input input-auto" size="4">~
+											<input type="text" class="input input-auto" size="4">
+											<button class="ok int button button-small">确定</button>
+											<button class="cancel button button-small">取消</button>
+										</span>
+									</li>
+								</ul>
+								<h5>最近购买时间：</h5>
+								<ul class="option">
+									<li class="selectall cur">全选</li>
+									<li val="lastTradeTime:[1456934400000 TO 1459567161027]" class="getdate" day="30">1个月内</li>
+									<li val="lastTradeTime:[1451750400000 TO 1459567161027]" class="getdate" day="90">3个月内</li>
+									<li val="lastTradeTime:[* TO 1451750400000]" class="getdate" day="90">3个月以前</li>
+									<li val="lastTradeTime:[1443974400000 TO 1459567161027]" class="getdate" day="180">半年内</li>
+									<li val="lastTradeTime:[* TO 1443974400000]" class="getdate" day="180">半年前</li>
+									<li temp="lastTradeTime:[{f} TO {t}]" class="manual" data-manual=""><b>自定义</b>
+										<span>
+											<input class="Wdate input input-auto" id="stime" name="stime" type="text" value="">~
+											<input class="Wdate input input-auto" id="etime" name="etime" type="text" value="">
+											<button class="date ok button button-small">确定</button>
+											<button class="cancel button button-small">取消</button>
+										</span>
+									</li>
+								</ul>
+								<h5>地域：</h5>
+								<ul class="mult option">
+									<li class="selectall cur">全国</li>
+									<li class="cancity" val="province:320000 OR province:330000 OR province:310000">江浙沪</li>
+									<li class="cancity" val="province:650000 OR province:540000 OR province:530000">偏远地区（新疆，西藏，云南）</li>
+									<li temp="province:{#}" class="manual" data-manual=""><b class="citys">自定义</b>
+									</li>
+								</ul>
+								<h5>过滤中差评：</h5>
+								<ul class="cannull option ">
+									<li class="cur" val="neutralRateCount:0) AND (badRateCount:0">过滤中差评买家</li>
+								</ul>
+								<h5>过滤黑名单：</h5>
+								<ul class="cannull option">
+									<li class="cur" val="isAppBlackList:false">过滤黑名单</li>
+									<li class="manual"><a href="http://dingdong.ciaosir.com/ui/SettingUI/blacklist" target="_blank">添加黑名单</a></li>
+								</ul>
+
+								<h5 class="fliter-tip"><img src="images/iconfont-2121.png" style="vertical-align: middle;" tip="为避免会员在短时间内重复收到短信，根据您的选择，系统能自动过滤掉最近某段时间内已经发送过营销短信会员。" class="showtip">已发送过滤：</h5>
+								<ul class="option fliter-option">
+									<li class="cur">不过滤已发送</li>
+									<li val="lastMktSmsSendTs:[* TO 1459526400000]" class="getdate" day="0">今天</li>
+									<li val="lastMktSmsSendTs:[* TO 1459353600000]" class="getdate" day="2">最近3天</li>
+									<li val="lastMktSmsSendTs:[* TO 1459008000000]" class="getdate" day="6">最近7天</li>
+									<li val="lastMktSmsSendTs:[* TO 1458316800000]" class="getdate" day="14">最近15天</li>
+								</ul>
+								<h5 class="mktexcludeflag">订单标旗：</h5>
+								<ul class="flagfilter option mktexcludeflag">
+									<li class="filter-flag cur" text="不限">不限</li>
+									<li class="add-filter-flag">排除指定标旗</li>
+									<span class="form-group form-inline float-left margin-left" style="display: none; padding-bottom: 0; margin-top: 6px;">
+									<div class="field">
+										<label>
+											<input type="checkbox" val="city:*FLAG1*" index="1" class="addflag"> <img src="images/op_memo_1.png">
+										</label>
+										<label>
+											<input type="checkbox" val="city:*FLAG2*" index="2" class="addflag"> <img src="images/op_memo_2.png">
+										</label>
+										<label>
+											<input type="checkbox" val="city:*FLAG3*" index="3" class="addflag"> <img src="images/op_memo_3.png">
+										</label>
+										<label>
+											<input type="checkbox" val="city:*FLAG4*" index="4" class="addflag"><img src="images/op_memo_4.png">
+										</label>
+										<label>
+											<input type="checkbox" val="city:*FLAG5*" index="5" class="addflag"><img src="images/op_memo_5.png">
+										</label>
+									</div>
+								</span>
+								</ul>					  						
+							</div> 
+							<div class="post-free-modal" style="display: none;">
+								<div class="margin-bottom">
+									<b>快捷操作:</b>
+									<a href="javascript:;" target="_self" type="1" class="button bg-blue button-little quick">全选</a>
+									<a href="javascript:;" target="_self" type="0" class="button bg-blue button-little quick">全不选</a>
+									<a href="javascript:;" target="_self" class="button bg-blue button-little select-area" aid="310000,320000,330000">江浙沪</a>
+								</div>
+								<ul class="list-unstyle list-inline text-big post-free">
+									<li>
+										<label>
+											<input type="checkbox" class="select-area" aid="540000,650000"> <b>藏疆</b>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="540000"> 西藏</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="650000"> 新疆</label>
+									</li>
+								</ul>
+								<ul class="list-unstyle list-inline text-big post-free">
+									<li>
+										<label>
+											<input type="checkbox" class="select-area" aid="110000,120000,130000,370000,140000,150000"> <b>华北</b>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="110000"> 北京</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="120000"> 天津</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="130000"> 河北</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="370000"> 山东</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="140000"> 山西</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="150000"> 内蒙古</label>
+									</li>
+								</ul>
+								<ul class="list-unstyle list-inline text-big post-free">
+									<li>
+										<label>
+											<input type="checkbox" class="select-area" aid="210000,220000,230000"> <b>东北</b>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="210000"> 辽宁</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="220000"> 吉林</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="230000"> 黑龙江</label>
+									</li>
+								</ul>
+								<ul class="list-unstyle list-inline text-big post-free">
+									<li>
+										<label>
+											<input type="checkbox" class="select-area" aid="310000,320000,330000,340000,360000"> <b>华东</b>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="310000"> 上海</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="320000"> 江苏</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="330000"> 浙江</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="340000"> 安徽</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="360000"> 江西</label>
+									</li>
+								</ul>
+								<ul class="list-unstyle list-inline text-big post-free">
+									<li>
+										<label>
+											<input type="checkbox" class="select-area" aid="410000,420000,430000"> <b>华中</b>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="410000"> 河南</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="420000"> 湖北</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="430000"> 湖南</label>
+									</li>
+								</ul>
+								<ul class="list-unstyle list-inline text-big post-free">
+									<li>
+										<label>
+											<input type="checkbox" class="select-area" aid="440000,450000,350000,460000"> <b>华南</b>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="440000"> 广东</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="450000"> 广西</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="350000"> 福建</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="460000"> 海南</label>
+									</li>
+								</ul>
+								<ul class="list-unstyle list-inline text-big post-free">
+									<li>
+										<label>
+											<input type="checkbox" class="select-area" aid="500000,510000,520000,530000"> <b>西南</b>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="500000"> 重庆</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="510000"> 四川</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="520000"> 贵州</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="530000"> 云南</label>
+									</li>
+								</ul>
+								<ul class="list-unstyle list-inline text-big post-free">
+									<li>
+										<label>
+											<input type="checkbox" class="select-area" aid="610000,620000,630000,640000"> <b>西北</b>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="610000"> 陕西</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="620000"> 甘肃</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="630000"> 青海</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" aid="640000"> 宁夏</label>
+									</li>
+								</ul>
+							</div>		
+							<hr>
+							<div class="text-center padding">
+								<a href="javascript:;" target="_self" class="button bg-yellow fliter-comfirm button-big">确认</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="main-step clearfix  margin-top">
+					<h2>
+						<b>3</b>发送时间：
+						<a href="javascript:;" target="_self" data-step="4" data-intro="点击修改优惠券发送时间~" class="change-time modify">修改</a>
+					</h2>
+					<ul class="select-ul sendts" style="display: inline-block;vertical-align: middle;">
+						<li class="active ">立即发送</li>
+					</ul>
+					<input class="Wdate input input-auto" id="sendTime" type="text" value="" style="display:none;">
+					<a href="javascript:;" target="_self" class="button button-small bg-yellow comfirm-sendts" style="display:none;">确定</a>
+					<span class="bg-red-light padding margin-big-left">【发送时段】：<span class="text-red margin-right">9:00-21:00</span></span>
+				</div>
+				<hr>
+				<div class="main-step clearfix margin-top">
+					<h2><b>4</b>短信通知：</h2>
+					<ul class="select-ul coupon-msg" data-step="5" data-intro="可以选择短信通知或不通知，短信发送时间为优惠券发送成功之后~">
+						<li class="active">通知</li>
+						<li>不通知</li>
+					</ul>
+				</div>
+				<hr>
+				<div class="main-step clearfix margin-top coupon-msg-wrap">
+					<h2><b>5</b>编辑短信内容：</h2>
+					<div data-step="6" data-intro="编辑短信内容~">
+					<div class="msg-content-wrapper clearfix ">
+						<div class="float-left">
+							<!--<img src="/public/images/markettip.jpg" alt="" style="cursor: pointer;  margin-left: 528px;" class="markettip">-->
+							<div class="msg-wrap  margin-top clearfix" style="border: 0px;">
+								<div class="sign-wrap margin-small clearfix">
+									<span class="sign-title float-left height-big">平台签名：</span>
+									<ul class="select-ul float-left">
+										<li value="1" td="退订回T" class="">淘宝</li>
+										<li value="2" td="退订回T" class="">天猫</li>
+										<li value="6" td="退订回T" class="">聚划算</li>
+									</ul>
+								</div>
+								<div class="sign-set margin-small clearfix">
+									<span class="sign-title float-left height-big">自定义签名：</span>
+									<ul class="select-ul float-left signset">
+										<li value="0" td="退订回T" class="active">BONA户外鞋</li>
+									</ul>
+									<ul class="select-ul float-left">
+										<a href="javascript:;" target="_self" class="modifysign modify margin-top">修改签名</a>
+									</ul>
+								</div>
+								<div class="tags-wrap margin-small" style="">
+									<span class="sign-title float-left height-big">短信标签：</span>
+									<ul class="clearfix">
+										<li><a href="javascript:;" target="_self" class="text-small showtip" tip="【#收件人姓名#】在发送时将会被替换为买家姓名，默认4个字，发送时以实际长度为准，有可能会超字数，变成多条短信哦！">【#收件人姓名#】</a></li>
+										<li><a href="javascript:;" target="_self" class="text-small showtip" tip="【#买家旺旺#】在发送时将会被替换为买家旺旺，默认7个字，发送时以实际长度为准，有可能会超字数，变成多条短信哦！">【#买家旺旺#】</a></li>
+									</ul>
+								</div>
+								<!--<a href="javascript:;" target="_self" class="text-small showtip" tip="为了减少短信字数，将长的宝贝网址转换为简短的网址">（什么是短链接）</a>-->
+								<div class="msg-temps margin-small-bottom  float-right">
+									<a href="javascript:;" target="_self" class=" more-temp">
+										<img src="images/icon1.png" class="margin-small-right" alt="">短信模板
+									</a>
+									<a href="javascript:;" target="_self" class=" short-url">
+										<img src="images/icon2.png" class="margin-small-right" alt="">插入短链接
+									</a>	
+								</div>
+								<div class="msgwrap clearfix">
+									<span class="sign-title float-left height-big float-left margin-small-left">短信内容：</span>
+									<div class="sign-msg float-left">
+										<textarea class="msg mrkmsg" value="">亲，最近这件衣服很流行哦！今天限时5折，赶紧来看看吧。O(∩_∩)o </textarea>
+									    <span class="sign-after text-blue">退订回T</span>
+									</div>
+								</div>
+								<!--<span class="sign-after text-blue"></span>-->
+								 <!--<div class="msg-temps margin-small">
+									使用短信模版：<a href="javascript:;" target="_self" class="text-blue more-temp "  onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-短信模版', '点击']);">选择</a>
+									<a href="javascript:;" target="_self" class="button bg button-small margin-left short-url " onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-插入短链接', '点击']);">插入短链接</a>
+									<a href="javascript:;" target="_self" class="text-small showtip" tip="为了减少短信字数，将长的宝贝网址转换为简短的网址">（什么是短链接）</a>
+								</div>-->				
+							</div>
+						</div>
+						<div class="msg-preview float-left mrkmsg">
+							<p>亲，最近这件衣服很流行哦！今天限时5折，赶紧来看看吧。O(∩_∩)o </p>
+							<div class="sign">【BONA户外鞋】</div>
+							<span class="td">退订回T</span>
+						</div>
+					</div>
+					<div class="msg-count mrkmsg height-big">
+						&nbsp;&nbsp;&nbsp;已经输入<span class="remain text-dot">48</span>/<span class="msgCount">70</span>字<span class="msglengtgtip">（亲!超过<span class="text-red">0</span>字，不满<span class="text-red">70</span>个字，需要<span class="text-red">1</span>条短信~）</span>
+					</div>
+					</div>
+				</div>
+				<!--<hr />
+				<div class="main-step clearfix  margin-top">
+					<h2><b>6</b>发送测试短信：</h2>
+					<a href="javascript:;" class=" button" id="send-test">发送测试短信</a>
+					<!--<input type="text" class="self-mobile input input-auto" size="25" placeholder="输入手机号码">
+					<a href="javascript:;" class="self-test-top test-send  button margin-left">发送</a>
+					<span class="bg-red-light padding margin-big-left">测试短信的发送内容和当前短信模版的短信内容一致</span>-->
+				<!--</div>-->
+				<div class="text-center margin-big subplan-wrap">
+					<a href="javascript:;" target="_self" data-step="7" data-intro="确认提交就可以啦~" class="sub-coupon button button-large bg-yellow" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-优惠券群发-确认提交&#39;, &#39;点击&#39;]);">确认提交</a>
+				</div>
+			</div>
+			<div class="main-tab-content padding clearfix" style="display: none;">
+				<div id="couponrpt">
+					<form method="post" class="form-inline" onsubmit="return false;">
+						<div class="form-group">
+							<div class="field">
+								<div class="input-group"><span class="addon">优惠券名称</span>
+									<input type="text" class="input search-plan-name" size="30">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="field">
+								<div class="input-group"><span class="addon">发送时间</span>
+									<input type="text" id="mktrptstime" class="input mktrpt-stime Wdate" size="22">
+									<span class="addon">~</span>
+									<input type="text" id="mktrptetime" class="input mktrpt-etime Wdate" size="22">
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="form-group margin-top">
+							<div class="field">
+								<div class="input-group"><span class="addon">面额</span>
+									<select class="denominations input">
+										<option value="">全部</option>
+										<option value="3">3元</option>
+										<option value="5">5元</option>
+										<option value="10">10元</option>
+										<option value="20">20元</option>
+										<option value="50">50元</option>
+										<option value="100">100元</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-group margin-top">
+							<div class="field">
+								<div class="input-group">
+								<span class="addon">有效期：</span>
+									<input type="text" id="yx-stime" class="input yx-stime Wdate" size="22">
+									<span class="addon">~</span>
+									<input type="text" id="yx-etime" class="input yx-etime Wdate" size="22">
+								</div>
+							</div>
+						</div>
+						<div class="form-button margin-top">
+							<button class="button searchbtn" type="submit">搜索</button>
+						</div>
+					</form>
+					<table class="table  margin-top text-left border">
+					<thead height="40">
+						<tr class="bg">
+							<th width="120">优惠券名称</th>
+							<th width="150">发送时间</th>
+							<th width="60">面额</th>
+							<th width="80">使用条件</th>
+							<th width="180">有效期</th>
+							<th width="150">优惠券数</th>
+							<th width="150">短信数</th>
+							<th width="70">状态</th>
+							<th width="100">详情</th>
+						</tr>
+					</thead>
+					<tbody class="text-small"><tr><td colspan="9" style="text-align:center;">没有发送记录哦</td></tr></tbody>
+					</table>
+					<ul class=" pagination float-right margin-top " style="display: none;">
+						<li class="page-prev page-prev-disabled" title="上一页">
+							<a href="http://dingdong.ciaosir.com/ui/MarketingUI/coupon#">上一页</a>
+						</li>
+						<li class="page-next page-next-abled" title="2">
+							<a href="http://dingdong.ciaosir.com/ui/MarketingUI/coupon#">下一页</a> 
+						</li>
+						<li class="pageinfo">共0页,0条记录  
+							<input type="text" class="jumpTo" style="" value="1"> 页 
+							<input style="border: solid 1px #ddd;" class="gopage-submit hand button button-small" title="跳转页面" type="button" value="确定">
+						</li>
+					</ul>
+				</div>
+			</div>
+<!-- Run the plugin -->
+		</div>
+		<ul id="fixnav">
+		    <li class="qq" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航qq&#39;, &#39;点击&#39;]);">
+				<a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&amp;key=XzgwMDA2OTk0NV8zNTk2MDhfODAwMDY5OTQ1XzJf">
+			 </a>
+			</li>
+			<li class="ww" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航旺旺&#39;, &#39;点击&#39;]);">
+				<a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8">
+				</a>
+			</li>
+			<li class="phone">
+				<div>152-6813-5612</div>
+			</li>
+			<li class="feedback" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航反馈&#39;, &#39;点击&#39;]);">
+				<a href="http://yq.open.taobao.com/isv/feedbacks?appkey=12337775" target="_blank"></a>
+			</li>
+			<li class="totop">
+				<a href="http://dingdong.ciaosir.com/ui/MarketingUI/coupon#" target="_self"></a>
+			</li>
+		</ul>
+	</div>
+	<!-- <div id="foot" class="text-center height-large margin-large">Copyright © 杭州逐鹿网络技术有限公司 2014</div> -->
+	<input type="hidden" id="authcode" value="">
+	<input type="hidden" id="oldpos" value="[]">
+	<input type="text" style="display:none;" id="sendlimit" value="10">
+	<input type="hidden" class="limit" value="70,134,201,268">
+	<input class="sendNeed" type="hidden">
+	<!--新手引导-->
+    <div class="guide-wrap" style="position: absolute;left: 0;top: 0;width:100%; height: 100%; display: none;">
+		<div id="guide" style="text-align: center;">
+			<div class="section" id="page1">
+				<img data="/public/images/newdd/1.png">
+				<a href="javascript:;" target="_self" class="finish" style="position: absolute; top: 39%;left: 42%;width:300px;height:52px;opacity: 0;"></a>
+				<a href="javascript:;" target="_self" class="start" style="position: absolute; top: 46%;left: 42%;width:300px;height:58px;opacity: 0;"></a>
+			</div>
+			<div class="section" id="page2">
+				<a href="javascript:;" target="_self" class="page2">
+				<img data="/public/images/newdd/2.png"></a>
+			</div>
+			<div class="section" id="page3">
+				<a href="javascript:;" target="_self" class="page3">
+				<img data="/public/images/newdd/3.png"></a>
+			</div>
+			<div class="section" id="page4">
+				<a href="javascript:;" target="_self" class="page4">
+				<img data="/public/images/newdd/4.png"></a>
+			</div>
+			<div class="section" id="page5">
+				<a href="javascript:;" target="_self" class="finish">
+				<img data="/public/images/newdd/5.png"></a>
+			</div>
+		</div>
+	</div>
+	<div style="display:none" class="popdia">
+		<div class="">
+			<b class="icon-times closepop" style="position: absolute;top: 1px;right:-0px;cursor: pointer;font-size: 30px;width: 42px;height: 40px;opacity: 0;"></b>
+			<img src="images/diafree.jpg" alt="">
+			<a href="#" class="burtton bg-red" style="position: absolute;top:247px;right:142px;cursor: pointer;width: 220px;height: 50px;opacity: 0;">联系客服</a>
+		</div>
+	</div>
+	<!--vip通道-->
+	<div style="display:none" class="vipdia">
+		<div class="">
+			<b class="icon-times closevip" style="position: absolute;top: 1px;right:-0px;cursor: pointer;font-size: 30px;width: 42px;height: 40px;opacity: 0;"></b>
+			<img src="images/0108.png" alt="">
+			<span class="num" style="position: absolute;top:185px;color:#ffde00;font-size:36px;right:160px;cursor: pointer;width:20px;height:65px;">01</span>
+			<a href="#" target="_blank" class="burtton bg-red closevip" style="position: absolute;top:299px;right:265px;cursor: pointer;width: 220px;height:65px;opacity: 0;">联系客服</a>
+		</div>
+	</div>
+	<script src="js/index.js"></script>
+</body>
+</html>
