@@ -9,7 +9,7 @@ import com.normal.model.User;
  */
 public interface UserService {
 	
-	User getUserById(int uerId);
+	User getUserById(int id);
 	
 	void save(User user);
 

@@ -5,7 +5,6 @@ import java.util.List;
 import com.normal.model.SMSInfo;
 
 /**
- * ¶ÌÐÅ¼Û¸ñ
  * @author weiyong
  *
  */

@@ -14,7 +14,7 @@
      -->
      
     <select id="getUserById" parameterType="int" resultType="com.normal.model.User">
-        select * from users where shopId=#{id}
+        select * from userinfo where shopId=#{id}
     </select>
     
     <insert id="saveUser" parameterType="com.normal.model.User" useGeneratedKeys="true"> 

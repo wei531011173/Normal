@@ -8,23 +8,26 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import com.normal.model.User;
 import com.normal.service.UserService;
+import com.normal.util.UserUtil;
 
 /**
- * Ä¬ÈÏÀ¹½ØÆ÷
+ * ç™»é™†æ‹¦æˆªå™¨
  * @author weiyong
  *
  */
 public class LoginInterceptor extends HandlerInterceptorAdapter {
 	
-	/*@Autowired
-	UserService userService;*/
+	@Autowired
+	UserService userService;
 	
 	@Override
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
 		
-		
-		
+		if(UserUtil.getUser() == null) {
+			User user = userService.getUserById(1);
+			UserUtil.setUser(user);
+		}
 		return true;
 	}
 

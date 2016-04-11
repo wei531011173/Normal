@@ -8,14 +8,14 @@
 	<meta name="renderer" content="ie-comp">
 	<meta name="renderer" content="ie-stand">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<link rel="stylesheet" media="screen" href="style/pintuer.css">
-	<link rel="stylesheet" media="screen" href="style/main.css">
-	<link rel="stylesheet" media="screen" href="style/webuploader.css">
-	<link rel="stylesheet" media="screen" href="style/ui-dialog.css">
-	<link rel="stylesheet" media="screen" href="style/introjs.css">
-	<link rel="stylesheet" media="screen" href="style/msgbox.css"> 
-	<link rel="stylesheet" media="screen" href="style/index.css"> 	
-	<script src="js/jQuery.js"></script>	
+	<link rel="stylesheet" media="screen" href="../style/pintuer.css">
+	<link rel="stylesheet" media="screen" href="../style/main.css">
+	<link rel="stylesheet" media="screen" href="../style/webuploader.css">
+	<link rel="stylesheet" media="screen" href="../style/ui-dialog.css">
+	<link rel="stylesheet" media="screen" href="../style/introjs.css">
+	<link rel="stylesheet" media="screen" href="../style/msgbox.css"> 
+	<link rel="stylesheet" media="screen" href="../style/index.css"> 	
+	<script src="../js/jQuery.js"></script>	
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 </head>
@@ -23,7 +23,7 @@
 	<div id="header" class="bg bg-main layout">
 		<div class="container clearfix bg bg-main">
 			<a href="#" target="_self">
-				<img src="images/logo.png" class="float-left">
+				<img src="../images/logo.png" class="float-left">
 			</a>
 		</div>
 	</div>
@@ -38,13 +38,13 @@
 					<a href="javascript:;" target="_self"><b></b>会员营销<span class="icon-angle-down"></span></a>
 					<ul class="main-nav-sub" style="display: block;">
 						<li>
-							<a href="AffiliateMarketing/MemberShortMessage.html" target="_self">会员短信群发</a>
+							<a href="../AffiliateMarketing/MemberShortMessage.html" target="_self">会员短信群发</a>
 						</li>
 						<li>
-							<a href="AffiliateMarketing/ImportNumberGroup.html" target="_self">导入号码群发</a>
+							<a href="../AffiliateMarketing/ImportNumberGroup.html" target="_self">导入号码群发</a>
 						</li>
 						<li>
-							<a href="AffiliateMarketing/CouponGroup.html" target="_self">优惠券群发</a>
+							<a href="../AffiliateMarketing/CouponGroup.html" target="_self">优惠券群发</a>
 						</li>
 						<li>
 							<a href="#" target="_self">订单营销</a>
@@ -58,37 +58,37 @@
 					</a>
 					<ul class="main-nav-sub" style="display: block;">
 						<li>
-							<a href="MemberCare/OrderReminder.html" target="_self">订单催付</a>
+							<a href="../MemberCare/OrderReminder.html" target="_self">订单催付</a>
 						</li>
 						<li>
-							<a href="MemberCare/TwoTimesPay.html" target="_self">二次催付</a>
+							<a href="../MemberCare/TwoTimesPay.html" target="_self">二次催付</a>
 						</li>
 						<li>
-							<a href="MemberCare/ShippingAlert.html" target="_self">发货提醒</a>
+							<a href="../MemberCare/ShippingAlert.html" target="_self">发货提醒</a>
 						</li>
 						<li>
 							<a href="#" target="_self">到货提醒</a>
 						</li>
 						<li>
-							<a href="MemberCare/SignReminder.html" target="_self">签收提醒</a>
+							<a href="../MemberCare/SignReminder.html" target="_self">签收提醒</a>
 						</li>
 						<li>
-							<a href="MemberCare/MiddleAndPoorEvaluationOfCare.html" target="_self">中差评关怀</a>
+							<a href="../MemberCare/MiddleAndPoorEvaluationOfCare.html" target="_self">中差评关怀</a>
 						</li>
 						<li>
-							<a href="MemberCare/CareFor.html" target="_self">好评关怀</a>
+							<a href="../MemberCare/CareFor.html" target="_self">好评关怀</a>
 						</li>
 						<li>
-							<a href="MemberCare/PaymentCare.html" target="_self">付款关怀</a>
+							<a href="../MemberCare/PaymentCare.html" target="_self">付款关怀</a>
 						</li>
 						<li>
 							<a href="#" target="_self">迟发提醒</a>
 						</li>
 						<li>
-							<a href="MemberCare/BackCare.html" target="_self">回款关怀</a>
+							<a href="../MemberCare/BackCare.html" target="_self">回款关怀</a>
 						</li>
 						<li>
-							<a href="MemberCare/RefundCare.html" target="_self">退款关怀</a>
+							<a href="../MemberCare/RefundCare.html" target="_self">退款关怀</a>
 						</li>
 					</ul>
 				</li>
@@ -147,10 +147,10 @@
 						<div class="bd">
 							<ul class="list-unstyle">
 								<li>
-									<a href="#" target="_blank"><img src="images/TB2J33cmXXXXXXBXXXXXXXXXXXX-734131476.jpg"></a>
+									<a href="#" target="_blank"><img src="../images/TB2J33cmXXXXXXBXXXXXXXXXXXX-734131476.jpg"></a>
 								</li>
 								<li>
-									<a href="#" target="_blank"><img src="images/TB2TgUQkXXXXXcvXpXXXXXXXXXX-734131476.jpg"></a>
+									<a href="#" target="_blank"><img src="../images/TB2TgUQkXXXXXcvXpXXXXXXXXXX-734131476.jpg"></a>
 								</li>
 							</ul>
 						</div>
@@ -176,21 +176,21 @@
 						<ul class="quick-btns clearfix">
 							<li>
 								<a href="#" target="_self">
-									<img src="images/btn1.jpg">
+									<img src="../images/btn1.jpg">
 									<b>会员短信群发</b>
 									<button>我要发送</button>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_self">
-									<img src="images/btn2.jpg">
+									<img src="../images/btn2.jpg">
 									<b>导入号码群发</b>
 									<button>我要发送</button>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_self">
-									<img src="images/btn3.jpg">
+									<img src="../images/btn3.jpg">
 									<b>优惠券群发</b>
 									<button>我要发送</button>
 								</a>
@@ -215,7 +215,7 @@
 								</a>
 							</li>
 							<li>
-								<img src="images/arr1.jpg">
+								<img src="../images/arr1.jpg">
 							</li>
 							<li>
 								<a href="#" target="_self" cat="20">
@@ -227,7 +227,7 @@
 								</a>
 							</li>
 							<li>
-								<img src="images/arr1.jpg">
+								<img src="../images/arr1.jpg">
 							</li>
 							<li>
 								<a href="#" target="_self" class="margin-big-bottom" cat="12">
@@ -239,7 +239,7 @@
 								</a>
 							</li>
 							<li>
-								<img src="images/arr2.jpg">
+								<img src="../images/arr2.jpg">
 							</li>
 							<li>
 								<a href="#" target="_self" class="margin-big-bottom" cat="2">
@@ -258,7 +258,7 @@
 								</a>
 							</li>
 							<li>
-								<img src="images/arr1.jpg">
+								<img src="../images/arr1.jpg">
 							</li>
 							<li>
 								<a href="#" target="_self" cat="4">
@@ -270,7 +270,7 @@
 								</a>
 							</li>
 							<li>
-								<img src="images/arr1.jpg">
+								<img src="../images/arr1.jpg">
 							</li>
 							<li>
 								<a href="#" target="_self" cat="3">
@@ -282,7 +282,7 @@
 								</a>
 							</li>
 							<li>
-								<img src="images/arr2.jpg">
+								<img src="../images/arr2.jpg">
 							</li>
 							<li>
 								<a href="#" target="_self" class="margin-big-bottom" cat="7">
@@ -301,7 +301,7 @@
 								</a>
 							</li>
 							<li>
-								<img src="images/arr2.jpg">
+								<img src="../images/arr2.jpg">
 							</li>
 							<li>
 								<a href="#" target="_self" class="margin-big-bottom" cat="10">
@@ -330,21 +330,21 @@
 						<ul class="quick-btns clearfix">
 							<li>
 								<a href="#" target="_self">
-									<img src="images/btn4.jpg">
+									<img src="../images/btn4.jpg">
 									<b>营销效果</b>
 									<button>点击查看</button>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_self">
-									<img src="images/btn5.jpg">
+									<img src="../images/btn5.jpg">
 									<b>优惠券效果</b>
 									<button>点击查看</button>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_self">
-									<img src="images/btn6.jpg">
+									<img src="../images/btn6.jpg">
 									<b>催付效果</b>
 									<button>点击查看</button>
 								</a>
@@ -360,21 +360,21 @@
 						<ul class="quick-btns clearfix">
 							<li>
 								<a href="#" target="_self">
-									<img src="images/btn7.jpg">
+									<img src="../images/btn7.jpg">
 									<b>营销记录</b>
 									<button>点击查看</button>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_self">
-									<img src="images/btn8.jpg">
+									<img src="../images/btn8.jpg">
 									<b>关怀记录</b>
 									<button>点击查看</button>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_self">
-									<img src="images/btn9.jpg">
+									<img src="../images/btn9.jpg">
 									<b>系统短信记录</b>
 									<button>点击查看</button>
 								</a>
@@ -403,7 +403,7 @@
 		</ul>
 	</div>
 	<div id="foot" class="text-center height-large margin-large">Copyright © 杭州逐鹿网络技术有限公司 2014</div>
-	<script src="js/jquery.SuperSlide2.js"></script>
-	<script src="js/index.js"></script>
+	<script src="../js/jquery.SuperSlide2.js"></script>
+	<script src="../js/index.js"></script>
 </body>
 </html>

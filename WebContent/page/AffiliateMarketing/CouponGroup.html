@@ -8,19 +8,19 @@
 	<meta name="renderer" content="ie-comp">
 	<meta name="renderer" content="ie-stand">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<link rel="stylesheet" media="screen" href="style/pintuer.css">
-	<link rel="stylesheet" media="screen" href="style/main.css">
-	<link rel="stylesheet" media="screen" href="style/webuploader.css">
-	<link rel="stylesheet" media="screen" href="style/ui-dialog.css">
-	<link rel="stylesheet" media="screen" href="style/introjs.css">
-	<link rel="stylesheet" media="screen" href="style/msgbox.css"> 	
-	<script src="js/jQuery.js"></script>		
+	<link rel="stylesheet" media="screen" href="../style/pintuer.css">
+	<link rel="stylesheet" media="screen" href="../style/main.css">
+	<link rel="stylesheet" media="screen" href="../style/webuploader.css">
+	<link rel="stylesheet" media="screen" href="../style/ui-dialog.css">
+	<link rel="stylesheet" media="screen" href="../style/introjs.css">
+	<link rel="stylesheet" media="screen" href="../style/msgbox.css"> 	
+	<script src="../js/jQuery.js"></script>		
 </head>
 <body>
 	<div id="header" class="bg bg-main layout">
 		<div class="container clearfix bg bg-main">
 			<a href="#" target="_self">
-				<img src="images/logo.png" class="float-left">
+				<img src="../images/logo.png" class="float-left">
 			</a>
 			<div class="float-right user-info">
 				欢迎 <span id="shop-name">用户名</span> 剩余短信：
@@ -33,65 +33,68 @@
 	</div>
 	<div id="wrapper" class="clearfix container">
 		<marquee behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()">
-			<img src="images/iconfont-laba.png"> 
+			<img src="../images/iconfont-laba.png"> 
 			亲爱的叮咚用户，由于淘宝数据接口规则发生变化，一星期内没登陆叮咚，已开启的关怀提醒功能会自动失效。所以，为保障您关怀短信正常发送，今后烦请7天内至少登陆一次叮咚哦。给您带来的不便，敬请谅解。
 		</marquee>
 		<div id="main-nav">
 			<ul class="main-ul">
 				<li class="nav-index">
-					<a href="#" target="_self"><b></b>首页</a></li>
+					<a href="../index/index.html" target="_self"><b></b>首页</a></li>
 				<li class="nav-market">
 					<a href="javascript:;" target="_self" class="active"><b></b>会员营销<span class="icon-angle-down"></span></a>
 					<ul class="main-nav-sub" style="display: block;">
 						<li>
-							<a href="#" target="_self">会员短信群发</a>
+							<a href="../AffiliateMarketing/MemberShortMessage.html" target="_self">会员短信群发</a>
 						</li>
 						<li>
-							<a href="#" target="_self">导入号码群发</a>
+							<a href="../AffiliateMarketing/ImportNumberGroup.html" target="_self">导入号码群发</a>
 						</li>
 						<li class="active">
-							<a href="#" target="_self">优惠券群发</a>
+							<a href="../AffiliateMarketing/CouponGroup.html" target="_self">优惠券群发</a>
 						</li>
 						<li style="display: none;">
 							<a href="#" target="_self">订单营销</a>
 						</li>
 					</ul>
-				</li>					
+				</li>									
 				<li class="nav-care">
-					<a href="javascript:;" target="_self"><b></b>会员关怀<span class="icon-angle-down"></span></a>
-					<ul class="main-nav-sub">
+					<a href="javascript:;" target="_self">
+						<b></b>会员关怀
+						<span class="icon-angle-down"></span>
+					</a>
+					<ul class="main-nav-sub" style="display: block;">
 						<li>
-							<a href="#" target="_self">订单催付</a>
+							<a href="../MemberCare/OrderReminder.html" target="_self">订单催付</a>
 						</li>
 						<li>
-							<a href="#" target="_self">二次催付</a>
+							<a href="../MemberCare/TwoTimesPay.html" target="_self">二次催付</a>
 						</li>
 						<li>
-							<a href="#" target="_self">发货提醒</a>
+							<a href="../MemberCare/ShippingAlert.html" target="_self">发货提醒</a>
 						</li>
 						<li>
 							<a href="#" target="_self">到货提醒</a>
 						</li>
 						<li>
-							<a href="#" target="_self">签收提醒</a>
+							<a href="../MemberCare/SignReminder.html" target="_self">签收提醒</a>
 						</li>
 						<li>
-							<a href="#" target="_self">中差评关怀</a>
+							<a href="../MemberCare/MiddleAndPoorEvaluationOfCare.html" target="_self">中差评关怀</a>
 						</li>
 						<li>
-							<a href="#" target="_self">好评关怀</a>
+							<a href="../MemberCare/CareFor.html" target="_self">好评关怀</a>
 						</li>
 						<li>
-							<a href="#" target="_self">付款关怀</a>
+							<a href="../MemberCare/PaymentCare.html" target="_self">付款关怀</a>
 						</li>
 						<li>
 							<a href="#" target="_self">迟发提醒</a>
 						</li>
 						<li>
-							<a href="#" target="_self">回款关怀</a>
+							<a href="../MemberCare/BackCare.html" target="_self">回款关怀</a>
 						</li>
 						<li>
-							<a href="#" target="_self">退款关怀</a>
+							<a href="../MemberCare/RefundCare.html" target="_self">退款关怀</a>
 						</li>
 					</ul>
 				</li>
@@ -232,7 +235,7 @@
 							<li><b>地域：</b><span class="blue">全国</span> </li>
 							<li><b>过滤中差评：</b><span class="blue">过滤中差评买家</span> </li>
 							<li><b>过滤黑名单：</b><span class="blue">过滤黑名单</span> </li>
-							<li><b><img src="images/iconfont-2121.png" style="vertical-align: middle;" class="showtip">已发送过滤：</b><span class="blue">不过滤已发送</span> </li>
+							<li><b><img src="../images/iconfont-2121.png" style="vertical-align: middle;" class="showtip">已发送过滤：</b><span class="blue">不过滤已发送</span> </li>
 							<li class="mktexcludeflag"><b>订单标旗：</b><span class="blue">不限</span> </li>							
 						</ul>
 						<dl class="fliter-items clearfix" style="display: none;">
@@ -249,8 +252,8 @@
 					<hr>
 					<div class="height-big"> 
 						<span class="hasSeleCont text-big margin-big-right">根据条件筛选出
-							<img src="images/loadings.gif" width="16" height="16" alt="">人其中
-							<img src="images/loadings.gif" width="16" height="16" alt="">人有手机号。
+							<img src="../images/loadings.gif" width="16" height="16" alt="">人其中
+							<img src="../images/loadings.gif" width="16" height="16" alt="">人有手机号。
 						</span>
 						数据不全?
 						<a href="javascript:;" target="_self" class="toImport text-main">请点击此处导入历史订单。</a>
@@ -372,7 +375,7 @@
 									<li class="manual"><a href="http://dingdong.ciaosir.com/ui/SettingUI/blacklist" target="_blank">添加黑名单</a></li>
 								</ul>
 
-								<h5 class="fliter-tip"><img src="images/iconfont-2121.png" style="vertical-align: middle;" tip="为避免会员在短时间内重复收到短信，根据您的选择，系统能自动过滤掉最近某段时间内已经发送过营销短信会员。" class="showtip">已发送过滤：</h5>
+								<h5 class="fliter-tip"><img src="../images/iconfont-2121.png" style="vertical-align: middle;" tip="为避免会员在短时间内重复收到短信，根据您的选择，系统能自动过滤掉最近某段时间内已经发送过营销短信会员。" class="showtip">已发送过滤：</h5>
 								<ul class="option fliter-option">
 									<li class="cur">不过滤已发送</li>
 									<li val="lastMktSmsSendTs:[* TO 1459526400000]" class="getdate" day="0">今天</li>
@@ -387,19 +390,19 @@
 									<span class="form-group form-inline float-left margin-left" style="display: none; padding-bottom: 0; margin-top: 6px;">
 									<div class="field">
 										<label>
-											<input type="checkbox" val="city:*FLAG1*" index="1" class="addflag"> <img src="images/op_memo_1.png">
+											<input type="checkbox" val="city:*FLAG1*" index="1" class="addflag"> <img src="../images/op_memo_1.png">
 										</label>
 										<label>
-											<input type="checkbox" val="city:*FLAG2*" index="2" class="addflag"> <img src="images/op_memo_2.png">
+											<input type="checkbox" val="city:*FLAG2*" index="2" class="addflag"> <img src="../images/op_memo_2.png">
 										</label>
 										<label>
-											<input type="checkbox" val="city:*FLAG3*" index="3" class="addflag"> <img src="images/op_memo_3.png">
+											<input type="checkbox" val="city:*FLAG3*" index="3" class="addflag"> <img src="../images/op_memo_3.png">
 										</label>
 										<label>
-											<input type="checkbox" val="city:*FLAG4*" index="4" class="addflag"><img src="images/op_memo_4.png">
+											<input type="checkbox" val="city:*FLAG4*" index="4" class="addflag"><img src="../images/op_memo_4.png">
 										</label>
 										<label>
-											<input type="checkbox" val="city:*FLAG5*" index="5" class="addflag"><img src="images/op_memo_5.png">
+											<input type="checkbox" val="city:*FLAG5*" index="5" class="addflag"><img src="../images/op_memo_5.png">
 										</label>
 									</div>
 								</span>
@@ -656,10 +659,10 @@
 								<!--<a href="javascript:;" target="_self" class="text-small showtip" tip="为了减少短信字数，将长的宝贝网址转换为简短的网址">（什么是短链接）</a>-->
 								<div class="msg-temps margin-small-bottom  float-right">
 									<a href="javascript:;" target="_self" class=" more-temp">
-										<img src="images/icon1.png" class="margin-small-right" alt="">短信模板
+										<img src="../images/icon1.png" class="margin-small-right" alt="">短信模板
 									</a>
 									<a href="javascript:;" target="_self" class=" short-url">
-										<img src="images/icon2.png" class="margin-small-right" alt="">插入短链接
+										<img src="../images/icon2.png" class="margin-small-right" alt="">插入短链接
 									</a>	
 								</div>
 								<div class="msgwrap clearfix">
@@ -801,7 +804,7 @@
 			</li>
 		</ul>
 	</div>
-	<!-- <div id="foot" class="text-center height-large margin-large">Copyright © 杭州逐鹿网络技术有限公司 2014</div> -->
+	<div id="foot" class="text-center height-large margin-large">Copyright © 杭州逐鹿网络技术有限公司 2014</div>
 	<input type="hidden" id="authcode" value="">
 	<input type="hidden" id="oldpos" value="[]">
 	<input type="text" style="display:none;" id="sendlimit" value="10">
@@ -836,7 +839,7 @@
 	<div style="display:none" class="popdia">
 		<div class="">
 			<b class="icon-times closepop" style="position: absolute;top: 1px;right:-0px;cursor: pointer;font-size: 30px;width: 42px;height: 40px;opacity: 0;"></b>
-			<img src="images/diafree.jpg" alt="">
+			<img src="../images/diafree.jpg" alt="">
 			<a href="#" class="burtton bg-red" style="position: absolute;top:247px;right:142px;cursor: pointer;width: 220px;height: 50px;opacity: 0;">联系客服</a>
 		</div>
 	</div>
@@ -844,11 +847,11 @@
 	<div style="display:none" class="vipdia">
 		<div class="">
 			<b class="icon-times closevip" style="position: absolute;top: 1px;right:-0px;cursor: pointer;font-size: 30px;width: 42px;height: 40px;opacity: 0;"></b>
-			<img src="images/0108.png" alt="">
+			<img src="../images/0108.png" alt="">
 			<span class="num" style="position: absolute;top:185px;color:#ffde00;font-size:36px;right:160px;cursor: pointer;width:20px;height:65px;">01</span>
 			<a href="#" target="_blank" class="burtton bg-red closevip" style="position: absolute;top:299px;right:265px;cursor: pointer;width: 220px;height:65px;opacity: 0;">联系客服</a>
 		</div>
 	</div>
-	<script src="js/index.js"></script>
+	<script src="../js/index.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import com.normal.model.UserBuySMSInfo;
 
 /**
- * 用户购买记录DAO
+ * 鐢ㄦ埛璐拱鐭俊
  * @author wy
  *
  */
@@ -15,20 +15,20 @@ import com.normal.model.UserBuySMSInfo;
 public interface UserBuySMSInfoDAO {
 	
 	/**
-	 * 根据用户id获取用户的充值信息
+	 * 鏍规嵁鐢ㄦ埛鑾峰彇淇℃伅
 	 * @param userId
 	 * @return
 	 */
 	List<UserBuySMSInfo> getSMSInfoByUserId(int userId);
 	
 	/**
-	 * 保存用户的充值信息
+	 * 淇濆瓨
 	 * @param info
 	 */
 	void saveUserBuySMSInfo(UserBuySMSInfo info);
 	
 	/**
-	 * 更新用户的充值信息
+	 * 鏇存柊
 	 * @param id
 	 */
 	void updateUserBuySMSInfoById(UserBuySMSInfo info);

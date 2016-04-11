@@ -1,7 +1,7 @@
 package com.normal.model;
 
 /**
- * 用户购买记录实体类
+ * 鐢ㄦ埛璐拱鐭俊璁板綍
  * 
  * @author wy
  *
@@ -9,11 +9,11 @@ package com.normal.model;
 public class UserBuySMSInfo {
 
 	private int id;
-	/** 用户ID */
+	/** 鐢ㄦ埛id */
 	private int userId;
-	/** 档位信息 */
+	/** 鐭俊id */
 	private int smsId;
-	/** 是否购买成功 */
+	/** 鏄惁鎴愬姛 */
 	private int isSuccess;
 
 	public int getId() {

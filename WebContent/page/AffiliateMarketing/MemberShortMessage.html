@@ -8,19 +8,19 @@
 	<meta name="renderer" content="ie-comp">
 	<meta name="renderer" content="ie-stand">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<link rel="stylesheet" media="screen" href="style/pintuer.css">
-	<link rel="stylesheet" media="screen" href="style/main.css">
-	<link rel="stylesheet" media="screen" href="style/webuploader.css">
-	<link rel="stylesheet" media="screen" href="style/ui-dialog.css">
-	<link rel="stylesheet" media="screen" href="style/introjs.css">
-	<link rel="stylesheet" media="screen" href="style/msgbox.css">
-	<script src="js/jQuery.js"></script>	 		
+	<link rel="stylesheet" media="screen" href="../style/pintuer.css">
+	<link rel="stylesheet" media="screen" href="../style/main.css">
+	<link rel="stylesheet" media="screen" href="../style/webuploader.css">
+	<link rel="stylesheet" media="screen" href="../style/ui-dialog.css">
+	<link rel="stylesheet" media="screen" href="../style/introjs.css">
+	<link rel="stylesheet" media="screen" href="../style/msgbox.css">
+	<script src="../js/jQuery.js"></script>	 		
 </head>
 <body>
 	<div id="header" class="bg bg-main layout">
 		<div class="container clearfix bg bg-main">
 			<a href="#" target="_self">
-				<img src="images/logo.png" class="float-left">
+				<img src="../images/logo.png" class="float-left">
 			</a>
 			<div class="float-right user-info">
 				欢迎 <span id="shop-name">用户名</span> 剩余短信：<b class="msg-remain">10</b>条 <a href="#" target="_self" class="button bg-yellow button-small">充值</a> | 软件还剩：<b class="deadL">14</b>天
@@ -30,39 +30,24 @@
 	</div>
 	<div id="wrapper" class="clearfix container">
 		<marquee behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()">
-			<img src="images/iconfont-laba.png"> 
+			<img src="../images/iconfont-laba.png"> 
 			亲爱的叮咚用户，由于淘宝数据接口规则发生变化，一星期内没登陆叮咚，已开启的关怀提醒功能会自动失效。所以，为保障您关怀短信正常发送，今后烦请7天内至少登陆一次叮咚哦。给您带来的不便，敬请谅解。
 		</marquee>
 		<div id="main-nav">
 			<ul class="main-ul">
 				<li class="nav-index">
-					<a href="#" target="_self"><b></b>首页</a>
-				</li>
+					<a href="../index/index.html" target="_self"><b></b>首页</a></li>
 				<li class="nav-market">
 					<a href="javascript:;" target="_self" class="active"><b></b>会员营销<span class="icon-angle-down"></span></a>
-					<ul class="main-nav-sub">
-						<li>
-							<a href="#" target="_self">会员短信群发</a>
-						</li>
-						<li>
-							<a href="#" target="_self">导入号码群发</a>
-						</li>
-						<li>
-							<a href="#" target="_self">优惠券群发</a>
-						</li>
-						<li>
-							<a href="#" target="_self">订单营销</a>
-						</li>
-					</ul>
 					<ul class="main-nav-sub" style="display: block;">
 						<li class="active">
-							<a href="#" target="_self">会员短信群发</a>
+							<a href="../AffiliateMarketing/MemberShortMessage.html" target="_self">会员短信群发</a>
 						</li>
 						<li>
-							<a href="#" target="_self">导入号码群发</a>
+							<a href="../AffiliateMarketing/ImportNumberGroup.html" target="_self">导入号码群发</a>
 						</li>
 						<li>
-							<a href="#" target="_self">优惠券群发</a>
+							<a href="../AffiliateMarketing/CouponGroup.html" target="_self">优惠券群发</a>
 						</li>
 						<li style="display: none;">
 							<a href="#" target="_self">订单营销</a>
@@ -70,40 +55,43 @@
 					</ul>
 				</li>
 				<li class="nav-care">
-					<a href="javascript:;" target="_self"><b></b>会员关怀<span class="icon-angle-down"></span></a>
-					<ul class="main-nav-sub">
+					<a href="javascript:;" target="_self">
+						<b></b>会员关怀
+						<span class="icon-angle-down"></span>
+					</a>
+					<ul class="main-nav-sub" style="display: block;">
 						<li>
-							<a href="#" target="_self">订单催付</a>
+							<a href="../MemberCare/OrderReminder.html" target="_self">订单催付</a>
 						</li>
 						<li>
-							<a href="#" target="_self">二次催付</a>
+							<a href="../MemberCare/TwoTimesPay.html" target="_self">二次催付</a>
 						</li>
 						<li>
-							<a href="#" target="_self">发货提醒</a>
+							<a href="../MemberCare/ShippingAlert.html" target="_self">发货提醒</a>
 						</li>
 						<li>
 							<a href="#" target="_self">到货提醒</a>
 						</li>
 						<li>
-							<a href="#" target="_self">签收提醒</a>
+							<a href="../MemberCare/SignReminder.html" target="_self">签收提醒</a>
 						</li>
 						<li>
-							<a href="#" target="_self">中差评关怀</a>
+							<a href="../MemberCare/MiddleAndPoorEvaluationOfCare.html" target="_self">中差评关怀</a>
 						</li>
 						<li>
-							<a href="#" target="_self">好评关怀</a>
+							<a href="../MemberCare/CareFor.html" target="_self">好评关怀</a>
 						</li>
 						<li>
-							<a href="#" target="_self">付款关怀</a>
+							<a href="../MemberCare/PaymentCare.html" target="_self">付款关怀</a>
 						</li>
 						<li>
 							<a href="#" target="_self">迟发提醒</a>
 						</li>
 						<li>
-							<a href="#" target="_self">回款关怀</a>
+							<a href="../MemberCare/BackCare.html" target="_self">回款关怀</a>
 						</li>
 						<li>
-							<a href="#" target="_self">退款关怀</a>
+							<a href="../MemberCare/RefundCare.html" target="_self">退款关怀</a>
 						</li>
 					</ul>
 				</li>
@@ -201,7 +189,7 @@
 								<span class="blue">过滤黑名单</span>  
 							</li>
 							<li>
-								<b><img src="images/iconfont-2121.png" tip="为避免会员在短时间内重复收到短信，根据您的选择，系统能自动过滤掉最近某段时间内已经发送过营销短信会员。" class="showtip">已发送过滤：</b>
+								<b><img src="../images/iconfont-2121.png" style="vertical-align: middle;" class="showtip">已发送过滤：</b>
 								<span class="blue">不过滤已发送</span>  
 							</li>
 							<li>
@@ -214,9 +202,9 @@
 							<dt>指定宝贝筛选：</dt>
 							<dd class="clearfix">
 								<ul>
-									<!--<li><img src="/public/images/xufei61.gif" class="float-left">
-												<b></b>
-											</li>-->
+								<!--<li><img src="/public/images/xufei61.gif" class="float-left">
+										<b></b>
+									</li>-->
 								</ul>
 							</dd>
 						</dl>
@@ -338,7 +326,7 @@
 									<li class="cur">过滤黑名单</li>
 									<li class="manual"><a href="#" target="_blank">添加黑名单</a></li>
 								</ul>
-								<h5 class="fliter-tip"><img src="images/iconfont-2121.png" style="vertical-align: middle;" tip="为避免会员在短时间内重复收到短信，根据您的选择，系统能自动过滤掉最近某段时间内已经发送过营销短信会员。" class="showtip">已发送过滤：</h5>
+								<h5 class="fliter-tip"><img src="../images/iconfont-2121.png" style="vertical-align: middle;" tip="为避免会员在短时间内重复收到短信，根据您的选择，系统能自动过滤掉最近某段时间内已经发送过营销短信会员。" class="showtip">已发送过滤：</h5>
 								<ul class="option fliter-option">
 									<li class="cur">不过滤已发送</li>
 									<li class="getdate" day="0">今天</li>
@@ -353,19 +341,19 @@
 									<span class="form-group form-inline float-left margin-left">
 										<div class="field">
 											<label>
-												<input type="checkbox" val="city:*FLAG1*" index="1" class="addflag"> <img src="images/op_memo_1.png">
+												<input type="checkbox" val="city:*FLAG1*" index="1" class="addflag"> <img src="../images/op_memo_1.png">
 											</label>
 											<label>
-												<input type="checkbox" val="city:*FLAG2*" index="2" class="addflag"> <img src="images/op_memo_2.png">
+												<input type="checkbox" val="city:*FLAG2*" index="2" class="addflag"> <img src="../images/op_memo_2.png">
 											</label>
 											<label>
-												<input type="checkbox" val="city:*FLAG3*" index="3" class="addflag"> <img src="images/op_memo_3.png">
+												<input type="checkbox" val="city:*FLAG3*" index="3" class="addflag"> <img src="../images/op_memo_3.png">
 											</label>
 											<label>
-												<input type="checkbox" val="city:*FLAG4*" index="4" class="addflag"><img src="images/op_memo_4.png">
+												<input type="checkbox" val="city:*FLAG4*" index="4" class="addflag"><img src="../images/op_memo_4.png">
 											</label>
 											<label>
-												<input type="checkbox" val="city:*FLAG5*" index="5" class="addflag"><img src="images/op_memo_5.png">
+												<input type="checkbox" val="city:*FLAG5*" index="5" class="addflag"><img src="../images/op_memo_5.png">
 											</label>
 										</div>
 									</span>
@@ -576,8 +564,8 @@
 									</ul>
 								</div>
 								<div class="msg-temps margin-small-bottom  float-right">
-									<a href="javascript:;" target="_self" class=" more-temp" data-step="3" data-intro="小编收集好了很多好的模板，给您提供帮助哦~"><img src="images/icon1.png" class="margin-small-right" alt="">短信模板</a>
-									<a href="javascript:;" target="_self" data-step="4" data-intro="亲如果要插入链接，记得转换成短链接哦，可以大幅度减少字数~" class=" short-url"><img src="images/icon2.png" class="margin-small-right" alt="">插入短链接</a>	
+									<a href="javascript:;" target="_self" class=" more-temp" data-step="3" data-intro="小编收集好了很多好的模板，给您提供帮助哦~"><img src="../images/icon1.png" class="margin-small-right" alt="">短信模板</a>
+									<a href="javascript:;" target="_self" data-step="4" data-intro="亲如果要插入链接，记得转换成短链接哦，可以大幅度减少字数~" class=" short-url"><img src="../images/icon2.png" class="margin-small-right" alt="">插入短链接</a>	
 								</div>
 								<div class="msgwrap clearfix">
 									<span class="sign-title float-left height-big float-left margin-small-left">短信内容：</span>
@@ -633,7 +621,7 @@
 					<a href="javascript:;" target="_self" data-step="8" data-intro="确认提交就可以啦~" class="subplan button button-large bg-yellow">确认提交</a>
 				</div>
 			</div>
-			<div class="main-tab-content padding">
+			<div class="main-tab-content padding" style="display: none;">
 				<div id="mktrpt" class="clearfix">
 					<form method="post" class="form-inline" onsubmit="return false;">
 						<div class="form-group">
@@ -714,6 +702,6 @@
 		</ul>
 	</div>
 	<div id="foot" class="text-center height-large margin-large">Copyright © 杭州逐鹿网络技术有限公司 2014</div>
-	<script src="js/index.js"></script>
+	<script src="../js/index.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import com.normal.model.User;
 
 /**
- * userDAO接口
+ * userDAO
  * @author weiyong
  *
  */
@@ -13,14 +13,14 @@ import com.normal.model.User;
 public interface UserDAO {
 	
 	/**
-	 * 根据id获取用户
+	 * 鑾峰彇鐢ㄦ埛
 	 * @param uerId
 	 * @return
 	 */
 	User getUserById(int uerId);
 	
 	/**
-	 * 保存用户
+	 * 淇濆瓨鐢ㄦ埛
 	 * @param user
 	 */
 	void saveUser(User user);

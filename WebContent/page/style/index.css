@@ -3,6 +3,7 @@
 	height: 250px;
 	float: left;
 	margin-right: 10px;
+	border-radius: 12px;
 	position: relative; overflow: hidden;
 }
 #user-info {
@@ -13,7 +14,7 @@
 	height: 20px;
 	overflow: hidden;
 	position: absolute;
-	right: 5px;
+	right: 10px;
 	bottom: 5px;
 	z-index: 1;
 }
@@ -29,13 +30,13 @@
 	height: 20px;
 	line-height: 20px;
 	text-align: center;
-	background: #FFF;
+	background: #EBF0F3;
 	cursor: pointer;
 	display: inline-block;
 }
 #slide .hd ul li.on {
 	background: #F00;
-	color: #FFF;
+	color: #EBF0F3;
 }
 #slide .bd li {
 	zoom: 1;
@@ -48,6 +49,8 @@
 }
 #user-info {
 	height: 250px;
+	background: #EBF0F3;
+	border-radius: 12px;
 }
 #user-info ul li {
 	line-height: 40px;

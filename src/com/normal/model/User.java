@@ -1,7 +1,7 @@
 package com.normal.model;
 
 /**
- * ÓÃ»§ÊµÌåÀà
+ * ç”¨æˆ·ä¿¡æ¯
  * 
  * @author weiyong
  *
@@ -9,15 +9,15 @@ package com.normal.model;
 public class User {
 
 	private int id;
-	/** ÉÌµê±êÊ¶ */
+	/** å•†åº—id */
 	private int shopId;
-	/** ¶ÌĞÅÊıÁ¿ */
+	/** çŸ­ä¿¡æ•°é‡ */
 	private int smsCount;
-	/** ¶©¹ºÊ±¼ä */
+	/** è´­ä¹°æ—¥æœŸ */
 	private int buyTime;
-	/** ¶©¹ºÌìÊı */
+	/** è´­ä¹°æ—¶é—´ */
 	private int dayCount;
-	/** ÓÃ»§Ãû*/
+	/** ç”¨æˆ·å*/
 	private String userName;
 
 	public int getId() {

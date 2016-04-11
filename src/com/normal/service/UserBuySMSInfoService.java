@@ -5,7 +5,7 @@ import java.util.List;
 import com.normal.model.UserBuySMSInfo;
 
 /**
- * ÓÃ»§¹ºÂò¼ÇÂ¼
+ * ç”¨æˆ·è´­ä¹°ä¿¡æ¯
  * 
  * @author weiyong
  *

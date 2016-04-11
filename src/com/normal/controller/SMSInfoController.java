@@ -15,7 +15,7 @@ import com.normal.service.SMSInfoService;
 import com.normal.service.UserBuySMSInfoService;
 
 /**
- * ¶ÌĞÅĞÅÏ¢¿ØÖÆÆ÷
+ * å……å€¼é¢åº¦
  * @author wy
  *
  */
@@ -29,12 +29,10 @@ public class SMSInfoController {
 	UserBuySMSInfoService userBuySMSInfoService;
 	
 	/*** 
-     * Ê×Ò³ ·µ»ØÖÁ/page/home.jspÒ³Ãæ 
      * @return 
      */  
     @RequestMapping("/getSMSInfo")  
     public ModelAndView getSMSInfo(){  
-        //´´½¨Ä£ĞÍ¸úÊÓÍ¼£¬ÓÃÓÚäÖÈ¾Ò³Ãæ¡£²¢ÇÒÖ¸¶¨Òª·µ»ØµÄÒ³ÃæÎªhomeÒ³Ãæ  
     	List<SMSInfo> smsInfos = smsInfoService.getSMSInfoList();
         ModelAndView mav = new ModelAndView("smsinfo");
         mav.addObject("smsInfos", smsInfos);
@@ -54,7 +52,6 @@ public class SMSInfoController {
     	
     	userBuySMSInfoService.saveUserBuySMSInfo(userBuySMSInfo);
     	
-        //´´½¨Ä£ĞÍ¸úÊÓÍ¼£¬ÓÃÓÚäÖÈ¾Ò³Ãæ¡£²¢ÇÒÖ¸¶¨Òª·µ»ØµÄÒ³ÃæÎªhomeÒ³Ãæ  
         ModelAndView mav = new ModelAndView("smsinfo");
         return mav;  
     }

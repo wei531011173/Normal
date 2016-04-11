@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://dingdong.ciaosir.com/ui/CareUI/signpay -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>签收提醒</title>
+	<meta http-equiv="Cache-Control" content="max-age=86400">
+	<meta name="renderer" content="webkit">
+	<meta name="renderer" content="ie-comp">
+	<meta name="renderer" content="ie-stand">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" media="screen" href="../style/pintuer.css">
+	<link rel="stylesheet" media="screen" href="../style/main.css">
+	<link rel="stylesheet" media="screen" href="../style/webuploader.css">
+	<link rel="stylesheet" media="screen" href="../style/ui-dialog.css">
+	<link rel="stylesheet" media="screen" href="../style/introjs.css">
+	<link rel="stylesheet" media="screen" href="../style/msgbox.css">
+	<link rel="stylesheet" type="text/css" href="style/WdatePicker.css">
+	<script src="../js/jQuery.js"></script>	
+	<script src="../js/js/hm.js"></script>
+	<script type="text/javascript">
+		var TD = TD || {};
+		TD.authcode = TD.authcode || '';
+		var USER = USER || {};
+		USER.uid = USER.uid || '540592922';
+		USER.ver = USER.ver || '10';
+		USER.nick = USER.nick || '用户名';
+		USER.olduser = USER.olduser || '';
+	</script>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "//hm.baidu.com/hm.js?effa3aa69d58f92e6887af5412a3af7b";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();		
+	</script>
+</head>
+	<body>
+		<div id="header" class="bg bg-main layout">
+			<div class="container clearfix bg bg-main">
+				<a href="http://dingdong.ciaosir.com/ui/IndexUI/index" target="_self">
+					<img src="../images/logo.png" class="float-left">
+				</a>
+			    <!--//修改 by mlc-->
+				<!--<a href="/ui/AccountUI/switchVersion" target="_self" style="float: right;margin-top: 25px;display: none;" class="changever" onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-切换到老版本', '点击']);">
+					<span class="text-white">切换到老版本>></span>
+				</a>-->
+
+								<div class="float-right user-info">
+					欢迎 <span id="shop-name">夜空很美1122</span> 剩余短信：<b class="msg-remain">10</b>条 <a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg" target="_self" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部充值&#39;, &#39;点击&#39;]);">充值</a> | 软件还剩：<b class="deadL">14</b>天
+					<a href="https://fuwu.taobao.com/ser/detail.html?spm=a1z13.1113643.0.0.IfpuXB&amp;service_code=ts-13720&amp;tracelog=rjxf" target="_blank" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部续费&#39;, &#39;点击&#39;]);">续费</a>
+				</div>
+				
+			</div>
+		</div>
+		<div id="wrapper" class="clearfix container">
+			<marquee behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()"><img src="../images/iconfont-laba.png"> 亲爱的叮咚用户，由于淘宝数据接口规则发生变化，一星期内没登陆叮咚，已开启的关怀提醒功能会自动失效。所以，为保障您关怀短信正常发送，今后烦请7天内至少登陆一次叮咚哦。给您带来的不便，敬请谅解。</marquee>
+			<div id="main-nav">
+				<ul>
+					<li class="nav-index">
+						<a href="../index/index.html" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航首页&#39;, &#39;点击&#39;]);">
+							<b></b>首页
+						</a>
+					</li>
+					<li class="nav-market">
+						<a href="javascript:;" target="_self"><b></b>会员营销<span class="icon-angle-down"></span></a>
+						<ul class="main-nav-sub" style="display: block;">
+							<li>
+								<a href="../AffiliateMarketing/MemberShortMessage.html" target="_self">会员短信群发</a>
+							</li>
+							<li>
+								<a href="../AffiliateMarketing/ImportNumberGroup.html" target="_self">导入号码群发</a>
+							</li>
+							<li>
+								<a href="../AffiliateMarketing/CouponGroup.html" target="_self">优惠券群发</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-care">
+						<a href="javascript:;" target="_self">
+							<b></b>会员关怀
+							<span class="icon-angle-down"></span>
+						</a>
+						<ul class="main-nav-sub" style="display: block;">
+							<li>
+								<a href="OrderReminder.html" target="_self">订单催付</a>
+							</li>
+							<li>
+								<a href="TwoTimesPay.html" target="_self">二次催付</a>
+							</li>
+							<li>
+								<a href="ShippingAlert.html" target="_self">发货提醒</a>
+							</li>
+							<li>
+								<a href="#" target="_self">到货提醒</a>
+							</li>
+							<li class="active">
+								<a href="SignReminder.html" target="_self">签收提醒</a>
+							</li>
+							<li>
+								<a href="MiddleAndPoorEvaluationOfCare.html" target="_self">中差评关怀</a>
+							</li>
+							<li>
+								<a href="CareFor.html" target="_self">好评关怀</a>
+							</li>
+							<li>
+								<a href="PaymentCare.html" target="_self">付款关怀</a>
+							</li>
+							<li>
+								<a href="#" target="_self">迟发提醒</a>
+							</li>
+							<li>
+								<a href="BackCare.html" target="_self">回款关怀</a>
+							</li>
+							<li>
+								<a href="RefundCare.html" target="_self">退款关怀</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-history"><a href="javascript:;" target="_self"><b></b>短信记录/效果<span class="icon-angle-down"></span></a>
+						<ul class="main-nav-sub">
+							<li>
+								<a href="http://dingdong.ciaosir.com/ui/MarketingUI/marketinglog" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航营销效果&#39;, &#39;点击&#39;]);">营销效果</a>
+							</li>
+							<li>
+								<a href="http://dingdong.ciaosir.com/ui/MarketingUI/couponlog" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航优惠券效果&#39;, &#39;点击&#39;]);">优惠券效果</a>
+							</li>
+							<li>
+								<a href="http://dingdong.ciaosir.com/ui/RptUI/orderrpt" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航催付效果&#39;, &#39;点击&#39;]);">催付效果</a>
+							</li>
+							<li>
+								<a href="http://dingdong.ciaosir.com/ui/RptUI/sendhis" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航发送记录&#39;, &#39;点击&#39;]);">发送记录</a>
+							</li>
+							<li>
+								<a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航充值记录&#39;, &#39;点击&#39;]);">充值记录</a>
+							</li>
+							<li>
+								<a href="http://dingdong.ciaosir.com/ui/RptUI/smscount" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航短信账单&#39;, &#39;点击&#39;]);">短信账单</a>
+							</li>
+						</ul>
+
+					</li>
+					<li class="nav-sysset"><a href="javascript:;" target="_self"><b></b>系统设置<span class="icon-angle-down"></span></a>
+						<ul class="main-nav-sub">
+							<li>
+								<a href="http://dingdong.ciaosir.com/ui/SettingUI/importtrades" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航导入历史订单&#39;, &#39;点击&#39;]);">导入历史订单</a>
+							</li>
+							<li>
+								<a href="http://dingdong.ciaosir.com/ui/SettingUI/sendset" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航短信发送设置&#39;, &#39;点击&#39;]);">短信发送设置</a>
+							</li>
+							<li>
+								<a href="http://dingdong.ciaosir.com/ui/SettingUI/blacklist" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航黑名单设置&#39;, &#39;点击&#39;]);">黑名单设置</a>
+							</li>
+							<li>
+								<a href="http://dingdong.ciaosir.com/ui/SettingUI/subaccount" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航子账号设置&#39;, &#39;点击&#39;]);">子账号设置</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-help"><a href="http://dingdong.ciaosir.com/ui/SettingUI/help" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航帮助中心&#39;, &#39;点击&#39;]);"><b></b>帮助中心</a></li>
+				</ul>
+			</div>
+			<div id="main-content" class="clearfix">
+				  <ul class="cares-map clearfix">
+	<li>
+		<a href="http://dingdong.ciaosir.com/ui/CareUI/commonpay" target="_self" cat="1" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-订单催付&#39;, &#39;点击&#39;]);">
+			<b>订单催付</b>
+			<button>未开启</button>
+			<div class="care-mask">
+				<span>点击设置</span>
+			</div>
+		</a>
+	</li>
+	<li>
+		<img src="../images/arr1.jpg">
+	</li>
+	<li>
+		<a href="http://dingdong.ciaosir.com/ui/CareUI/twicepay" target="_self" cat="20" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-二次催付&#39;, &#39;点击&#39;]);">
+			<b>二次催付</b>
+			<button>未开启</button>
+			<div class="care-mask">
+				<span>点击设置</span>
+			</div>
+		</a>
+	</li>
+	<li>
+		<img src="../images/arr1.jpg">
+	</li>
+	<li>
+		<a href="http://dingdong.ciaosir.com/ui/CareUI/payment" target="_self" class="margin-big-bottom" cat="12" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-付款关怀&#39;, &#39;点击&#39;]);">
+			<b>付款关怀</b>
+			<button>未开启</button>
+			<div class="care-mask">
+				<span>点击设置</span>
+			</div>
+		</a>
+	</li>
+	<li>
+		<img src="../images/arr2.jpg">
+	</li>
+	<li>
+		<a href="http://dingdong.ciaosir.com/ui/CareUI/sendpay" target="_self" class="margin-big-bottom" cat="2" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-发货提醒&#39;, &#39;点击&#39;]);">
+			<b>发货提醒</b>
+			<button>未开启</button>
+			<div class="care-mask">
+				<span>点击设置</span>
+			</div>
+		</a>
+		<a href="http://dingdong.ciaosir.com/ui/CareUI/delaypay" target="_self" cat="6" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-迟发提醒&#39;, &#39;点击&#39;]);">
+			<b>迟发提醒</b>
+			<button>未开启</button>
+			<div class="care-mask">
+				<span>点击设置</span>
+			</div>
+		</a>
+	</li>
+	<li>
+		<img src="../images/arr1.jpg">
+	</li>
+	<li>
+		<a href="http://dingdong.ciaosir.com/ui/CareUI/arrivalpay" target="_self" cat="4" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-到货提醒&#39;, &#39;点击&#39;]);">
+			<b>到货提醒</b>
+			<button>未开启</button>
+			<div class="care-mask">
+				<span>点击设置</span>
+			</div>
+		</a>
+	</li>
+	<li>
+		<img src="../images/arr1.jpg">
+	</li>
+	<li>
+		<a href="http://dingdong.ciaosir.com/ui/CareUI/signpay" target="_self" cat="3" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-签收提醒&#39;, &#39;点击&#39;]);" class="current">
+			<b>签收提醒</b>
+			<button>未开启</button>
+			<div class="care-mask">
+				<span>点击设置</span>
+			</div>
+		</a>
+	</li>
+	<li>
+		<img src="../images/arr2.jpg">
+	</li>
+	<li>
+		<a href="http://dingdong.ciaosir.com/ui/CareUI/backpay" target="_self" class="margin-big-bottom" cat="7" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-回款关怀&#39;, &#39;点击&#39;]);">
+			<b>回款关怀</b>
+			<button>未开启</button>
+			<div class="care-mask">
+				<span>点击设置</span>
+			</div>
+		</a>
+		<a href="http://dingdong.ciaosir.com/ui/CareUI/refundpay" target="_self" cat="8" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-退款关怀&#39;, &#39;点击&#39;]);">
+			<b>退款关怀</b>
+			<button>未开启</button>
+			<div class="care-mask">
+				<span>点击设置</span>
+			</div>
+		</a>
+	</li>
+	<li>
+		<img src="../images/arr2.jpg">
+	</li>
+	<li>
+		<a href="http://dingdong.ciaosir.com/ui/CareUI/badpay" target="_self" class="margin-big-bottom" cat="10" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-中差评关怀&#39;, &#39;点击&#39;]);">
+			<b>中差评关怀</b>
+			<button>未开启</button>
+			<div class="care-mask">
+				<span>点击设置</span>
+			</div>
+		</a>
+		<a href="http://dingdong.ciaosir.com/ui/CareUI/goodpay" target="_self" cat="11" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-好评关怀&#39;, &#39;点击&#39;]);">
+			<b>好评关怀</b>
+			<button>未开启</button>
+			<div class="care-mask">
+				<span>点击设置</span>
+			</div>
+		</a>
+	</li>
+</ul><ul class="main-tab-nav">
+	<li class="active">签收提醒</li>
+	<li>发送记录</li>
+</ul>
+<div class="main-tab-content" cat="3">
+	<div class="main-step clearfix margin-top">
+		<h2>功能描述：&nbsp;当买家签收时，将自动发送短信给买家，提醒买家确认收货。</h2>
+		<h2>功能状态：<a href="javascript:;" target="_self" class="switch-btn switch-off" msg="3"></a></h2></div>
+	<hr class="split">
+	<div class="main-step clearfix">
+		<h2>发送条件：</h2>
+		<ul class="care-condition">
+			<li>买家签收宝贝<b class="sign-day text-red">第0天</b> （订单金额大于<b class="send-price text-red">0</b>元才提醒 ），自动发送短信通知买家<span class="text-red">（若买家已确认收货，则不发送）</span>。<a href="javascript:;" target="_self" class="change-condition modify">修改</a>
+			</li>
+			<li class="remind-event">
+				<div class="bg bg-yellow-light padding">买家签收宝贝
+					<select name="day" class="day input input-auto">
+						<option value="1" dm="0" selected="selected">当天</option>
+						<option value="2" dm="86400000">第2天</option>
+						<option value="3" dm="172800000">第3天</option>
+						<option value="4" dm="259200000">第4天</option>
+						<option value="5" dm="345600000">第5天</option>
+						<option value="6" dm="432000000">第6天</option>
+						<option value="7" dm="518400000">第7天</option>
+					</select>
+					（订单金额大于
+
+					<input type="text" class="min-price text input input-auto" size="3" value="0"> 元才提醒），自动发送短信通知买家（若买家已确认收货，则不发送）
+					<a href="javascript:;" target="_self" caretype="3" class="change-remind-event button bg-yellow">确定</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<hr class="split">
+	<div class="main-step clearfix margin-small-top ">
+		<h2>高级设置：<a href="javascript:;" target="_self" class="change-careset modify">修改</a></h2> <ul class="setcare-result"><li class=""><b>订单标旗：</b><span class="blue">所有标旗都不排除</span> </li></ul>
+<div class="setcare-wrap" style="display: none;">
+	<dl class="dl-inline clearfix careflag">
+		<dt>订单标旗：</dt>
+		<dd type="flag" text="所有标旗都不排除">
+			<ul class="select-ul flag-wrap float-left">
+				<li class="active ">所有标旗都不排除</li>
+				<li>排除指定标旗</li>
+			</ul>
+			<div class="form-group form-inline float-left margin-left" style="display: none; padding-bottom: 0; line-height: 28px;">
+				<div class="field">
+					<label>
+						<input type="checkbox" value="1"> <img src="../images/op_memo_1.png">
+					</label>
+					<label>
+						<input type="checkbox" value="2"> <img src="../images/op_memo_2.png">
+					</label>
+					<label>
+						<input type="checkbox" value="3"> <img src="../images/op_memo_3.png">
+					</label>
+					<label>
+						<input type="checkbox" value="4"> <img src="../images/op_memo_4.png">
+					</label>
+					<label>
+						<input type="checkbox" value="5"> <img src="../images/op_memo_5.png">
+					</label>
+
+				</div>
+			</div>
+		</dd>
+	</dl>
+
+	
+	<a href="javascript:;" target="_self" class="button bg-yellow setcare-comfirm margin-big-left">确认</a>
+</div>	</div>
+	<hr class="split">
+	<div class="main-step clearfix margin-small-top margin-small-bottom">
+		<h2>编辑短信内容：<a href="javascript:;" target="_self" class="change-msg modify">修改</a></h2> <div class="curSetting">
+	<strong></strong><span>亲，您在【#店铺名称#】购买的宝贝是否已签收，使用前请仔细查看使用说明，有问题欢迎咨询【【#店铺名称#】】</span>
+</div>
+<div class="tab margin-top care-tab float-left">
+	<div class="tab-head">
+		<ul class="tab-nav">
+			<li class="active margin-left"><a href="javascript:;" target="_self">系统模版</a></li>
+			<li><a href="javascript:;" target="_self">自定义模版</a></li>
+		</ul>
+	</div>
+	<div class="tab-body">
+		<div class="tab-panel active">
+			<div class="template-wrapper"><div class="clearfix item  cur"><div class="float-left padding-large-right margin-large-right height"><input type="radio" name="tmp3" tid="3" checked="checked"><span class="tmp-msg">亲，您在【#店铺名称#】购买的宝贝是否已签收，使用前请仔细查看使用说明，有问题欢迎咨询【【#店铺名称#】】</span></div><a href="javascript:;" class="set-care-temp button button-small bg-blue">使用</a></div><div class="clearfix item "><div class="float-left padding-large-right margin-large-right height"><input type="radio" name="tmp3" tid="3002"><span class="tmp-msg">亲，感谢您在【#店铺名称#】购买宝贝，签收后请仔细检查宝贝，如满意请点亮5颗星星，有问题随时联系【【#店铺名称#】】</span></div><a href="javascript:;" class="set-care-temp button button-small bg-blue">使用</a></div><div class="clearfix item "><div class="float-left padding-large-right margin-large-right height"><input type="radio" name="tmp3" tid="3003"><span class="tmp-msg">亲，您于【#签收日期#】签收的宝贝是否满意？如满意请给我们点亮5颗星星，有问题联系【【#店铺名称#】】</span></div><a href="javascript:;" class="set-care-temp button button-small bg-blue">使用</a></div></div>
+			<!--<div class="clearfix clear margin-top"><a href="javascript:;" target="_self" class="save-setting button bg-yellow">保存模版</a></div>-->
+		</div>
+		<div class="tab-panel  msg-content-wrapper">
+			<div class="msg-wrap clearfix">
+				<div class="tags-wrap margin-small">
+	点击可插入标签：
+	<ul class="clearfix" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-插入标签&#39;, &#39;点击&#39;]);">
+	<li>【#店铺名称#】</li><li>【#签收日期#】</li><li>【#收件人姓名#】</li><li>【#快递单号#】</li></ul>
+</div>
+<hr>
+<textarea class="msg" value="">亲，您在【#店铺名称#】购买的宝贝是否已签收，使用前请仔细查看使用说明，有问题欢迎咨询【【#店铺名称#】】</textarea>
+<span class="sign-after text-blue"></span>
+<!--<span class="sign-after text-blue"></span>-->
+ <!--<div class="msg-temps margin-small">
+	使用短信模版：<a href="javascript:;" target="_self" class="text-blue more-temp "  onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-短信模版', '点击']);">选择</a>
+	<a href="javascript:;" target="_self" class="button bg button-small margin-left short-url " onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-插入短链接', '点击']);">插入短链接</a>
+	<a href="javascript:;" target="_self" class="text-small showtip" tip="为了减少短信字数，将长的宝贝网址转换为简短的网址">（什么是短链接）</a>
+</div>-->				<div class="msg-count height-big padding-little-left" style="background: #F7F7F7;">
+					已经输入<span class="remain text-yellow">2</span>/<span class="msgCount">70</span>字
+					<span class="msglengtgtip">（亲!超过<span class="text-red">0</span>字，不满<span class="text-red">70</span>个字，需要<span class="text-red">1</span>条短信~）</span>
+				</div>
+			</div>
+
+			<div class="clearfix clear margin-top"><a href="javascript:;" target="_self" class="toexamine button bg-yellow">提交审核</a></div>
+		</div>
+	</div>
+	<div class="short-code-setting margin-top">
+
+		<div class="margin-small-top">
+			使用中的店铺签名：
+			<input type="text" class="current-sign input input-auto input-small" disabled="disabled"> 修改签名请到
+			<a href="http://dingdong.ciaosir.com/ui/SettingUI/sendset" target="_blank" class="text-blue">短信发送设置</a>操作
+		</div>
+	</div>
+</div>
+
+<div class="msg-preview float-left margin-large-top" style="display: none;">
+	<p>亲，您在【#店铺名称#】购买的宝贝是否已签收，使用前请仔细查看使用说明，有问题欢迎咨询【【#店铺名称#】】</p>
+	<div class="sign">【夜空很美1122】</div>
+	<span class="td"></span>
+</div>	</div>
+	<hr class="split">
+	<div class="main-step clearfix margin-top">
+		<h2>发送测试短信：</h2>
+		<input type="text" class="self-mobile input input-auto" size="25" placeholder="输入手机号码">
+		<a href="javascript:;" class="self-test-top test-send  button margin-left">发送</a>
+		<span class="bg-red-light padding margin-big-left">测试短信的发送内容和当前短信模版的短信内容一致</span>
+	</div>
+</div>
+<div class="main-tab-content padding" style="display: none;">
+	<div id="carerpt" class="clearfix">
+	<form method="post" class="form-inline" onsubmit="return false;">
+		<div class="form-group">
+			<div class="field">
+				<div class="input-group"><span class="addon">旺旺</span>
+					<input type="text" class="input nick input-auto" size="10">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="field">
+				<div class="input-group"><span class="addon">号码</span>
+					<input type="text" class="input mobile input-auto" size="12">
+				</div>
+			</div>
+		</div>
+		<div class="form-group" style="display: none;">
+			<div class="field">
+				<div class="input-group"><span class="addon">类型</span>
+					<select class="care-type input input-auto">
+						<option value="">全部</option>
+						<option value="9">营销短信</option>
+						<option value="1">订单催付</option>
+						<option value="20">二次催付</option>
+						<option value="2">发货提醒</option>
+						<option value="4">到货提醒</option>
+						<option value="3">签收提醒</option>
+						<option value="10">中差评关怀</option>
+						<option value="11">好评关怀</option>
+						<option value="12">付款关怀</option>
+						<option value="6">迟发提醒</option>
+						<option value="7">回款关怀</option>
+						<option value="8">退款关怀</option>
+						<option value="18">优惠券</option>
+						<option value="97">余额不足提醒</option>
+						<option value="98">日报</option>
+						<option value="99">卖家发送测试短信</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="field">
+				<div class="input-group"><span class="addon">发送时间</span>
+					<input type="text" id="carerptstime" class="input carerpt-stime Wdate" size="19" onfocus="WdatePicker({dateFmt:&#39;yyyy/MM/dd &#39;,maxDate:&#39;#F{$dp.$D(\&#39;carerptetime\&#39;)}&#39;,skin:&#39;twoer&#39;,onpicked:function(){carerptetime.focus();}})"><span class="addon">~</span>
+					<input type="text" id="carerptetime" class="input carerpt-etime Wdate" size="19" onfocus="WdatePicker({dateFmt:&#39;yyyy/MM/dd&#39;,minDate:&#39;#F{$dp.$D(\&#39;carerptstime\&#39;)}&#39;,skin:&#39;twoer&#39;})">
+				</div>
+			</div>
+		</div>
+
+		<div class="form-button">
+			<button class="button searchbtn" type="submit">搜索</button>
+		</div>
+	</form>
+	<table class="table  margin-top text-left border">
+		<thead>
+			<tr class="bg">
+				<th width="90">接收者旺旺</th>
+				<th width="150">发送时间</th>
+				<th width="85">手机号码</th>
+				<th width="70">短信类型</th>
+				<th width="300">短信内容</th>
+				<th width="90">发送结果</th>
+			</tr>
+		</thead>
+		<tbody><tr><td colspan="6">没有此类型发送记录</td></tr></tbody>
+	</table>
+	<ul class=" pagination float-right margin-top " style="display: none;"><li class="page-prev page-prev-disabled" title="上一页"><a href="http://dingdong.ciaosir.com/ui/CareUI/signpay#">上一页</a></li><li class="page-next page-next-abled" title="2"><a href="http://dingdong.ciaosir.com/ui/CareUI/signpay#">下一页</a> </li><li class="pageinfo">共0页,0条记录  <input type="text" class="jumpTo" style="" value="1"> 页 <input style="border: solid 1px #ddd;" class="gopage-submit hand button button-small" title="跳转页面" type="button" value="确定"></li></ul>
+</div>
+<script src="../js/js/aling.min.js" type="text/javascript" charset="utf-8"></script></div>
+<ul class="tags fl" style="display: none;">
+	<li>【#店铺名称#】</li>
+	<li>【#签收日期#】</li>
+	<li>【#收件人姓名#】</li>
+	<li>【#快递单号#】</li>
+</ul>
+			</div>
+
+			<ul id="fixnav">
+			    <li class="qq" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航qq&#39;, &#39;点击&#39;]);">
+					<a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&amp;key=XzgwMDA2OTk0NV8zNTk2MDhfODAwMDY5OTQ1XzJf">
+				 </a>
+				</li>
+				<li class="ww" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航旺旺&#39;, &#39;点击&#39;]);">
+					<a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8">
+					</a>
+				</li>
+				<li class="phone">
+					<div>152-6813-5612</div>
+				</li>
+				<li class="feedback" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航反馈&#39;, &#39;点击&#39;]);">
+					<a href="http://yq.open.taobao.com/isv/feedbacks?appkey=12337775" target="_blank"></a>
+				</li>
+				<li class="totop">
+					<a href="http://dingdong.ciaosir.com/ui/CareUI/signpay#" target="_self"></a>
+				</li>
+			</ul>
+		</div>
+		<div id="foot" class="text-center height-large margin-large">Copyright © 杭州逐鹿网络技术有限公司 2014</div>
+
+		<input type="hidden" id="authcode" value="">
+		<input type="hidden" id="oldpos" value="[]">
+		<input type="text" style="display:none;" id="sendlimit" value="10">
+		<input type="hidden" class="limit" value="70,134,201,268">
+		<input class="sendNeed" type="hidden">
+		<script type="text/javascript" src="./签收提醒_files/securesdk_v2.js" id="J_secure_sdk_v2" data-appkey="12337775"></script>
+	
+	
+	       <!--新手引导-->
+	             <div class="guide-wrap" style="position: absolute;left: 0;top: 0;width:100%; height: 100%; display: none;">
+						<div id="guide" style="text-align: center;">
+							<div class="section" id="page1">
+								<img data="/public/images/newdd/1.png">
+								<a href="javascript:;" target="_self" class="finish" style="position: absolute; top: 39%;left: 42%;width:300px;height:52px;opacity: 0;"></a>
+								<a href="javascript:;" target="_self" class="start" style="position: absolute; top: 46%;left: 42%;width:300px;height:58px;opacity: 0;"></a>
+							</div>
+							<div class="section" id="page2">
+								<a href="javascript:;" target="_self" class="page2">
+								<img data="/public/images/newdd/2.png"></a>
+							</div>
+							<div class="section" id="page3">
+								<a href="javascript:;" target="_self" class="page3">
+								<img data="/public/images/newdd/3.png"></a>
+							</div>
+							<div class="section" id="page4">
+								<a href="javascript:;" target="_self" class="page4">
+								<img data="/public/images/newdd/4.png"></a>
+							</div>
+							<div class="section" id="page5">
+								<a href="javascript:;" target="_self" class="finish">
+								<img data="/public/images/newdd/5.png"></a>
+							</div>
+						</div>
+					</div>
+	<div style="display:none" class="popdia">
+		<div class="">
+			<b class="icon-times closepop" style="position: absolute;top: 1px;right:-0px;cursor: pointer;font-size: 30px;width: 42px;height: 40px;opacity: 0;"></b>
+			<img src="../images/diafree.jpg" alt="">
+			<a href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8" class="burtton bg-red" style="position: absolute;top:247px;right:142px;cursor: pointer;width: 220px;height: 50px;opacity: 0;">联系客服</a>
+		</div>
+	</div>
+	<!--vip通道-->
+	<div style="display:none" class="vipdia">
+		<div class="">
+			<b class="icon-times closevip" style="position: absolute;top: 1px;right:-0px;cursor: pointer;font-size: 30px;width: 42px;height: 40px;opacity: 0;"></b>
+			<img src="../images/0108.png" alt="">
+			<span class="num" style="position: absolute;top:185px;color:#ffde00;font-size:36px;right:160px;cursor: pointer;width:20px;height:65px;">01</span>
+			<a href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8" target="_blank" class="burtton bg-red closevip" style="position: absolute;top:299px;right:265px;cursor: pointer;width: 220px;height:65px;opacity: 0;">联系客服</a>
+		</div>
+	</div>
+
+
+<script src="../js/js/sea.js"></script>
+<script src="../js/js/seajs-preload.js"></script>
+<script src="../js/js/msgbox.js"></script>
+<script type="text/javascript">
+	if (!document.addEventListener) {
+		// IE6~IE8
+		document.write('<script src="/public/javascripts/dingdong/newdd/lib/respond.js"><\/script>');
+		document.write('<script src="/public/javascripts/dingdong/newdd/lib/json2.js"><\/script>');
+	}
+	seajs.config({
+		base: '/public/javascripts/dingdong/newdd/javascripts',
+		alias: {
+			"jquery": "http://7xpfoq.com1.z0.glb.clouddn.com/jquery-1.9.1.min.js",
+			"dialog": "/public/javascripts/dingdong/newdd/lib/dialog.js",
+			"pagination": "/public/javascripts/dingdong/newdd/lib/pagination.js",
+			"template": "/public/javascripts/dingdong/newdd/lib/template.js",
+			"until": "/public/javascripts/dingdong/newdd/lib/global.js",
+			"iealert": "/public/javascripts/dingdong/newdd/lib/iealert.js",
+			"webuploader": "/public/javascripts/dingdong/newdd/lib/webuploader.min.js",
+			"fullpage": "/public/javascripts/dingdong/newdd/lib/jquery.fullPage.min.js",
+			"intro":"/public/javascripts/dingdong/newdd/lib/intro.js"
+		},
+		map: [
+			[/^(.*\.(?:css|js))(.*)$/i, '$1?1109']
+		],
+		preload: ['jquery', "base"]
+	});
+	seajs.use(["jquery", "dialog", "iealert", "fullpage","intro"], function($, dialog, iealert,fullpage,intro) {
+		var userAgent = navigator.userAgent.toLowerCase();
+		// Figure out what browser is being used
+		$.browser = {
+			version: (userAgent.match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/) || [])[1],
+			safari: /webkit/.test(userAgent),
+			opera: /opera/.test(userAgent),
+			msie: /msie/.test(userAgent) && !/opera/.test(userAgent),
+			mozilla: /mozilla/.test(userAgent) && !/(compatible|webkit)/.test(userAgent)
+		};
+		$("body").iealert();	
+		var pathname = location.pathname.split("?")[0];
+		var path = pathname.substring(pathname.lastIndexOf('/'), pathname.length);
+		$(".main-nav-sub li").removeClass("active");
+		
+		if (pathname) {
+			$('.main-nav-sub li a[href^="' + pathname + '"]').parent().addClass("active");
+			$('.main-nav-sub li a[href^="' + pathname + '"]').parent().parent().prev().addClass("active");
+			$('.cares-map li a[href^="' + pathname + '"]').addClass("current");
+			
+			if (path == "/help") {
+				$(".nav-help a").addClass("active")
+			}
+			if (path == "/marketing" || path == "/coupon") {
+				$(".main-nav-sub").prev().removeClass("active");
+				$(".main-nav-sub").eq(0).prev().addClass("active");
+				$(".main-nav-sub").eq(0).show();
+			}
+
+			if (path == "/index") {
+				/*轮播*/
+				  $.ajax({
+					url: "http://223.4.52.133:30000/banner/ClientCtrl/getPopCons",
+					type: "get",
+					data: {
+						code: 1,
+						appId: 3,
+						userId: USER.uid,
+						token: 111111,
+						maxSize: 3
+					},
+					dataType: "jsonp",
+					jsonp: "jsonpCallBack",
+					jsonpCallback: "jsonp",
+					success: function(data) {
+						if(data.results.moduleContents.length!=0){
+							$("#main-content .index #slide >.hd > ul").html('<li>1</li>');
+							$("#main-content .index #slide >.bd > ul").html("");
+							var popImgsrc = [];
+							var pophref = [];
+							var popactId = []
+							$(data.results.moduleContents).each(function(i, obj){
+								$(obj).each(function(k, v) {
+									if (v.url) {
+										popImgsrc.push(v.url)
+									} 
+									pophref.push(v.popCon)
+								});	
+							});
+							   $(pophref).each(function(k, v) {
+								   if(k!=0){
+								    	$("#main-content .index #slide >.hd >ul").append('<li>'+(k+1)+'</li>');
+								    }
+							        $("#main-content .index #slide >.bd > ul").append(
+									    '<li><a href="'+decodeURIComponent(v)+'" target="_blank"></a></li>')
+							    });//pophref 
+								$(popImgsrc).each(function(k, v){
+									$("#main-content .index #slide >.bd > ul li a").eq(k).html(
+										'<img src="'+decodeURIComponent(v)+'"/>')
+								});//popsrc	
+								jQuery("#slide").slide({ mainCell:".bd ul",effect:"fold",autoPlay:true,delayTime:200 });
+						   }//if
+					}
+				})
+				      /*自定义签名*/
+				$(".nav-index a").addClass("active");
+				$.ajax({
+					url: "/ui/PopupLogUI/isPopupResult",
+					dataType: 'json',
+					type: 'post',
+					data: {
+							popupType: 2
+						},
+						success: function(data) {
+							if (data.isPopup) {
+								dialog({
+									title: "系统提示",
+									skin: "signdata",
+									id: "sms_sign",
+									content: '<div class="padding" style="width:600px;">' +
+										'<span class="info">为了让用户方便找到您的店铺，请在下方填入您的自定义签名哦！</span>' +
+										'<div class="margin-top margin-little-left line"><div class="x8">' +
+										'<input type="text" class="input input-auto signtitle"   size="38">' +
+										'<p class="text-red margin-large-top tips">提示：签名限制3-14个字，不得包含营销文案、链接，手机号QQ号，不易频繁变动。</p>' +
+										'</div>' +
+										'<div class="msg-pre x4">' +
+										'<div style="height:100px;"><div class="sign">【' + data.result + '】亲,这件衣服很美哦，赶紧行动吧O(∩_∩)o</div>' +
+										'</div>' +
+										'<span class="td">退订回T</span>' +
+										'</div></div></div>',
+									okValue: "立即提交",
+									ok: function() {
+										var _this = this;
+										var smssign = $(".signtitle").val();
+										if (!$.trim(smssign)) {
+											ZENG.msgbox.show("签名不能为空", 5,3000);
+											return false;
+										}
+					
+										if (smssign.length < 3 || smssign.length > 14) {
+											ZENG.msgbox.show("签名长度请限制在3~14之内", 5, 3000);
+											return false;
+										}
+										$.ajax({
+											url: "/SignCtrl/setNewSmsSignature",
+											dataType: "json",
+											data: {
+												sign: smssign,
+												type: 1
+											},
+											success: function(data) {
+												if(!data.success){
+													ZENG.msgbox.show(data.message, 5, 3000);
+												    return false;
+												}
+												_this.remove();
+											}
+										})
+					
+										return false
+									}
+								}).showModal()
+							
+								
+								$(".signdata .signtitle").val(data.result)
+								$(".signdata .signtitle").on('input', function() {
+									var newsign = $(this).val();
+									$(".signdata .sign").html("【" + newsign + "】"+"亲,这件衣服很美哦，赶紧行动吧O(∩_∩)o ")
+								});
+								$(".signdata .ui-dialog-footer button.ui-dialog-autofocus").css("background-color", "#f8ae2e")
+								$(".signdata .ui-dialog-footer button.ui-dialog-autofocus").css("border-color", "#f8ae2e")
+							} 
+						}
+					});	
+			}
+			
+		}
+		
+		if (USER.olduser == "true") {
+			$("#header .changever").show();
+		} else {
+			$("#header .changever").hide();
+		}
+		$.ajax({
+			url: "/AccountCtrl/checkIfInWhiteList",
+			dataType: 'json',
+			type: 'post',
+			data: {
+				type: 3,
+				userId: USER.uid
+			},
+			success: function(data) {
+				window.inwhitecoupon=data.results;
+				if (data.results||/localhost/.test(location.href)) {
+					window.inwhite=true
+					$(".add-fliter-items-wrap,.setcare-wrap .careitems").show();		
+					$(".main-tab-content[cat='20'] .setcare-wrap .careitems").show();
+					$(".main-tab-content[cat='1'] .setcare-wrap .careitems").show();
+				}else{
+					$(".add-fliter-items-wrap").prev("h5").remove();
+					$(".add-fliter-items-wrap,.setcare-wrap .careitems,.fliter-result li:last").remove();			
+				}
+			}
+		});
+		/*订单标旗白名单*/	
+		$.ajax({
+			url: "/AccountCtrl/checkIfInWhiteList",
+			dataType: 'json',
+			type: 'post',
+			data: {
+				type: 5,
+				userId: USER.uid
+			},
+			success: function(data) {
+				window.inwhite=data.results;
+				if (data.results||/localhost/.test(location.href)) {
+					window.inwhite=true
+					$(".mktexcludeflag").show();
+				}else{
+					$(".mktexcludeflag").remove();
+				}
+			}
+		});
+		/*订单营销白名单*/
+		$.ajax({
+			url: "/AccountCtrl/checkIfInWhiteList",
+			dataType: 'json',
+			type: 'post',
+			data: {
+				type: 7,
+				userId: USER.uid
+			},
+			success: function(data) {
+				window.orderpay=data.results;
+				if (data.results) {
+					window.orderpay=true
+					$(".main-nav-sub").eq(0).find("li:last").show();
+				}else{
+					$(".main-nav-sub").eq(0).find("li:last").hide();
+				}
+			}
+		});
+		/*buymsgbanner*/
+		$.ajax({
+			type: "post",
+			url: "/ui/PopupLogUI/isPopup",
+			dataType: "json",
+			data: {
+				popupType: 14
+			},
+			success: function(data) {
+				if (data.success) {
+					$("#tab-start2 .smsbanner").show();
+					if(USER.ver==20){
+						$("#tab-start2 .smsbanner").find("ul li").hide();
+						$("#tab-start2 .smsbanner").find("ul li").eq(1).show();
+					}else{
+						$("#tab-start2 .smsbanner").find("ul li").hide();
+						$("#tab-start2 .smsbanner").find("ul li").eq(0).show();
+					}
+				}
+			}
+		})
+		
+		/*新手引导*/
+		var winWidth,winHeight;
+		 Resize = function(){
+			winWidth = $(window).width(),
+			winHeight= $(window).height();
+		 }
+		 $.ajax({
+				url: "/ui/PopupLogUI/isPopup",
+				type: "post",
+				data: {
+					popupType: 10
+				},
+				dataType: "json",
+				success: function(data) {
+					if (data.success) {
+						$("<link>")
+								.attr({
+									rel: "stylesheet",
+									type: "text/css",
+									href: "/public/stylesheets/newdd/jquery.fullPage.min.css"
+								})
+								.appendTo("head");
+							$(".guide-wrap img").each(function() {
+								$(this).attr("src", $(this).attr("data"))
+							})
+							$(".guide-wrap").show();
+							$("#slide .hd").hide();
+							var guide = $('#guide').fullpage({
+								'navigation': true,
+								'slidesNavigation': true,
+								"onLeave": function(index, nextIndex) {
+									 if (nextIndex == 5) {
+											$('html,body').animate({
+												scrollTop: '300px'
+											}, 800);
+										}else {
+											$('html,body').animate({
+												scrollTop: '0px'
+											}, 800);
+										}
+								}
+							});
+							$("#fp-nav").hide();
+							$("#guide .finish").click(function() {
+								location.href = "/ui/IndexUI/index";
+							    $("#slide .hd").show(3000);
+							})
+							$("#guide .start").click(function() {
+								$('#guide').fullpage.moveTo(2)
+							})
+							$("#guide .page2").click(function() {
+								$('#guide').fullpage.moveTo(3)
+							})
+							$("#guide .page3").click(function() {
+								$('#guide').fullpage.moveTo(4)
+							})
+							$("#guide .page4").click(function() {
+								$('#guide').fullpage.moveTo(5)
+								
+						})		
+				   }
+				}
+			})
+	         /*vip*/
+//			$.ajax({
+//				type: "post",
+//				url: "/ui/PopupLogUI/isPopup",
+//				dataType: "json",
+//				data: {
+//					popupType: 3
+//				},
+//				success: function(data) {
+//					if (data.success) {
+//						var num =parseInt(Math.random()*50+1);
+//						if(num<10){
+//							num='0'+num;	
+//						}
+//						popdia = dialog({
+//							skin: "vip-dia",
+//							id: "vipdata",
+//							content: $(".vipdia").html()
+//						}).showModal();
+//						
+//					  	$(".vip-dia .num").html(num);
+//							
+//					}
+//				}
+//		   })
+			$("body").on("click", ".closevip", function() {
+				if (dialog.get("vipdata")) {
+					dialog.get("vipdata").remove()
+				}
+			})
+			           
+		$.ajax({
+			type: "post",
+			url: "/ui/PopupLogUI/isPopup",
+			dataType: "json",
+			data: {
+				popupType: 1
+			},
+			success: function(data) {
+				if (data.success) {
+					popdia = dialog({
+						width: 500,
+						skin: "pop-dia",
+						id: "popdata",
+						content: $(".popdia").html()
+					}).showModal();
+				}
+			}
+		})
+		$("body").on("click", ".closepop", function() {
+			if (dialog.get("popdata")) {
+				dialog.get("popdata").remove()
+			}
+		})
+	});
+	
+	Date.prototype.format = function(format) //author: meizz
+		{
+			var o = {
+				"M+": this.getMonth() + 1, //month
+				"d+": this.getDate(), //day
+				"h+": this.getHours(), //hour
+				"m+": this.getMinutes(), //minute
+				"s+": this.getSeconds(), //second
+				"q+": Math.floor((this.getMonth() + 3) / 3), //quarter
+				"S": this.getMilliseconds() //millisecond
+			}
+			if (/(y+)/.test(format)) format = format.replace(RegExp.$1, (this.getFullYear() + "")
+				.substr(4 - RegExp.$1.length));
+			for (var k in o)
+				if (new RegExp("(" + k + ")")
+					.test(format)) format = format.replace(RegExp.$1,
+					RegExp.$1.length == 1 ? o[k] : ("00" + o[k])
+					.substr(("" + o[k])
+						.length));
+			return format;
+		}
+	Date.prototype.formatHM = function() {
+		return this.format('h:mm');
+		}
+	Date.prototype.formatMD = function() {
+		return this.format('MM月dd日');
+	}
+	Date.prototype.formatYMD = function() {
+		return this.format('yyyy/MM/dd');
+	}
+	Date.prototype.formatYMDHMS = function() {
+		return this.format('yyyy/MM/dd hh:mm:ss');
+	}
+</script>
+<script src="../js/js/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/js/aling.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	seajs.config({
+		alias: {},
+		preload: []
+	});
+	seajs.use(["care", "jquery"], function(care, $) {
+		care.init()
+		$(".main-nav-sub").eq(1).show();
+		$(".main-tab-content").eq(1).find("form .form-group").eq(2).hide();
+	});
+</script>
+ <script>
+	seajs.use(["editmsg"], function(care) {});
+</script><iframe width="0" height="0" src="saved_resource.html" frameborder="0" style="width:0;height:0;border:0;margin:0;padding:0;display:none;"></iframe></body></html>
