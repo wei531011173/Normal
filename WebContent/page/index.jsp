@@ -67,7 +67,7 @@
 							<a href="MemberCare/ShippingAlert.html" target="_self">发货提醒</a>
 						</li>
 						<li>
-							<a href="#" target="_self">到货提醒</a>
+							<a href="MemberCare/ArrivalReminder.html" target="_self">到货提醒</a>
 						</li>
 						<li>
 							<a href="MemberCare/SignReminder.html" target="_self">签收提醒</a>
@@ -82,7 +82,7 @@
 							<a href="MemberCare/PaymentCare.html" target="_self">付款关怀</a>
 						</li>
 						<li>
-							<a href="#" target="_self">迟发提醒</a>
+							<a href="MemberCare/DelayedAlert.html" target="_self">迟发提醒</a>
 						</li>
 						<li>
 							<a href="MemberCare/BackCare.html" target="_self">回款关怀</a>
@@ -105,13 +105,13 @@
 							<a href="#" target="_self">催付效果</a>
 						</li> -->
 						<li>
-							<a href="#" target="_self">发送记录</a>
+							<a href="SMSRecord/SendRecord.html" target="_self">发送记录</a>
 						</li>
 						<li>
-							<a href="#" target="_self">充值记录</a>
+							<a href="SMSRecord/RechargeRecord.html" target="_self">充值记录</a>
 						</li>
 						<li>
-							<a href="#" target="_self">短信账单</a>
+							<a href="SMSRecord/SMSBill.html" target="_self">短信账单</a>
 						</li>
 					</ul>
 				</li>
@@ -119,21 +119,21 @@
 					<a href="javascript:;" target="_self"><b></b>系统设置<span class="icon-angle-down"></span></a>
 					<ul class="main-nav-sub">
 						<li>
-							<a href="#" target="_self">导入历史订单</a>
+							<a href="SystemSettings/ImportHistoricalOrder.html" target="_self">导入历史订单</a>
 						</li>
 						<li>
-							<a href="#" target="_self">短信发送设置</a>
+							<a href="SystemSettings/SMSsettings.html" target="_self">短信发送设置</a>
 						</li>
 						<li>
-							<a href="#" target="_self">黑名单设置</a>
+							<a href="SystemSettings/BlackListSettings.html" target="_self">黑名单设置</a>
 						</li>
 						<li>
-							<a href="#" target="_self">子账号设置</a>
+							<a href="SystemSettings/ChildAccountSettings.html" target="_self">子账号设置</a>
 						</li>
 					</ul>
 				</li>
 				<li class="nav-help">
-					<a href="#" target="_self"><b></b>帮助中心</a>
+					<a href="HelpCenter/HelpCenter.html" target="_self"><b></b>帮助中心</a>
 				</li>
 			</ul>
 		</div>

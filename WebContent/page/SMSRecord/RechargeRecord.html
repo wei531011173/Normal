@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>充值记录</title>
+	<meta http-equiv="Cache-Control" content="max-age=86400">
+	<meta name="renderer" content="webkit">
+	<meta name="renderer" content="ie-comp">
+	<meta name="renderer" content="ie-stand">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" media="screen" href="../style/pintuer.css">
+	<link rel="stylesheet" media="screen" href="../style/main.css">
+	<link rel="stylesheet" media="screen" href="../style/webuploader.css">
+	<link rel="stylesheet" media="screen" href="../style/ui-dialog.css">
+	<link rel="stylesheet" media="screen" href="../style/introjs.css">
+	<link rel="stylesheet" media="screen" href="../style/msgbox.css"> 
+	<link rel="stylesheet" media="screen" href="../style/index.css"> 	
+	<script src="../js/jQuery.js"></script>	
+</head>
+</head>
+	<body>
+		<div id="header" class="bg bg-main layout">
+			<div class="container clearfix bg bg-main">
+				<a href="http://dingdong.ciaosir.com/ui/IndexUI/index" target="_self">
+					<img src="../images/logo.png" class="float-left">
+				</a>
+				<div class="float-right user-info">
+					欢迎 <span id="shop-name">用户名</span> 剩余短信：<b class="msg-remain">10</b>条 <a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg" target="_self" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部充值&#39;, &#39;点击&#39;]);">充值</a> | 软件还剩：<b class="deadL">14</b>天
+					<a href="https://fuwu.taobao.com/ser/detail.html?spm=a1z13.1113643.0.0.IfpuXB&amp;service_code=ts-13720&amp;tracelog=rjxf" target="_blank" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部续费&#39;, &#39;点击&#39;]);">续费</a>
+				</div>			
+			</div>
+		</div>
+		<div id="wrapper" class="clearfix container">
+			<marquee behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()"><img src="../images/iconfont-laba.png"> 亲爱的叮咚用户，由于淘宝数据接口规则发生变化，一星期内没登陆叮咚，已开启的关怀提醒功能会自动失效。所以，为保障您关怀短信正常发送，今后烦请7天内至少登陆一次叮咚哦。给您带来的不便，敬请谅解。</marquee>
+			<div id="main-nav">
+				<ul class="main-ul">
+				<li class="nav-index">
+					<a href="../index/index.html" target="_self"><b></b>首页</a>
+				</li>
+				<li class="nav-market">
+					<a href="javascript:;" target="_self"><b></b>会员营销<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<li>
+							<a href="../AffiliateMarketing/MemberShortMessage.html" target="_self">会员短信群发</a>
+						</li>
+						<li>
+							<a href="../AffiliateMarketing/ImportNumberGroup.html" target="_self">导入号码群发</a>
+						</li>
+						<li>
+							<a href="../AffiliateMarketing/CouponGroup.html" target="_self">优惠券群发</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-care">
+					<a href="javascript:;" target="_self">
+						<b></b>会员关怀
+						<span class="icon-angle-down"></span>
+					</a>
+					<ul class="main-nav-sub">
+						<li>
+							<a href="../MemberCare/OrderReminder.html" target="_self">订单催付</a>
+						</li>
+						<li>
+							<a href="../MemberCare/TwoTimesPay.html" target="_self">二次催付</a>
+						</li>
+						<li>
+							<a href="../MemberCare/ShippingAlert.html" target="_self">发货提醒</a>
+						</li>
+						<li>
+							<a href="../MemberCare/ArrivalReminder.html" target="_self">到货提醒</a>
+						</li>
+						<li>
+							<a href="../MemberCare/SignReminder.html" target="_self">签收提醒</a>
+						</li>
+						<li>
+							<a href="../MemberCare/MiddleAndPoorEvaluationOfCare.html" target="_self">中差评关怀</a>
+						</li>
+						<li>
+							<a href="../MemberCare/CareFor.html" target="_self">好评关怀</a>
+						</li>
+						<li>
+							<a href="../MemberCare/PaymentCare.html" target="_self">付款关怀</a>
+						</li>
+						<li>
+							<a href="../MemberCare/DelayedAlert.html" target="_self">迟发提醒</a>
+						</li>
+						<li>
+							<a href="../MemberCare/BackCare.html" target="_self">回款关怀</a>
+						</li>
+						<li>
+							<a href="../MemberCare/RefundCare.html" target="_self">退款关怀</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-history">
+					<a href="javascript:;" target="_self" class="active"><b></b>短信记录/效果<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub" style="display: block;">
+						<!-- <li>
+							<a href="#" target="_self">营销效果</a>
+						</li>
+						<li>
+							<a href="#" target="_self">优惠券效果</a>
+						</li>
+						<li>
+							<a href="#" target="_self">催付效果</a>
+						</li> -->
+						<li>
+							<a href="SendRecord.html" target="_self">发送记录</a>
+						</li>
+						<li class="active">
+							<a href="RechargeRecord.html" target="_self">充值记录</a>
+						</li>
+						<li>
+							<a href="SMSBill.html" target="_self">短信账单</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-sysset">
+					<a href="javascript:;" target="_self"><b></b>系统设置<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<li>
+							<a href="../SystemSettings/ImportHistoricalOrder.html" target="_self">导入历史订单</a>
+						</li>
+						<li>
+							<a href="../SystemSettings/SMSsettings.html" target="_self">短信发送设置</a>
+						</li>
+						<li>
+							<a href="../SystemSettings/BlackListSettings.html" target="_self">黑名单设置</a>
+						</li>
+						<li>
+							<a href="../SystemSettings/ChildAccountSettings.html" target="_self">子账号设置</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-help">
+					<a href="../HelpCenter/HelpCenter.html" target="_self"><b></b>帮助中心</a>
+				</li>
+			</ul>
+			</div>
+			<div id="main-content" class="clearfix" style="background-color: rgb(246, 246, 246);">
+				 
+			<div class="bg bg-yellow-light padding buymsg">
+				你的短信余额没了？！新春促销即将开始，赶紧买短信做活动吧~
+			</div>
+			<ul class="main-tab-nav margin-top">
+				<li class="" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-订购短信tab&#39;, &#39;点击&#39;, &#39;旺旺&#39;]);">充值短信</li>
+				<li onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-订购记录tab&#39;, &#39;点击&#39;, &#39;旺旺&#39;]);" class="active">充值记录</li>
+			</ul>
+<div class="main-tab-content padding" id="tab-start2" style="display: none; background-color: rgb(255, 255, 255);">
+
+	<table class="table margin-top  text-left border" id="buy-message-table">
+		<thead class="bg">
+			<tr>
+				<th width="390">订购条数</th>
+				<th width="">短信单价</th>
+				<th width="220" style="font-size:14px; font-weight:600;">订购金额</th>
+				<th width="120">操作</th>
+			</tr>
+		</thead>
+		<tbody class=""><tr class="text-red" style="font-weight: bold;"><td class="clearfix"><img src="../images/TB2yJFpkpXXXXaFXpXXXXXXXXXX-734131476.jpg" style="float:left;" alt=""><span class="" style="float:left;margin-left: 40px;">36888条 （送2000条+一年软件）</span></td><td>均价4.6分/条</td><td>1788元</td><td><a href="http://dingdong.ciaosir.com/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=25" target="_blank" smssetid="25" class="go-buy-message button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-购买短信20000&#39;, &#39;点击&#39;]);">立即充值 </a></td></tr><tr class="bg"><td class="clearfix"><span class="">1000条</span></td><td>5分/条（市场均价6.2分/条）</td><td>50元</td><td><a href="http://dingdong.ciaosir.com/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=21" target="_blank" smssetid="21" class="go-buy-message button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-购买短信20000&#39;, &#39;点击&#39;]);">立即充值 </a></td></tr><tr class=""><td class="clearfix"><span class="">5000条</span></td><td>5分/条（市场均价5.8分/条）</td><td>250元</td><td><a href="http://dingdong.ciaosir.com/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=20" target="_blank" smssetid="20" class="go-buy-message button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-购买短信20000&#39;, &#39;点击&#39;]);">立即充值 </a></td></tr><tr class="bg"><td class="clearfix"><span class="">10000条</span></td><td>4.8分/条（市场均价5.7分/条）</td><td>480元</td><td><a href="http://dingdong.ciaosir.com/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=19" target="_blank" smssetid="19" class="go-buy-message button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-购买短信20000&#39;, &#39;点击&#39;]);">立即充值 </a></td></tr><tr class=""><td class="clearfix"><span class="">50000条</span></td><td>4.7分/条（市场均价5.4分/条）</td><td>2350元</td><td><a href="http://dingdong.ciaosir.com/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=18" target="_blank" smssetid="18" class="go-buy-message button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-购买短信20000&#39;, &#39;点击&#39;]);">立即充值 </a></td></tr><tr class="bg"><td class="clearfix"><span class="">100000条</span></td><td>4.6分/条（市场均价5.2分/条）</td><td>4600元</td><td><a href="http://dingdong.ciaosir.com/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=16" target="_blank" smssetid="16" class="go-buy-message button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-购买短信20000&#39;, &#39;点击&#39;]);">立即充值 </a></td></tr><tr class=""><td class="clearfix"><span class="">200000条</span></td><td>4.5分/条（市场均价5.2分/条）</td><td>9000元</td><td><a href="http://dingdong.ciaosir.com/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=15" target="_blank" smssetid="15" class="go-buy-message button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-购买短信20000&#39;, &#39;点击&#39;]);">立即充值 </a></td></tr><tr class="bg"><td class="clearfix"><span class="">500000条</span></td><td>4.4分/条（市场均价5.2分/条）</td><td>22000元</td><td><a href="http://dingdong.ciaosir.com/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=14" target="_blank" smssetid="14" class="go-buy-message button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-购买短信20000&#39;, &#39;点击&#39;]);">立即充值 </a></td></tr><tr class=""><td class="clearfix"><span class="">1000000条</span></td><td>4.2分/条（市场均价5.2分/条）</td><td>42000元</td><td><a href="http://dingdong.ciaosir.com/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=13" target="_blank" smssetid="13" class="go-buy-message button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-购买短信20000&#39;, &#39;点击&#39;]);">立即充值 </a></td></tr>
+			<!--<tr class="text-red" style="font-weight: bold;">
+				<td class="clearfix" ><img src="../../../public/images/newdd/1213.png" style="float:left;" alt="" /><span class="" style="float:left;margin-left: 40px;">24064条（送2000条+一年软件）</span></td>
+				<td>均价4.7分/条</td>
+				<td>1225元</td>
+				<td><a href="/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=16010101" target="_blank" smssetid="1001" class="go-buy-message button bg-yellow button-small" onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-购买短信20000', '点击']);">立即充值 </a>
+				</td>
+			</tr>
+			<tr class="common">
+				<td>1000条</td>
+				<td>5分/条<span>（市场均价6.2分/条）</span></td>
+				<td>50元</td>
+				<td><a href="/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=2" target="_blank" smssetid="2" class="go-buy-message button bg-yellow button-small" onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-购买短信1000', '点击']);">立即充值 </a></td>
+			</tr>
+			<tr class="bg">
+				<td>5000条</td>
+				<td>5分/条<span>（市场均价5.8分/条）</span></td>
+				<td>250元</td>
+				<td><a href="/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=3" target="_blank" smssetid="3" class="go-buy-message button bg-yellow button-small" onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-购买短信5000', '点击']);">立即充值 </a></td>
+			</tr>
+			<tr>
+				<td>10000条</td>
+				<td>4.8分/条<span>（市场均价5.7分/条）</span></td>
+				<td>480元</td>
+				<td><a href="/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=4" target="_blank" smssetid="4" class="go-buy-message button bg-yellow button-small" onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-购买短信10000', '点击']);">立即充值 </a></td>
+			</tr>
+			<tr class="bg">
+				<td>50000条</td>
+				<td>4.7分/条<span>（市场均价5.4分/条）</span></td>
+				<td>2350元</td>
+				<td><a href="/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=5" target="_blank" smssetid="5" class="go-buy-message button bg-yellow button-small" onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-购买短信50000', '点击']);">立即充值 </a></td>
+			</tr>
+			<tr>
+				<td>100000条</td>
+				<td>4.6分/条<span>（市场均价5.2分/条）</span></td>
+				<td>4600元</td>
+				<td><a href="/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=6" target="_blank" smssetid="6" class="go-buy-message button bg-yellow button-small" onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-购买短信100000', '点击']);">立即充值 </a></td>
+			</tr>
+
+			<tr class="bg">
+				<td>200000条</td>
+				<td>4.5分/条<span>（市场均价5.2分/条）</span></td>
+				<td>9000元</td>
+				<td><a href="/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=7" target="_blank" smssetid="7" class="go-buy-message button bg-yellow button-small" onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-购买短信200000', '点击']);">立即充值 </a></td>
+			</tr>
+			<tr>
+				<td>500000条</td>
+				<td>4.4分/条<span>（市场均价5.2分/条）</span></td>
+				<td>22000元</td>
+				<td><a href="/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=8" target="_blank" smssetid="8" class="go-buy-message button bg-yellow button-small" onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-购买短信500000', '点击']);">立即充值 </a></td>
+			</tr>
+			<tr class="bg">
+				<td>1000000条</td>
+				<td>4.2分/条<span>（市场均价5.2分/条）</span></td>
+				<td>42000元</td>
+				<td><a href="/AlipayTradeCtrl/buildSmsBuyAlipayTrade?smsSetId=9" target="_blank" smssetid="9" class="go-buy-message button bg-yellow button-small" onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-购买短信1000000', '点击']);">立即充值 </a></td>
+			</tr>-->
+					</tbody>
+				</table>
+				<div class="height-big">
+					订购后将跳转到支付宝进行付款，支付成功后系统自动将对应短信充入账户。</div>
+				<div class="text-red">短信永不过期，软件到期后不会清零，续订软件即可继续使用。</div>
+				<div class="height-big">
+					<a href="http://bangpai.taobao.com/group/thread/15768151-290025043.htm?spm=0.0.0.0.SXdJpK&amp;qq-pf-to=pcqq.discussion" target="_blank" class="text-blue">查看订购指导教程</a> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;遇到问题?
+					<a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-购买短信&#39;, &#39;点击&#39;, &#39;旺旺&#39;]);"><img border="0" src="../images/online.aw" alt="点击这里给我发消息" style="vertical-align: middle;"></a>
+				</div>
+				<p class="text-red">建议使用谷歌浏览器<a href="http://www.baidu.com/s?wd=%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E8%BD%BD&amp;rsv_spt=1&amp;issp=1&amp;f=8&amp;rsv_bp=0&amp;rsv_idx=2&amp;ie=utf-8&amp;tn=10018802_hao&amp;rsv_enter=0&amp;rsv_sug3=27&amp;rsv_sug4=946&amp;rsv_sug1=18&amp;rsv_pq=fa53aacb0000cafa&amp;rsv_t=455be2nfEj5X3e9%2BT1u1%2BrZXbZcHKdGv5QH4HZjrVd%2BuoMptx6NR&amp;rsv_sug2=0&amp;inputT=2834&amp;rsv_sug=1" target="_blank" class="text-blue"> 前去下载</a></p>
+			</div>
+			<div class="main-tab-content clearfix padding" style="background-color: rgb(255, 255, 255);">
+				<table class="table  margin-top text-left border " id="buy-record-table">
+					<thead height="40" class="bg">
+						<tr>
+							<th width="192">短信来源</th>
+							<th width="192">金额</th>
+							<th width="192">条数</th>
+							<th width="196">订购时间</th>
+							<th width="192">订单状态</th>
+						</tr>
+					</thead>
+					<tbody><tr><td>支付宝购买</td><td>1788</td><td>36888</td><td>2016/04/02 11:13:22</td><td>去付款<a href="http://dingdong.ciaosir.com/AlipayTradeCtrl/payAlipayTrade?outId=201604021113022" target="_blank" class="tag bg-yellow margin-left go-buy-message">立即付款</a></td></tr><tr class="bg"><td><span>赠:</span>系统管理员赠送</td><td>0</td><td>10</td><td>2016/04/02 10:49:15</td><td>赠送成功</td></tr></tbody>
+				</table>
+				<ul class="buypage pagination float-right margin-top" style="display: none;">
+					<li class="page-prev page-prev-disabled" title="上一页">
+						<a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg#">上一页</a>
+					</li>
+					<li class="current" title="1"><a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg#">1</a></li>
+					<li class="page-next page-next-disabled" title="下一页"><a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg#">下一页</a></li>
+					<li class="pageinfo">共1页,2条记录  
+						<input type="text" class="jumpTo" style="" value="1"> 页 <input style="border: solid 1px #ddd;" class="gopage-submit hand button button-small" title="跳转页面" type="button" value="确定">
+					</li>
+				</ul>
+			</div>
+			</div>
+
+			<ul id="fixnav">
+			    <li class="qq" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航qq&#39;, &#39;点击&#39;]);">
+					<a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&amp;key=XzgwMDA2OTk0NV8zNTk2MDhfODAwMDY5OTQ1XzJf">
+				 </a>
+				</li>
+				<li class="ww" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航旺旺&#39;, &#39;点击&#39;]);">
+					<a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8">
+					</a>
+				</li>
+				<li class="phone">
+					<div>152-6813-5612</div>
+				</li>
+				<li class="feedback" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航反馈&#39;, &#39;点击&#39;]);">
+					<a href="http://yq.open.taobao.com/isv/feedbacks?appkey=12337775" target="_blank"></a>
+				</li>
+				<li class="totop">
+					<a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg#" target="_self"></a>
+				</li>
+			</ul>
+		</div>
+		<div id="foot" class="text-center height-large margin-large">Copyright © 杭州逐鹿网络技术有限公司 2014</div>
+	
+	    <!--新手引导-->        
+        <div class="guide-wrap" style="position: absolute;left: 0;top: 0;width:100%; height: 100%; display: none;">
+			<div id="guide" style="text-align: center;">
+				<div class="section" id="page1">
+					<img data="/public/images/newdd/1.png">
+					<a href="javascript:;" target="_self" class="finish" style="position: absolute; top: 39%;left: 42%;width:300px;height:52px;opacity: 0;"></a>
+					<a href="javascript:;" target="_self" class="start" style="position: absolute; top: 46%;left: 42%;width:300px;height:58px;opacity: 0;"></a>
+				</div>
+				<div class="section" id="page2">
+					<a href="javascript:;" target="_self" class="page2">
+					<img data="/public/images/newdd/2.png"></a>
+				</div>
+				<div class="section" id="page3">
+					<a href="javascript:;" target="_self" class="page3">
+					<img data="/public/images/newdd/3.png"></a>
+				</div>
+				<div class="section" id="page4">
+					<a href="javascript:;" target="_self" class="page4">
+					<img data="/public/images/newdd/4.png"></a>
+				</div>
+				<div class="section" id="page5">
+					<a href="javascript:;" target="_self" class="finish">
+					<img data="/public/images/newdd/5.png"></a>
+				</div>
+			</div>
+		</div>
+	<div style="display:none" class="popdia">
+		<div class="">
+			<b class="icon-times closepop" style="position: absolute;top: 1px;right:-0px;cursor: pointer;font-size: 30px;width: 42px;height: 40px;opacity: 0;"></b>
+			<img src="../images/diafree.jpg" alt="">
+			<a href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8" class="burtton bg-red" style="position: absolute;top:247px;right:142px;cursor: pointer;width: 220px;height: 50px;opacity: 0;">联系客服</a>
+		</div>
+	</div>
+	<!--vip通道-->
+	<div style="display:none" class="vipdia">
+		<div class="">
+			<b class="icon-times closevip" style="position: absolute;top: 1px;right:-0px;cursor: pointer;font-size: 30px;width: 42px;height: 40px;opacity: 0;"></b>
+			<img src="../images/0108.png" alt="">
+			<span class="num" style="position: absolute;top:185px;color:#ffde00;font-size:36px;right:160px;cursor: pointer;width:20px;height:65px;">01</span>
+			<a href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8" target="_blank" class="burtton bg-red closevip" style="position: absolute;top:299px;right:265px;cursor: pointer;width: 220px;height:65px;opacity: 0;">联系客服</a>
+		</div>
+	</div>
+	<script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>短信发送设置</title>
+	<meta http-equiv="Cache-Control" content="max-age=86400">
+	<meta name="renderer" content="webkit">
+	<meta name="renderer" content="ie-comp">
+	<meta name="renderer" content="ie-stand">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" media="screen" href="../style/pintuer.css">
+	<link rel="stylesheet" media="screen" href="../style/main.css">
+	<link rel="stylesheet" media="screen" href="../style/webuploader.css">
+	<link rel="stylesheet" media="screen" href="../style/ui-dialog.css">
+	<link rel="stylesheet" media="screen" href="../style/introjs.css">
+	<link rel="stylesheet" media="screen" href="../style/msgbox.css"> 
+	<link rel="stylesheet" media="screen" href="../style/index.css"> 	
+	<script src="../js/jQuery.js"></script>	
+</head>
+<body>
+	<div id="header" class="bg bg-main layout">
+		<div class="container clearfix bg bg-main">
+			<a href="http://dingdong.ciaosir.com/ui/IndexUI/index" target="_self">
+				<img src="../images/logo.png" class="float-left">
+			</a>
+		    <div class="float-right user-info">
+				欢迎 <span id="shop-name">用户名</span> 剩余短信：<b class="msg-remain">10</b>条 <a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg" target="_self" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部充值&#39;, &#39;点击&#39;]);">充值</a> | 软件还剩：<b class="deadL">14</b>天
+				<a href="https://fuwu.taobao.com/ser/detail.html?spm=a1z13.1113643.0.0.IfpuXB&amp;service_code=ts-13720&amp;tracelog=rjxf" target="_blank" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部续费&#39;, &#39;点击&#39;]);">续费</a>
+			</div>			
+		</div>
+	</div>
+	<div id="wrapper" class="clearfix container">
+		<marquee behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()">
+			<img src="../images/iconfont-laba.png"> 亲爱的叮咚用户，由于淘宝数据接口规则发生变化，一星期内没登陆叮咚，已开启的关怀提醒功能会自动失效。所以，为保障您关怀短信正常发送，今后烦请7天内至少登陆一次叮咚哦。给您带来的不便，敬请谅解。
+		</marquee>
+		<div id="main-nav">
+			<ul class="main-ul">
+				<li class="nav-index">
+					<a href="../index/index.html" target="_self"><b></b>首页</a>
+				</li>
+				<li class="nav-market">
+					<a href="javascript:;" target="_self"><b></b>会员营销<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<li>
+							<a href="../AffiliateMarketing/MemberShortMessage.html" target="_self">会员短信群发</a>
+						</li>
+						<li>
+							<a href="../AffiliateMarketing/ImportNumberGroup.html" target="_self">导入号码群发</a>
+						</li>
+						<li>
+							<a href="../AffiliateMarketing/CouponGroup.html" target="_self">优惠券群发</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-care">
+					<a href="javascript:;" target="_self">
+						<b></b>会员关怀
+						<span class="icon-angle-down"></span>
+					</a>
+					<ul class="main-nav-sub">
+						<li>
+							<a href="../MemberCare/OrderReminder.html" target="_self">订单催付</a>
+						</li>
+						<li>
+							<a href="../MemberCare/TwoTimesPay.html" target="_self">二次催付</a>
+						</li>
+						<li>
+							<a href="../MemberCare/ShippingAlert.html" target="_self">发货提醒</a>
+						</li>
+						<li>
+							<a href="../MemberCare/ArrivalReminder.html" target="_self">到货提醒</a>
+						</li>
+						<li>
+							<a href="../MemberCare/SignReminder.html" target="_self">签收提醒</a>
+						</li>
+						<li>
+							<a href="../MemberCare/MiddleAndPoorEvaluationOfCare.html" target="_self">中差评关怀</a>
+						</li>
+						<li>
+							<a href="../MemberCare/CareFor.html" target="_self">好评关怀</a>
+						</li>
+						<li>
+							<a href="../MemberCare/PaymentCare.html" target="_self">付款关怀</a>
+						</li>
+						<li>
+							<a href="../MemberCare/DelayedAlert.html" target="_self">迟发提醒</a>
+						</li>
+						<li>
+							<a href="../MemberCare/BackCare.html" target="_self">回款关怀</a>
+						</li>
+						<li>
+							<a href="../MemberCare/RefundCare.html" target="_self">退款关怀</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-history">
+					<a href="javascript:;" target="_self"><b></b>短信记录/效果<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<!-- <li>
+							<a href="#" target="_self">营销效果</a>
+						</li>
+						<li>
+							<a href="#" target="_self">优惠券效果</a>
+						</li>
+						<li>
+							<a href="#" target="_self">催付效果</a>
+						</li> -->
+						<li>
+							<a href="../SMSRecord/SendRecord.html" target="_self">发送记录</a>
+						</li>
+						<li>
+							<a href="../SMSRecord/RechargeRecord.html" target="_self">充值记录</a>
+						</li>
+						<li>
+							<a href="../SMSRecord/SMSBill.html" target="_self">短信账单</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-sysset">
+					<a href="javascript:;" target="_self" class="active"><b></b>系统设置<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub" style="display: block;">
+						<li>
+							<a href="ImportHistoricalOrder.html" target="_self">导入历史订单</a>
+						</li>
+						<li>
+							<a href="SMSsettings.html" target="_self">短信发送设置</a>
+						</li>
+						<li>
+							<a href="BlackListSettings.html" target="_self">黑名单设置</a>
+						</li>
+						<li>
+							<a href="ChildAccountSettings.html" target="_self">子账号设置</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-help">
+					<a href="../HelpCenter/HelpCenter.html" target="_self"><b></b>帮助中心</a>
+				</li>
+			</ul>
+		</div>
+		<div id="main-content" class="clearfix">				  
+			<div class="panel sendset">
+				<div class="panel-head">
+					<h4>短信发送设置</h4>
+				</div>
+				<div class="panel-body">
+					<h3>设置营销签名</h3>
+					<div class="line">
+						<label for="">设置签名</label>
+						<input type="text" class="mkt-sign input input-auto">
+						<a href="javascript:;" class="save-mkt-sign button  bg-main" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-短信发送设置-保存营销签名&#39;, &#39;点击&#39;]);">保存</a>
+						<ul class="mkt-signs height-big list-inline"></ul>
+					</div>
+					<div class="height-big"> 		签名限制3-14个字，为保障短信到达率，请设置为店铺名或品牌名，不得包含营销文案、链接、手机号QQ号，且不宜频繁变动。
+					</div>
+					<div class="text-red">
+						签名报备需要2-3天，签名内不可添加特殊符号。
+					</div>
+					<h3 class="title1">设置关怀签名</h3>
+					<div class="content">
+						<div class="line">
+							<label for="">设置签名</label>
+							<input type="text" class="care-sign  input input-auto">
+							<a href="javascript:;" class="save-care-sign button  bg-main" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-短信发送设置-保存关怀签名&#39;, &#39;点击&#39;]);">保存</a> </div>
+						<div class="height-big"> 签名限制2-8个字，为保障短信到达率，请设置为店铺名或品牌名，不得包含营销文案、链接、手机号QQ号，且不宜频繁变动。</div>
+					</div>
+					<h3 class="title3">设置日报</h3>
+					<div class="content" id="daily-rpt">
+						<div class="line">
+							<ul class="height-big">
+								<li>
+									<input type="checkbox" class="dailyOpen"> 每天
+									<select class="daily-hour  input input-auto" value="9"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9" selected="selected">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>时
+									<select class="daily-min  input input-auto"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select>分接收前一天短信发送数量和催付效果
+								</li>
+								<li>
+									<input type="checkbox" class="balanceAlarmOpen"> 软件短信不足
+									<select class="daily-balance input input-auto">
+										<option value="10" selected="selected">10</option>
+										<option value="50">50</option>
+										<option value="100">100</option>
+									</select>条提醒
+								</li>
+								<li>
+									<input type="checkbox" class="expiredOpen"> 软件过期提醒
+								</li>
+								<li>
+									<input type="checkbox" class="notifyOpen"> 叮咚优惠活动及时通知
+								</li>
+							</ul>
+							您的手机号：
+							<input type="text" class="mobile input input-auto" placeholder="手机号码">
+							<div class="text-red height-large">PS:注意哦！如果当日您没有短信消耗，次日是不会发送日报给您哒~</div>
+							<div>
+								<button class="button  bg-main" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-短信发送设置-保存日报&#39;, &#39;点击&#39;]);">保存</button>
+							</div>
+						</div>
+					</div>
+					<h3 class="title2">短信禁发时间段</h3>
+					<div class="content">
+						<div class="line">短信禁发时段</div>
+						<table class="time-table margin-top margin-bottom">
+							<tbody>
+								<tr>
+									<td class="off">0点</td>
+									<td class="off">1点</td>
+									<td class="off">2点</td>
+									<td class="off">3点</td>
+									<td class="off">4点</td>
+									<td class="off">5点</td>
+									<td class="off">6点</td>
+									<td class="off">7点</td>
+									<td class="off">8点</td>
+									<td style="background-color: #FFFFFF;">9点</td>
+									<td style="background-color: #FFFFFF;">10点</td>
+									<td style="background-color: #FFFFFF;">11点</td>
+								</tr>
+								<tr>
+									<td style="background-color: #FFFFFF;">12点</td>
+									<td style="background-color: #FFFFFF;">13点</td>
+									<td style="background-color: #FFFFFF;">14点</td>
+									<td style="background-color: #FFFFFF;">15点</td>
+									<td style="background-color: #FFFFFF;">16点</td>
+									<td style="background-color: #FFFFFF;">17点</td>
+									<td style="background-color: #FFFFFF;">18点</td>
+									<td style="background-color: #FFFFFF;">19点</td>
+									<td style="background-color: #FFFFFF;">20点</td>
+									<td style="background-color: #FFFFFF;">21点</td>
+									<td class="off">22点</td>
+									<td class="off">23点</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="blue">灰色标记的时段将自动禁发短信，所有短信会顺延到之后的时段发送</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<ul id="fixnav">
+		    <li class="qq" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航qq&#39;, &#39;点击&#39;]);">
+				<a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&amp;key=XzgwMDA2OTk0NV8zNTk2MDhfODAwMDY5OTQ1XzJf">
+			 </a>
+			</li>
+			<li class="ww" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航旺旺&#39;, &#39;点击&#39;]);">
+				<a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8">
+				</a>
+			</li>
+			<li class="phone">
+				<div>152-6813-5612</div>
+			</li>
+			<li class="feedback" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航反馈&#39;, &#39;点击&#39;]);">
+				<a href="http://yq.open.taobao.com/isv/feedbacks?appkey=12337775" target="_blank"></a>
+			</li>
+			<li class="totop">
+				<a href="http://dingdong.ciaosir.com/ui/SettingUI/sendset#" target="_self"></a>
+			</li>
+		</ul>
+	</div>
+	<div id="foot" class="text-center height-large margin-large">Copyright © 杭州逐鹿网络技术有限公司 2014</div>
+	<!--新手引导-->
+ 	<div class="guide-wrap" style="position: absolute;left: 0;top: 0;width:100%; height: 100%; display: none;">
+		<div id="guide" style="text-align: center;">
+			<div class="section" id="page1">
+				<img data="/public/images/newdd/1.png">
+				<a href="javascript:;" target="_self" class="finish" style="position: absolute; top: 39%;left: 42%;width:300px;height:52px;opacity: 0;"></a>
+				<a href="javascript:;" target="_self" class="start" style="position: absolute; top: 46%;left: 42%;width:300px;height:58px;opacity: 0;"></a>
+			</div>
+			<div class="section" id="page2">
+				<a href="javascript:;" target="_self" class="page2">
+				<img data="/public/images/newdd/2.png"></a>
+			</div>
+			<div class="section" id="page3">
+				<a href="javascript:;" target="_self" class="page3">
+				<img data="/public/images/newdd/3.png"></a>
+			</div>
+			<div class="section" id="page4">
+				<a href="javascript:;" target="_self" class="page4">
+				<img data="/public/images/newdd/4.png"></a>
+			</div>
+			<div class="section" id="page5">
+				<a href="javascript:;" target="_self" class="finish">
+				<img data="/public/images/newdd/5.png"></a>
+			</div>
+		</div>
+	</div>
+	<div style="display:none" class="popdia">
+		<div class="">
+			<b class="icon-times closepop" style="position: absolute;top: 1px;right:-0px;cursor: pointer;font-size: 30px;width: 42px;height: 40px;opacity: 0;"></b>
+			<img src="../images/diafree.jpg" alt="">
+			<a href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8" class="burtton bg-red" style="position: absolute;top:247px;right:142px;cursor: pointer;width: 220px;height: 50px;opacity: 0;">联系客服</a>
+		</div>
+	</div>
+	<!--vip通道-->
+	<div style="display:none" class="vipdia">
+		<div class="">
+			<b class="icon-times closevip" style="position: absolute;top: 1px;right:-0px;cursor: pointer;font-size: 30px;width: 42px;height: 40px;opacity: 0;"></b>
+			<img src="../images/0108.png" alt="">
+			<span class="num" style="position: absolute;top:185px;color:#ffde00;font-size:36px;right:160px;cursor: pointer;width:20px;height:65px;">01</span>
+			<a href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8" target="_blank" class="burtton bg-red closevip" style="position: absolute;top:299px;right:265px;cursor: pointer;width: 220px;height:65px;opacity: 0;">联系客服</a>
+		</div>
+	</div>			
+	<script src="../js/index.js"></script>											
+</body>
+</html>

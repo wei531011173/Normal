@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>二次催付</title>
+	<title>到货提醒</title>
 	<meta http-equiv="Cache-Control" content="max-age=86400">
 	<meta name="renderer" content="webkit">
 	<meta name="renderer" content="ie-comp">
@@ -13,10 +13,10 @@
 	<link rel="stylesheet" media="screen" href="../style/webuploader.css">
 	<link rel="stylesheet" media="screen" href="../style/ui-dialog.css">
 	<link rel="stylesheet" media="screen" href="../style/introjs.css">
-	<link rel="stylesheet" media="screen" href="../style/msgbox.css">
-	<link rel="stylesheet" type="text/css" href="style/WdatePicker.css">
-	<script src="../js/jQuery.js"></script>	
-	<script src="../js/index.js"></script> 		
+	<link rel="stylesheet" media="screen" href="../style/msgbox.css"> 
+	<link rel="stylesheet" media="screen" href="../style/index.css"> 	
+	<link rel="stylesheet" media="screen" href="../style/WdatePicker.css">
+	<script src="../js/jQuery.js"></script>
 </head>
 <body>
 	<div id="header" class="bg bg-main layout">
@@ -25,7 +25,7 @@
 				<img src="../images/logo.png" class="float-left">
 			</a>
 		    <div class="float-right user-info">
-				欢迎 <span id="shop-name">用户名</span> 剩余短信：<b class="msg-remain">10</b>条 <a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg" target="_self" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部充值&#39;, &#39;点击&#39;]);">充值</a> | 软件还剩：<b class="deadL">14</b>天
+				欢迎 <span id="shop-name">用户名</span> 剩余短信：<b class="msg-remain">10</b>条 <a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg" target="_self" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部充值&#39;, &#39;点击&#39;]);">充值</a> | 软件还剩：<b class="deadL">6</b>天
 				<a href="https://fuwu.taobao.com/ser/detail.html?spm=a1z13.1113643.0.0.IfpuXB&amp;service_code=ts-13720&amp;tracelog=rjxf" target="_blank" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部续费&#39;, &#39;点击&#39;]);">续费</a>
 			</div>				
 		</div>
@@ -35,7 +35,7 @@
 		<div id="main-nav">
 			<ul class="main-ul">
 				<li class="nav-index">
-					<a href="../index/index.html" target="_self"><b></b>首页</a>
+					<a href="#" target="_self"><b></b>首页</a>
 				</li>
 				<li class="nav-market">
 					<a href="javascript:;" target="_self"><b></b>会员营销<span class="icon-angle-down"></span></a>
@@ -58,37 +58,37 @@
 					</a>
 					<ul class="main-nav-sub" style="display: block;">
 						<li>
-							<a href="OrderReminder.html" target="_self">订单催付</a>
+							<a href="../MemberCare/OrderReminder.html" target="_self">订单催付</a>
+						</li>
+						<li>
+							<a href="../MemberCare/TwoTimesPay.html" target="_self">二次催付</a>
+						</li>
+						<li>
+							<a href="../MemberCare/ShippingAlert.html" target="_self">发货提醒</a>
 						</li>
 						<li class="active">
-							<a href="TwoTimesPay.html" target="_self">二次催付</a>
+							<a href="../MemberCare/ArrivalReminder.html" target="_self">到货提醒</a>
 						</li>
 						<li>
-							<a href="ShippingAlert.html" target="_self">发货提醒</a>
+							<a href="../MemberCare/SignReminder.html" target="_self">签收提醒</a>
 						</li>
 						<li>
-							<a href="ArrivalReminder.html" target="_self">到货提醒</a>
+							<a href="../MemberCare/MiddleAndPoorEvaluationOfCare.html" target="_self">中差评关怀</a>
 						</li>
 						<li>
-							<a href="SignReminder.html" target="_self">签收提醒</a>
+							<a href="../MemberCare/CareFor.html" target="_self">好评关怀</a>
 						</li>
 						<li>
-							<a href="MiddleAndPoorEvaluationOfCare.html" target="_self">中差评关怀</a>
+							<a href="../MemberCare/PaymentCare.html" target="_self">付款关怀</a>
 						</li>
 						<li>
-							<a href="CareFor.html" target="_self">好评关怀</a>
+							<a href="../MemberCare/DelayedAlert.html" target="_self">迟发提醒</a>
 						</li>
 						<li>
-							<a href="PaymentCare.html" target="_self">付款关怀</a>
+							<a href="../MemberCare/BackCare.html" target="_self">回款关怀</a>
 						</li>
 						<li>
-							<a href="DelayedAlert.html" target="_self">迟发提醒</a>
-						</li>
-						<li>
-							<a href="BackCare.html" target="_self">回款关怀</a>
-						</li>
-						<li>
-							<a href="RefundCare.html" target="_self">退款关怀</a>
+							<a href="../MemberCare/RefundCare.html" target="_self">退款关怀</a>
 						</li>
 					</ul>
 				</li>
@@ -105,13 +105,13 @@
 							<a href="#" target="_self">催付效果</a>
 						</li> -->
 						<li>
-							<a href="../SMSRecord/SendRecord.html" target="_self">发送记录</a>
+							<a href="#" target="_self">发送记录</a>
 						</li>
 						<li>
-							<a href="../SMSRecord/RechargeRecord.html" target="_self">充值记录</a>
+							<a href="#" target="_self">充值记录</a>
 						</li>
 						<li>
-							<a href="../SMSRecord/SMSBill.html" target="_self">短信账单</a>
+							<a href="#" target="_self">短信账单</a>
 						</li>
 					</ul>
 				</li>
@@ -119,21 +119,21 @@
 					<a href="javascript:;" target="_self"><b></b>系统设置<span class="icon-angle-down"></span></a>
 					<ul class="main-nav-sub">
 						<li>
-							<a href="../SystemSettings/ImportHistoricalOrder.html" target="_self">导入历史订单</a>
+							<a href="#" target="_self">导入历史订单</a>
 						</li>
 						<li>
-							<a href="../SystemSettings/SMSsettings.html" target="_self">短信发送设置</a>
+							<a href="#" target="_self">短信发送设置</a>
 						</li>
 						<li>
-							<a href="../SystemSettings/BlackListSettings.html" target="_self">黑名单设置</a>
+							<a href="#" target="_self">黑名单设置</a>
 						</li>
 						<li>
-							<a href="../SystemSettings/ChildAccountSettings.html" target="_self">子账号设置</a>
+							<a href="#" target="_self">子账号设置</a>
 						</li>
 					</ul>
 				</li>
 				<li class="nav-help">
-					<a href="../HelpCenter/HelpCenter.html" target="_self"><b></b>帮助中心</a>
+					<a href="" target="_self"><b></b>帮助中心</a>
 				</li>
 			</ul>
 		</div>
@@ -152,7 +152,7 @@
 					<img src="../images/arr1.jpg">
 				</li>
 				<li>
-					<a href="http://dingdong.ciaosir.com/ui/CareUI/twicepay" target="_self" cat="20" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-二次催付&#39;, &#39;点击&#39;]);" class="current">
+					<a href="http://dingdong.ciaosir.com/ui/CareUI/twicepay" target="_self" cat="20" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-二次催付&#39;, &#39;点击&#39;]);">
 						<b>二次催付</b>
 						<button>未开启</button>
 						<div class="care-mask">
@@ -195,7 +195,7 @@
 					<img src="../images/arr1.jpg">
 				</li>
 				<li>
-					<a href="http://dingdong.ciaosir.com/ui/CareUI/arrivalpay" target="_self" cat="4" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-到货提醒&#39;, &#39;点击&#39;]);">
+					<a href="http://dingdong.ciaosir.com/ui/CareUI/arrivalpay" target="_self" cat="4" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-关怀步骤-到货提醒&#39;, &#39;点击&#39;]);" class="current">
 						<b>到货提醒</b>
 						<button>未开启</button>
 						<div class="care-mask">
@@ -255,52 +255,41 @@
 				</li>
 			</ul>
 			<ul class="main-tab-nav">
-				<li class="active">二次催付</li>
+				<li class="active">到货提醒</li>
 				<li>发送记录</li>
 			</ul>
-			<div class="main-tab-content" cat="20">
-				<div class="main-step clearfix margin-top ">
-					<h2>功能描述：&nbsp;当首次催付超过一定时间，买家仍未付款，将自动发送短信给买家，予以二次催付，有效提高订单付款率。</h2>
-					<h2>功能状态：<a href="javascript:;" target="_self" class="switch-btn switch-off" msg="20"></a></h2>
+			<div class="main-tab-content" cat="4">
+				<div class="main-step clearfix margin-top">
+					<h2>功能描述：&nbsp;当宝贝到达买家所在城市时，将自动发送短信给买家，提醒快递即将到达。</h2>
+					<h2>功能状态：<a href="javascript:;" target="_self" class="switch-btn switch-off" msg="4"></a></h2>
 				</div>
 				<hr class="split">
 				<div class="main-step clearfix">
 					<h2>发送条件：</h2>
 					<ul class="care-condition">
-						<li>1.&nbsp;首次催付<span class="send-delay-time text-red">120分钟</span>后还未付款自动发短信（订单金额大于<span class="send-price text-red">0</span>元才提醒 ） 。
+						 <li>1.&nbsp;订单金额大于<span class="send-price text-red">0</span>元才提醒  。
 							<a href="javascript:;" target="_self" class="change-condition modify">修改</a>
 						</li>
 						<li class="remind-event">
-							<div class="bg bg-yellow-light padding">首次催付
-								<select name="time" class="cf-delay input input-auto">
-									<option value="300000">5分钟</option>
-									<option value="600000">10分钟</option>
-									<option value="1200000">20分钟</option>
-									<option value="1800000">30分钟</option>
-									<option value="3600000" selected="selected">1小时</option>
-									<option value="7200000" selected="selected">2小时</option>
-									<option value="14400000">4小时</option>
-									<option value="28800000">8小时</option>
-									<option value="43200000">12小时</option>
-									<option value="86400000">24小时</option>
-									<option value="172800000">48小时</option>
-								</select>
-								后还未付款自动发短信（订单金额大于
-								<input type="text" class="min-price text input input-auto" size="3" value="0"> 元才提醒）
-								<a href="javascript:;" target="_self" caretype="20" class="change-remind-event button bg-yellow">确定</a>
+							<div class="bg bg-yellow-light padding">
+								订单金额大于
+								<input type="text" class="min-price text input input-auto" size="3" value="0"> 元才提醒
+								<a href="javascript:;" target="_self" caretype="4" class="change-remind-event button bg-yellow">确定</a>
 							</div>
 						</li>
-						<li>2.&nbsp;同一买家当天<span class="text-red">最多发1次</span>二次催付。</li>
-						<li>3.&nbsp;买家当天在本店<span class="text-red">已付款订单&gt;=1</span>，二次催付将自动取消。</li>
+						<li>2.&nbsp;当宝贝到达收件人所在城市后，叮咚将自动发送短信通知买家注意查收。
+						</li>
+						<li>3.&nbsp;18:00至第二天8:00的到达提醒延迟至第二天8:00发送；</li>
+						<li>4.&nbsp;若买家<span class="text-red">已签收</span>或确认<span class="text-red">已收货</span>则不发。</li>
 					</ul>
 				</div>
 				<hr class="split">
 				<div class="main-step clearfix margin-small-top">
 					<h2>高级设置：<a href="javascript:;" target="_self" class="change-careset modify">修改</a></h2> 
-					<ul class="setcare-result" style="display: none;">
+					<ul class="setcare-result">
 						<li class=""><b>订单标旗：</b><span class="blue">所有标旗都不排除</span> </li>
 					</ul>
-					<div class="setcare-wrap">
+					<div class="setcare-wrap" style="display: none;">
 						<dl class="dl-inline clearfix careflag">
 							<dt>订单标旗：</dt>
 							<dd type="flag" text="所有标旗都不排除">
@@ -337,7 +326,8 @@
 				<div class="main-step clearfix margin-small-top margin-small-bottom">
 					<h2>编辑短信内容：<a href="javascript:;" target="_self" class="change-msg modify">修改</a></h2> 
 					<div class="curSetting">
-						<strong></strong><span>亲，您拍下的宝贝我们一直为您留着呢，付款后可及时发货，有什么问题都可以联系【【#店铺名称#】】</span>
+						<strong></strong>
+						<span>亲，您的宝贝已抵达【#收件人城市#】，请注意查收，有问题联系客服，如满意请点亮5颗星星，感谢您的支持【【#店铺名称#】】</span>
 					</div>
 					<div class="tab margin-top care-tab float-left">
 						<div class="tab-head">
@@ -348,30 +338,31 @@
 						</div>
 						<div class="tab-body">
 							<div class="tab-panel active">
-								<div class="template-wrapper"><div class="clearfix item  cur"><div class="float-left padding-large-right margin-large-right height"><input type="radio" name="tmp20" tid="20" checked="checked"><span class="tmp-msg">亲，您拍下的宝贝我们一直为您留着呢，付款后可及时发货，有什么问题都可以联系【【#店铺名称#】】</span></div><a href="javascript:;" class="set-care-temp button button-small bg-blue">使用</a></div></div>
+								<div class="template-wrapper"><div class="clearfix item  cur"><div class="float-left padding-large-right margin-large-right height"><input type="radio" name="tmp4" tid="4" checked="checked"><span class="tmp-msg">亲，您的宝贝已抵达【#收件人城市#】，请注意查收，有问题联系客服，如满意请点亮5颗星星，感谢您的支持【【#店铺名称#】】</span></div><a href="javascript:;" class="set-care-temp button button-small bg-blue">使用</a></div><div class="clearfix item "><div class="float-left padding-large-right margin-large-right height"><input type="radio" name="tmp4" tid="4002"><span class="tmp-msg">亲爱的【#收件人姓名#】，您在本店购买的宝贝已抵达【#收件人城市#】，请验货后再查收，有问题联系【【#店铺名称#】】</span></div><a href="javascript:;" class="set-care-temp button button-small bg-blue">使用</a></div><div class="clearfix item "><div class="float-left padding-large-right margin-large-right height"><input type="radio" name="tmp4" tid="4003"><span class="tmp-msg">亲，您的包裹于【#到达日期#】由【#快递公司#】运抵【#收件人城市#】，查收后有问题请联系【【#店铺名称#】】</span></div><a href="javascript:;" class="set-care-temp button button-small bg-blue">使用</a></div></div>
 								<!--<div class="clearfix clear margin-top"><a href="javascript:;" target="_self" class="save-setting button bg-yellow">保存模版</a></div>-->
 							</div>
 							<div class="tab-panel  msg-content-wrapper">
 								<div class="msg-wrap clearfix">
 									<div class="tags-wrap margin-small">
 										点击可插入标签：
-										<ul class="clearfix">
+										<ul class="clearfix" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-插入标签&#39;, &#39;点击&#39;]);">
 											<li>【#店铺名称#】</li>
-											<li>【#拍下日期#】</li>
 											<li>【#收件人姓名#】</li>
+											<li>【#快递公司#】</li>
+											<li>【#收件人城市#】</li>
 											<li>【#买家旺旺#】</li>
-											<li>【#催付链接#】</li>
+											<li>【#快递单号#】</li>
 										</ul>
 									</div>
 									<hr>
-									<textarea class="msg" value="">亲，您拍下的宝贝我们一直为您留着呢，付款后可及时发货，有什么问题都可以联系【【#店铺名称#】】</textarea>
+									<textarea class="msg" value="">亲，您的宝贝已抵达【#收件人城市#】，请注意查收，有问题联系客服，如满意请点亮5颗星星，感谢您的支持【【#店铺名称#】】</textarea>
 									<span class="sign-after text-blue"></span>
 									<!--<span class="sign-after text-blue"></span>-->
 									 <!--<div class="msg-temps margin-small">
 										使用短信模版：<a href="javascript:;" target="_self" class="text-blue more-temp "  onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-短信模版', '点击']);">选择</a>
 										<a href="javascript:;" target="_self" class="button bg button-small margin-left short-url " onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-插入短链接', '点击']);">插入短链接</a>
 										<a href="javascript:;" target="_self" class="text-small showtip" tip="为了减少短信字数，将长的宝贝网址转换为简短的网址">（什么是短链接）</a>
-									</div>-->				
+									</div>-->		
 									<div class="msg-count height-big padding-little-left" style="background: #F7F7F7;">
 										已经输入<span class="remain text-yellow">2</span>/<span class="msgCount">70</span>字
 										<span class="msglengtgtip">（亲!超过<span class="text-red">0</span>字，不满<span class="text-red">70</span>个字，需要<span class="text-red">1</span>条短信~）</span>
@@ -389,7 +380,7 @@
 						</div>
 					</div>
 					<div class="msg-preview float-left margin-large-top" style="display: none;">
-						<p>亲，您拍下的宝贝我们一直为您留着呢，付款后可及时发货，有什么问题都可以联系【【#店铺名称#】】</p>
+						<p>亲，您的宝贝已抵达【#收件人城市#】，请注意查收，有问题联系客服，如满意请点亮5颗星星，感谢您的支持【【#店铺名称#】】</p>
 						<div class="sign">【用户名】</div>
 						<span class="td"></span>
 					</div>	
@@ -470,15 +461,27 @@
 						</thead>
 						<tbody><tr><td colspan="6">没有此类型发送记录</td></tr></tbody>
 					</table>
-					<ul class=" pagination float-right margin-top " style="display: none;"><li class="page-prev page-prev-disabled" title="上一页"><a href="http://dingdong.ciaosir.com/ui/CareUI/twicepay#">上一页</a></li><li class="page-next page-next-abled" title="2"><a href="http://dingdong.ciaosir.com/ui/CareUI/twicepay#">下一页</a> </li><li class="pageinfo">共0页,0条记录  <input type="text" class="jumpTo" style="" value="1"> 页 <input style="border: solid 1px #ddd;" class="gopage-submit hand button button-small" title="跳转页面" type="button" value="确定"></li></ul>
+					<ul class=" pagination float-right margin-top " style="display: none;">
+						<li class="page-prev page-prev-disabled" title="上一页">
+							<a href="http://dingdong.ciaosir.com/ui/CareUI/arrivalpay#">上一页</a>
+						</li>
+						<li class="page-next page-next-abled" title="2">
+							<a href="http://dingdong.ciaosir.com/ui/CareUI/arrivalpay#">下一页</a> 
+						</li>
+						<li class="pageinfo">共0页,0条记录  
+							<input type="text" class="jumpTo" style="" value="1"> 页 
+							<input style="border: solid 1px #ddd;" class="gopage-submit hand button button-small" title="跳转页面" type="button" value="确定">
+						</li>
+					</ul>
 				</div>
 			</div>
 			<ul class="tags fl" style="display: none;">
 				<li>【#店铺名称#】</li>
-				<li>【#拍下日期#】</li>
 				<li>【#收件人姓名#】</li>
+				<li>【#快递公司#】</li>
+				<li>【#收件人城市#】</li>
 				<li>【#买家旺旺#】</li>
-				<li>【#催付链接#】</li>
+				<li>【#快递单号#】</li>
 			</ul>
 		</div>
 		<ul id="fixnav">
@@ -497,13 +500,13 @@
 				<a href="http://yq.open.taobao.com/isv/feedbacks?appkey=12337775" target="_blank"></a>
 			</li>
 			<li class="totop">
-				<a href="http://dingdong.ciaosir.com/ui/CareUI/twicepay#" target="_self"></a>
+				<a href="http://dingdong.ciaosir.com/ui/CareUI/arrivalpay#" target="_self"></a>
 			</li>
 		</ul>
 	</div>
 	<div id="foot" class="text-center height-large margin-large">Copyright © 杭州逐鹿网络技术有限公司 2014</div>
-    <!--新手引导-->
-	<div class="guide-wrap" style="position: absolute;left: 0;top: 0;width:100%; height: 100%; display: none;">
+	<!--新手引导-->
+ 	<div class="guide-wrap" style="position: absolute;left: 0;top: 0;width:100%; height: 100%; display: none;">
 		<div id="guide" style="text-align: center;">
 			<div class="section" id="page1">
 				<img data="/public/images/newdd/1.png">
@@ -544,5 +547,6 @@
 			<a href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8" target="_blank" class="burtton bg-red closevip" style="position: absolute;top:299px;right:265px;cursor: pointer;width: 220px;height:65px;opacity: 0;">联系客服</a>
 		</div>
 	</div>
+	<script src="../js/index.js"></script>
 </body>
 </html>

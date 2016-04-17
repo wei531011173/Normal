@@ -17,17 +17,17 @@ import com.normal.util.UserUtil;
  */
 public class LoginInterceptor extends HandlerInterceptorAdapter {
 	
-	@Autowired
-	UserService userService;
+/*	@Autowired
+	UserService userService;*/
 	
 	@Override
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
 		
-		if(UserUtil.getUser() == null) {
+		/*if(UserUtil.getUser() == null) {
 			User user = userService.getUserById(1);
 			UserUtil.setUser(user);
-		}
+		}*/
 		return true;
 	}
 

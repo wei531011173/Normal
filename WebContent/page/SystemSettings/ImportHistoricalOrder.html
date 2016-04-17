@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://dingdong.ciaosir.com/ui/SettingUI/importtrades -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>导入历史订单</title>		
+	<meta http-equiv="Cache-Control" content="max-age=86400">
+	<meta name="renderer" content="webkit">
+	<meta name="renderer" content="ie-comp">
+	<meta name="renderer" content="ie-stand">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" media="screen" href="../style/pintuer.css">
+	<link rel="stylesheet" media="screen" href="../style/main.css">
+	<link rel="stylesheet" media="screen" href="../style/webuploader.css">
+	<link rel="stylesheet" media="screen" href="../style/ui-dialog.css">
+	<link rel="stylesheet" media="screen" href="../style/introjs.css">
+	<link rel="stylesheet" media="screen" href="../style/msgbox.css"> 
+	<link rel="stylesheet" media="screen" href="../style/index.css"> 	
+	<script src="../js/jQuery.js"></script>	
+</head>
+<body>
+	<div id="header" class="bg bg-main layout">
+		<div class="container clearfix bg bg-main">
+			<a href="http://dingdong.ciaosir.com/ui/IndexUI/index" target="_self">
+				<img src="../images/logo.png" class="float-left">
+			</a>
+			<div class="float-right user-info">
+				欢迎 <span id="shop-name">用户名</span> 剩余短信：<b class="msg-remain">10</b>条 <a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg" target="_self" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部充值&#39;, &#39;点击&#39;]);">充值</a> | 软件还剩：<b class="deadL">14</b>天
+				<a href="https://fuwu.taobao.com/ser/detail.html?spm=a1z13.1113643.0.0.IfpuXB&amp;service_code=ts-13720&amp;tracelog=rjxf" target="_blank" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部续费&#39;, &#39;点击&#39;]);">续费</a>
+			</div>		
+		</div>
+	</div>
+	<div id="wrapper" class="clearfix container">
+		<marquee behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()">
+			<img src="../images/iconfont-laba.png"> 亲爱的叮咚用户，由于淘宝数据接口规则发生变化，一星期内没登陆叮咚，已开启的关怀提醒功能会自动失效。所以，为保障您关怀短信正常发送，今后烦请7天内至少登陆一次叮咚哦。给您带来的不便，敬请谅解。</marquee>
+		<div id="main-nav">
+			<ul class="main-ul">
+				<li class="nav-index">
+					<a href="../index/index.html" target="_self"><b></b>首页</a>
+				</li>
+				<li class="nav-market">
+					<a href="javascript:;" target="_self"><b></b>会员营销<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<li>
+							<a href="../AffiliateMarketing/MemberShortMessage.html" target="_self">会员短信群发</a>
+						</li>
+						<li>
+							<a href="../AffiliateMarketing/ImportNumberGroup.html" target="_self">导入号码群发</a>
+						</li>
+						<li>
+							<a href="../AffiliateMarketing/CouponGroup.html" target="_self">优惠券群发</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-care">
+					<a href="javascript:;" target="_self">
+						<b></b>会员关怀
+						<span class="icon-angle-down"></span>
+					</a>
+					<ul class="main-nav-sub">
+						<li>
+							<a href="../MemberCare/OrderReminder.html" target="_self">订单催付</a>
+						</li>
+						<li>
+							<a href="../MemberCare/TwoTimesPay.html" target="_self">二次催付</a>
+						</li>
+						<li>
+							<a href="../MemberCare/ShippingAlert.html" target="_self">发货提醒</a>
+						</li>
+						<li>
+							<a href="../MemberCare/ArrivalReminder.html" target="_self">到货提醒</a>
+						</li>
+						<li>
+							<a href="../MemberCare/SignReminder.html" target="_self">签收提醒</a>
+						</li>
+						<li>
+							<a href="../MemberCare/MiddleAndPoorEvaluationOfCare.html" target="_self">中差评关怀</a>
+						</li>
+						<li>
+							<a href="../MemberCare/CareFor.html" target="_self">好评关怀</a>
+						</li>
+						<li>
+							<a href="../MemberCare/PaymentCare.html" target="_self">付款关怀</a>
+						</li>
+						<li>
+							<a href="../MemberCare/DelayedAlert.html" target="_self">迟发提醒</a>
+						</li>
+						<li>
+							<a href="../MemberCare/BackCare.html" target="_self">回款关怀</a>
+						</li>
+						<li>
+							<a href="../MemberCare/RefundCare.html" target="_self">退款关怀</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-history">
+					<a href="javascript:;" target="_self"><b></b>短信记录/效果<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<!-- <li>
+							<a href="#" target="_self">营销效果</a>
+						</li>
+						<li>
+							<a href="#" target="_self">优惠券效果</a>
+						</li>
+						<li>
+							<a href="#" target="_self">催付效果</a>
+						</li> -->
+						<li>
+							<a href="../SMSRecord/SendRecord.html" target="_self">发送记录</a>
+						</li>
+						<li>
+							<a href="../SMSRecord/RechargeRecord.html" target="_self">充值记录</a>
+						</li>
+						<li>
+							<a href="../SMSRecord/SMSBill.html" target="_self">短信账单</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-sysset">
+					<a href="javascript:;" target="_self" class="active"><b></b>系统设置<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub" style="display: block;">
+						<li>
+							<a href="ImportHistoricalOrder.html" target="_self">导入历史订单</a>
+						</li>
+						<li>
+							<a href="SMSsettings.html" target="_self">短信发送设置</a>
+						</li>
+						<li>
+							<a href="BlackListSettings.html" target="_self">黑名单设置</a>
+						</li>
+						<li>
+							<a href="ChildAccountSettings.html" target="_self">子账号设置</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-help">
+					<a href="../HelpCenter/HelpCenter.html" target="_self"><b></b>帮助中心</a>
+				</li>
+			</ul>
+		</div>
+		<div id="main-content" class="clearfix">
+			<div class="panel">
+				<div class="panel-head">
+					<h4>导入历史订单</h4>
+				</div>
+				<div class="panel-body">
+					<div class="line-big margin-big-top">
+						<div class="x6 ">
+							<h4 class="bg-blue-light padding">第一步:下载历史订单</h4>
+							<div class="padding border">
+								请 <a href="https://trade.taobao.com/trade/itemlist/list_sold_items.htm" class="button bg-main" target="_blank">点击此处</a>导出3个月前的历史订单。
+								<div class="height-big">请检查下载到的是不是CSV格式？如果不是，是不是使用了迅雷/QQ旋风等下载工具下载文件, 
+									<span class="text-yellow">建议直接用浏览器下载（右键"另存为"） </span>
+								</div>
+							</div>
+						</div>
+						<div class="x6">
+							<h4 class="bg-blue-light padding">第二步:上传订单报表</h4>
+							<div class="padding border">
+								<a href="javascript:;" target="_self" class="upload-memebercsv webuploader-container" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导入历史订单-上传文件&#39;, &#39;点击&#39;]);"><div class="webuploader-pick">上传文件</div><div id="rt_rt_1afagriogg2d1lgcet4751d6u1" style="position: absolute; top: 0px; left: 0px; width: 88px; height: 34px; overflow: hidden; bottom: auto; right: auto;"><input type="file" name="file" class="webuploader-element-invisible" multiple="multiple" accept=""><label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label></div></a>
+								<div class="height-big">将第一步下载的文件直接上传即可<span class="text-yellow">（请不要打开)</span>，上传完成后，根据文件大小，叮咚需要<span class="text-yellow">0.5~2小时</span>进行处理，请耐心等待！</div>
+							</div>
+						</div>
+						<div class="x12 margin-big-top">
+							<h4 class="bg-blue-light padding">导入历史</h4>
+							<table class="table text-left border" id="import-table">
+								<thead class="bg">
+									<tr>
+										<th width="">文件名</th>
+										<th width="100">导入状态</th>
+										<th width="110">导入订单数</th>
+										<th width="135">有号码订单数</th>
+										<th width="110">新增号码数</th>
+										<th width="100">导入结果</th>
+									</tr>
+								</thead>
+								<tbody><tr><td colspan="5">没有导入记录哦</td></tr></tbody>
+							</table>
+							<ul class="pagination float-right margin-top" id="import-page" style="display: none;"><li class="page-prev page-prev-disabled" title="上一页"><a href="http://dingdong.ciaosir.com/ui/SettingUI/importtrades#">上一页</a></li><li class="page-next page-next-abled" title="2"><a href="http://dingdong.ciaosir.com/ui/SettingUI/importtrades#">下一页</a> </li><li class="pageinfo">共0页,0条记录  <input type="text" class="jumpTo" style="" value="1"> 页 <input style="border: solid 1px #ddd;" class="gopage-submit hand button button-small" title="跳转页面" type="button" value="确定"></li></ul>
+						</div>
+					</div>																		
+					<div class="QA margin-big-top"> 常见问题（FAQ）：
+						<h5><i class="arr-right"></i>导入历史订单需要等多久？</h5>
+						<p>
+							根据文件大小，叮咚需要0.5~2小时处理时间，一般10万条以下可以在1小时内处理完毕，10万-30万需要1-2小时，30万以上建议多次提交。历史订单上传同步期间，不影响最近三个月内的用户的筛选和使用。</p>
+						<h5><i class="arr-right"></i>不会导出订单？点此查看视频教程</h5>
+						<p>
+							<img data-src="http://img02.taobaocdn.com/imgextra/i2/734131476/T2Q9C8XfVbXXXXXXXX_!!734131476.gif">
+						</p>
+						<h5><i class="arr-right"></i>我应该下载哪个时间段的历史订单?</h5>
+						<p>3个月前的所有历史订单。 如您是2010年3月2号开店的，那么开始日期就选择：2010年3月2号
+						</p>
+						<h5><i class="arr-right"></i>为什么我的历史订单上传不了?</h5>
+						<p>1. 请亲检查您是不是选择了正确的文件上传.
+							<br> 2. 请亲检查下载到的是不是CSV格式？如果不是，是不是使用了迅雷/QQ旋风等下载工具下载文件, 迅雷等工具下载的文件有可能会改变格式, 建议直接用浏览器下载（右键"另存为"）
+							<br> 3. 下载完后的文件直接上传即可, 不要在本地打开, 也不要修改.</p>
+						<h5><i class="arr-right"></i>为什么最近3个月内的订单不用上传?</h5>
+						<p>3个月内的订单叮咚可以自动通过淘宝的API接口同步, 无需您下载哦o(∩_∩)o</p>
+					</div>			
+				</div>
+			</div>
+		</div>
+		<ul id="fixnav">
+		    <li class="qq" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航qq&#39;, &#39;点击&#39;]);">
+				<a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&amp;key=XzgwMDA2OTk0NV8zNTk2MDhfODAwMDY5OTQ1XzJf">
+			 </a>
+			</li>
+			<li class="ww" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航旺旺&#39;, &#39;点击&#39;]);">
+				<a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8">
+				</a>
+			</li>
+			<li class="phone">
+				<div>152-6813-5612</div>
+			</li>
+			<li class="feedback" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-浮动导航反馈&#39;, &#39;点击&#39;]);">
+				<a href="http://yq.open.taobao.com/isv/feedbacks?appkey=12337775" target="_blank"></a>
+			</li>
+			<li class="totop">
+				<a href="http://dingdong.ciaosir.com/ui/SettingUI/importtrades#" target="_self"></a>
+			</li>
+		</ul>
+	</div>
+	<div id="foot" class="text-center height-large margin-large">Copyright © 杭州逐鹿网络技术有限公司 2014</div>	
+	<!--新手引导-->
+	<div class="guide-wrap" style="position: absolute;left: 0;top: 0;width:100%; height: 100%; display: none;">
+		<div id="guide" style="text-align: center;">
+			<div class="section" id="page1">
+				<img data="/public/images/newdd/1.png">
+				<a href="javascript:;" target="_self" class="finish" style="position: absolute; top: 39%;left: 42%;width:300px;height:52px;opacity: 0;"></a>
+				<a href="javascript:;" target="_self" class="start" style="position: absolute; top: 46%;left: 42%;width:300px;height:58px;opacity: 0;"></a>
+			</div>
+			<div class="section" id="page2">
+				<a href="javascript:;" target="_self" class="page2">
+				<img data="/public/images/newdd/2.png"></a>
+			</div>
+			<div class="section" id="page3">
+				<a href="javascript:;" target="_self" class="page3">
+				<img data="/public/images/newdd/3.png"></a>
+			</div>
+			<div class="section" id="page4">
+				<a href="javascript:;" target="_self" class="page4">
+				<img data="/public/images/newdd/4.png"></a>
+			</div>
+			<div class="section" id="page5">
+				<a href="javascript:;" target="_self" class="finish">
+				<img data="/public/images/newdd/5.png"></a>
+			</div>
+		</div>
+	</div>
+	<div style="display:none" class="popdia">
+		<div class="">
+			<b class="icon-times closepop" style="position: absolute;top: 1px;right:-0px;cursor: pointer;font-size: 30px;width: 42px;height: 40px;opacity: 0;"></b>
+			<img src="../images/diafree.jpg" alt="">
+			<a href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8" class="burtton bg-red" style="position: absolute;top:247px;right:142px;cursor: pointer;width: 220px;height: 50px;opacity: 0;">联系客服</a>
+		</div>
+	</div>
+	<!--vip通道-->
+	<div style="display:none" class="vipdia">
+		<div class="">
+			<b class="icon-times closevip" style="position: absolute;top: 1px;right:-0px;cursor: pointer;font-size: 30px;width: 42px;height: 40px;opacity: 0;"></b>
+			<img src="../images/0108.png" alt="">
+			<span class="num" style="position: absolute;top:185px;color:#ffde00;font-size:36px;right:160px;cursor: pointer;width:20px;height:65px;">01</span>
+			<a href="http://www.taobao.com/webww/ww.php?ver=3&amp;touid=michael_gu_2009%3A%E5%8F%AE%E5%92%9Acrm&amp;siteid=cntaobao&amp;status=1&amp;charset=utf-8" target="_blank" class="burtton bg-red closevip" style="position: absolute;top:299px;right:265px;cursor: pointer;width: 220px;height:65px;opacity: 0;">联系客服</a>
+		</div>
+	</div>
+	<script src="../js/index.js"></script>
+</body>
+</html>

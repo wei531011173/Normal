@@ -16,25 +16,7 @@
 	<link rel="stylesheet" media="screen" href="../style/msgbox.css">
 	<link rel="stylesheet" type="text/css" href="style/WdatePicker.css">
 	<script src="../js/jQuery.js"></script>	
-	<script src="../js/js/hm.js"></script>
-	<script type="text/javascript">
-		var TD = TD || {};
-		TD.authcode = TD.authcode || '';
-		var USER = USER || {};
-		USER.uid = USER.uid || '540592922';
-		USER.ver = USER.ver || '10';
-		USER.nick = USER.nick || '用户名';
-		USER.olduser = USER.olduser || '';
-	</script>
-	<script>
-		var _hmt = _hmt || [];
-		(function() {
-			var hm = document.createElement("script");
-			hm.src = "//hm.baidu.com/hm.js?effa3aa69d58f92e6887af5412a3af7b";
-			var s = document.getElementsByTagName("script")[0];
-			s.parentNode.insertBefore(hm, s);
-		})();		
-	</script>
+	<script src="../js/index.js"></script>
 </head>
 	<body>
 		<div id="header" class="bg bg-main layout">
@@ -42,13 +24,8 @@
 				<a href="http://dingdong.ciaosir.com/ui/IndexUI/index" target="_self">
 					<img src="../images/logo.png" class="float-left">
 				</a>
-			    <!--//修改 by mlc-->
-				<!--<a href="/ui/AccountUI/switchVersion" target="_self" style="float: right;margin-top: 25px;display: none;" class="changever" onClick="javascript:_hmt.push(['_trackEvent', '新叮咚-切换到老版本', '点击']);">
-					<span class="text-white">切换到老版本>></span>
-				</a>-->
-
-								<div class="float-right user-info">
-					欢迎 <span id="shop-name">夜空很美1122</span> 剩余短信：<b class="msg-remain">10</b>条 <a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg" target="_self" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部充值&#39;, &#39;点击&#39;]);">充值</a> | 软件还剩：<b class="deadL">14</b>天
+			    <div class="float-right user-info">
+					欢迎 <span id="shop-name">用户名</span> 剩余短信：<b class="msg-remain">10</b>条 <a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg" target="_self" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部充值&#39;, &#39;点击&#39;]);">充值</a> | 软件还剩：<b class="deadL">14</b>天
 					<a href="https://fuwu.taobao.com/ser/detail.html?spm=a1z13.1113643.0.0.IfpuXB&amp;service_code=ts-13720&amp;tracelog=rjxf" target="_blank" class="button bg-yellow button-small" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-顶部续费&#39;, &#39;点击&#39;]);">续费</a>
 				</div>
 				
@@ -57,108 +34,109 @@
 		<div id="wrapper" class="clearfix container">
 			<marquee behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()"><img src="../images/iconfont-laba.png"> 亲爱的叮咚用户，由于淘宝数据接口规则发生变化，一星期内没登陆叮咚，已开启的关怀提醒功能会自动失效。所以，为保障您关怀短信正常发送，今后烦请7天内至少登陆一次叮咚哦。给您带来的不便，敬请谅解。</marquee>
 			<div id="main-nav">
-				<ul>
-					<li class="nav-index">
-						<a href="../index/index.html" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航首页&#39;, &#39;点击&#39;]);">
-							<b></b>首页
-						</a>
-					</li>
-					<li class="nav-market">
-						<a href="javascript:;" target="_self"><b></b>会员营销<span class="icon-angle-down"></span></a>
-						<ul class="main-nav-sub" style="display: block;">
-							<li>
-								<a href="../AffiliateMarketing/MemberShortMessage.html" target="_self">会员短信群发</a>
-							</li>
-							<li>
-								<a href="../AffiliateMarketing/ImportNumberGroup.html" target="_self">导入号码群发</a>
-							</li>
-							<li>
-								<a href="../AffiliateMarketing/CouponGroup.html" target="_self">优惠券群发</a>
-							</li>
-						</ul>
-					</li>
-					<li class="nav-care">
-						<a href="javascript:;" target="_self">
-							<b></b>会员关怀
-							<span class="icon-angle-down"></span>
-						</a>
-						<ul class="main-nav-sub" style="display: block;">
-							<li>
-								<a href="OrderReminder.html" target="_self">订单催付</a>
-							</li>
-							<li>
-								<a href="TwoTimesPay.html" target="_self">二次催付</a>
-							</li>
-							<li>
-								<a href="ShippingAlert.html" target="_self">发货提醒</a>
-							</li>
-							<li>
-								<a href="#" target="_self">到货提醒</a>
-							</li>
-							<li>
-								<a href="SignReminder.html" target="_self">签收提醒</a>
-							</li>
-							<li>
-								<a href="MiddleAndPoorEvaluationOfCare.html" target="_self">中差评关怀</a>
-							</li>
-							<li>
-								<a href="CareFor.html" target="_self">好评关怀</a>
-							</li>
-							<li>
-								<a href="PaymentCare.html" target="_self">付款关怀</a>
-							</li>
-							<li>
-								<a href="#" target="_self">迟发提醒</a>
-							</li>
-							<li class="active">
-								<a href="BackCare.html" target="_self">回款关怀</a>
-							</li>
-							<li>
-								<a href="RefundCare.html" target="_self">退款关怀</a>
-							</li>
-						</ul>
-					</li>
-					<li class="nav-history"><a href="javascript:;" target="_self"><b></b>短信记录/效果<span class="icon-angle-down"></span></a>
-						<ul class="main-nav-sub">
-							<li>
-								<a href="http://dingdong.ciaosir.com/ui/MarketingUI/marketinglog" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航营销效果&#39;, &#39;点击&#39;]);">营销效果</a>
-							</li>
-							<li>
-								<a href="http://dingdong.ciaosir.com/ui/MarketingUI/couponlog" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航优惠券效果&#39;, &#39;点击&#39;]);">优惠券效果</a>
-							</li>
-							<li>
-								<a href="http://dingdong.ciaosir.com/ui/RptUI/orderrpt" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航催付效果&#39;, &#39;点击&#39;]);">催付效果</a>
-							</li>
-							<li>
-								<a href="http://dingdong.ciaosir.com/ui/RptUI/sendhis" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航发送记录&#39;, &#39;点击&#39;]);">发送记录</a>
-							</li>
-							<li>
-								<a href="http://dingdong.ciaosir.com/ui/PayUI/buymsg" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航充值记录&#39;, &#39;点击&#39;]);">充值记录</a>
-							</li>
-							<li>
-								<a href="http://dingdong.ciaosir.com/ui/RptUI/smscount" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航短信账单&#39;, &#39;点击&#39;]);">短信账单</a>
-							</li>
-						</ul>
-
-					</li>
-					<li class="nav-sysset"><a href="javascript:;" target="_self"><b></b>系统设置<span class="icon-angle-down"></span></a>
-						<ul class="main-nav-sub">
-							<li>
-								<a href="http://dingdong.ciaosir.com/ui/SettingUI/importtrades" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航导入历史订单&#39;, &#39;点击&#39;]);">导入历史订单</a>
-							</li>
-							<li>
-								<a href="http://dingdong.ciaosir.com/ui/SettingUI/sendset" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航短信发送设置&#39;, &#39;点击&#39;]);">短信发送设置</a>
-							</li>
-							<li>
-								<a href="http://dingdong.ciaosir.com/ui/SettingUI/blacklist" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航黑名单设置&#39;, &#39;点击&#39;]);">黑名单设置</a>
-							</li>
-							<li>
-								<a href="http://dingdong.ciaosir.com/ui/SettingUI/subaccount" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航子账号设置&#39;, &#39;点击&#39;]);">子账号设置</a>
-							</li>
-						</ul>
-					</li>
-					<li class="nav-help"><a href="http://dingdong.ciaosir.com/ui/SettingUI/help" target="_self" onclick="javascript:_hmt.push([&#39;_trackEvent&#39;, &#39;新叮咚-导航帮助中心&#39;, &#39;点击&#39;]);"><b></b>帮助中心</a></li>
-				</ul>
+				<ul class="main-ul">
+				<li class="nav-index">
+					<a href="../index/index.html" target="_self"><b></b>首页</a>
+				</li>
+				<li class="nav-market">
+					<a href="javascript:;" target="_self"><b></b>会员营销<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<li>
+							<a href="../AffiliateMarketing/MemberShortMessage.html" target="_self">会员短信群发</a>
+						</li>
+						<li>
+							<a href="../AffiliateMarketing/ImportNumberGroup.html" target="_self">导入号码群发</a>
+						</li>
+						<li>
+							<a href="../AffiliateMarketing/CouponGroup.html" target="_self">优惠券群发</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-care">
+					<a href="javascript:;" target="_self" class="active">
+						<b></b>会员关怀
+						<span class="icon-angle-down"></span>
+					</a>
+					<ul class="main-nav-sub" style="display: block;">
+						<li>
+							<a href="OrderReminder.html" target="_self">订单催付</a>
+						</li>
+						<li>
+							<a href="TwoTimesPay.html" target="_self">二次催付</a>
+						</li>
+						<li>
+							<a href="ShippingAlert.html" target="_self">发货提醒</a>
+						</li>
+						<li>
+							<a href="ArrivalReminder.html" target="_self">到货提醒</a>
+						</li>
+						<li>
+							<a href="SignReminder.html" target="_self">签收提醒</a>
+						</li>
+						<li>
+							<a href="MiddleAndPoorEvaluationOfCare.html" target="_self">中差评关怀</a>
+						</li>
+						<li>
+							<a href="CareFor.html" target="_self">好评关怀</a>
+						</li>
+						<li>
+							<a href="PaymentCare.html" target="_self">付款关怀</a>
+						</li>
+						<li>
+							<a href="DelayedAlert.html" target="_self">迟发提醒</a>
+						</li>
+						<li class="active">
+							<a href="BackCare.html" target="_self">回款关怀</a>
+						</li>
+						<li>
+							<a href="RefundCare.html" target="_self">退款关怀</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-history">
+					<a href="javascript:;" target="_self"><b></b>短信记录/效果<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<!-- <li>
+							<a href="#" target="_self">营销效果</a>
+						</li>
+						<li>
+							<a href="#" target="_self">优惠券效果</a>
+						</li>
+						<li>
+							<a href="#" target="_self">催付效果</a>
+						</li> -->
+						<li>
+							<a href="../SMSRecord/SendRecord.html" target="_self">发送记录</a>
+						</li>
+						<li>
+							<a href="../SMSRecord/RechargeRecord.html" target="_self">充值记录</a>
+						</li>
+						<li>
+							<a href="../SMSRecord/SMSBill.html" target="_self">短信账单</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-sysset">
+					<a href="javascript:;" target="_self"><b></b>系统设置<span class="icon-angle-down"></span></a>
+					<ul class="main-nav-sub">
+						<li>
+							<a href="../SystemSettings/ImportHistoricalOrder.html" target="_self">导入历史订单</a>
+						</li>
+						<li>
+							<a href="../SystemSettings/SMSsettings.html" target="_self">短信发送设置</a>
+						</li>
+						<li>
+							<a href="../SystemSettings/BlackListSettings.html" target="_self">黑名单设置</a>
+						</li>
+						<li>
+							<a href="../SystemSettings/ChildAccountSettings.html" target="_self">子账号设置</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-help">
+					<a href="../HelpCenter/HelpCenter.html" target="_self"><b></b>帮助中心</a>
+				</li>
+			</ul>
 			</div>
 			<div id="main-content" class="clearfix">
 				  <ul class="cares-map clearfix">
@@ -392,7 +370,7 @@
 
 <div class="msg-preview float-left margin-large-top" style="display: none;">
 	<p>亲爱的【#收件人姓名#】，已收到您的付款信息，感谢您的光临。后续产品使用如有问题，请随时联系旺旺，我们会第一时间处理【【#店铺名称#】】</p>
-	<div class="sign">【夜空很美1122】</div>
+	<div class="sign">【用户名】</div>
 	<span class="td"></span>
 </div>	</div>
 	<hr class="split">
